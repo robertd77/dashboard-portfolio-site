@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f7f3;
+  --foreground: #23352e;
+  --card: #ffffff;
+  --card-foreground: #23352e;
+  --primary: #245c46;
+  --primary-foreground: #ffffff;
+  --secondary: #edf2ec;
+  --muted-foreground: #5e6b64;
+  --border: #dce3da;
+  --ring: #245c46;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+
+body { margin: 0; background: var(--background); color: var(--foreground); font-family: Arial, Helvetica, sans-serif; }
+a, button { -webkit-tap-highlight-color: transparent; }
+a:focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; }
+.shell-container { width: min(1120px, 100% - 48px); margin-inline: auto; }
+.site-header { background: var(--card); border-bottom: 1px solid var(--border); }
+.brand { display: inline-flex; align-items: center; gap: 12px; border-radius: 6px; }
+.brand-mark { display: grid; place-items: center; width: 46px; height: 46px; background: var(--primary); color: white; border-radius: 12px; }
+.demo-badge { display: flex; align-items: center; gap: 8px; border: 1px solid var(--border); background: var(--background); padding: 8px 12px; border-radius: 100px; font-size: 11px; color: var(--muted-foreground); }
+.demo-badge > span { height: 6px; width: 6px; border-radius: 50%; background: var(--primary); }
+.workflow-nav { padding-block: 30px; border-bottom: 1px solid var(--border); }
+.step-link { display: flex; height: 100%; align-items: center; gap: 12px; padding: 16px; border: 1px solid transparent; border-radius: 10px; color: var(--muted-foreground); transition: background-color 150ms; }
+.step-link:hover { background: #e9eee7; }
+.step-link-active { background: var(--primary); color: white; border-color: var(--primary); }
+.step-link-active:hover { background: #1d4d3a; }
+.step-number { display: grid; place-items: center; width: 34px; height: 34px; flex-shrink: 0; border: 1px solid var(--border); border-radius: 50%; font-size: 11px; }
+.step-link-active .step-number { border-color: #ffffff50; }
+.step-description { display: block; margin-top: 4px; font-size: 11px; line-height: 1.5; }
+.step-link-active .step-description { color: #e1ebe3; }
+.page-heading { padding-block: 46px 36px; }
+.eyebrow { color: var(--primary); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 14px; }
+h1 { max-width: 780px; font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; letter-spacing: -0.045em; line-height: 1.15; text-wrap: balance; }
+.icon-tile { display: inline-flex; justify-content: center; align-items: center; width: 44px; height: 44px; border-radius: 10px; color: var(--primary); background: var(--secondary); }
+.scope-note { display: flex; gap: 14px; border: 1px solid var(--border); background: var(--secondary); border-radius: 10px; padding: 20px; }
+.stage-placeholder { padding: 36px; }
+.status-label { display: inline-block; border: 1px solid var(--border); border-radius: 5px; padding: 4px 8px; color: var(--muted-foreground); font-size: 11px; margin-left: 14px; vertical-align: top; margin-top: 10px; }
+.planned-item { border-top: 1px solid var(--border); padding-top: 14px; line-height: 1.6; }
+.site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; border-top: 1px solid var(--border); padding-block: 24px 30px; color: var(--muted-foreground); font-size: 11px; line-height: 1.7; }
+.skip-link { position: fixed; top: 8px; left: 8px; z-index: 50; transform: translateY(-150%); padding: 12px 18px; border-radius: 8px; background: var(--primary); color: white; }
+.skip-link:focus { transform: translateY(0); }
+@media (max-width: 639px) {
+  .shell-container { width: calc(100% - 32px); }
+  .workflow-nav { padding-block: 20px; }
+  .step-link { padding: 12px; }
+  .step-description { display: none; }
+  .page-heading { padding-block: 32px 28px; }
+  .stage-placeholder { padding: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}

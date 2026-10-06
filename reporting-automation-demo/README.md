@@ -39,3 +39,39 @@ conflicts or ambiguities before making assumptions.
 
 Northwood Supply Co. is entirely fictional and the included data is
 simulated.
+
+## Local development
+
+The Next.js App Router application lives in this folder. Use Node.js
+20.9 or later (the initial implementation was verified with Node.js 24).
+Run all commands from `reporting-automation-demo/`:
+
+```sh
+npm ci
+npm run dev
+```
+
+The home route redirects to `/raw-data`. The workflow navigation links
+to `/raw-data`, `/process`, and `/dashboard`. All three routes are
+available directly and share the application header, navigation, and
+fictional-data disclosure.
+
+This first increment contains the application shell, a source-file
+overview, and clearly labeled placeholders for processing and reporting.
+It does not run transformations, render dataset previews, or calculate
+dashboard metrics. The original CSVs remain in `data/` and are not
+published as public assets. No credentials or external services are
+required. The UI uses TypeScript, Tailwind CSS, and shadcn/ui-style local
+components; Recharts can be added when the chart implementation begins.
+
+Validation and production startup:
+
+```sh
+npm run lint
+npm run typecheck
+npm run build
+npm start
+```
+
+If the environment's default npm cache is not writable, use
+`npm --cache /tmp/northwood-npm-cache ci` for installation.
