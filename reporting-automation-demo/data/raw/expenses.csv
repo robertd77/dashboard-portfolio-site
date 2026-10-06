@@ -1,0 +1,711 @@
+Date,Transaction Type,Number,Vendor,Account/Category,Memo/Description,Amount
+2025-01-07,Expense,EXP-5001,King Street Properties,Rent & Occupancy,Monthly operating expense,7200.0
+2025-01-08,Expense,EXP-5002,Shopify,Software & Subscriptions,Monthly operating expense,650.0
+2025-01-06,Expense,EXP-5003,Toronto Hydro,Utilities,Monthly operating expense,491.22
+2025-01-07,Expense,EXP-5004,Bell,Utilities,Monthly operating expense,310.0
+2025-01-01,Expense,EXP-5005,Intact Insurance,Insurance,Monthly operating expense,480.0
+2025-01-21,Expense,EXP-5006,UPS,Shipping & Delivery,Operating expense,191.24
+2025-01-24,Expense,EXP-5007,Staples,Office & Supplies,Operating expense,274.28
+2025-01-21,Expense,EXP-5008,Staples,Office & Supplies,Operating expense,98.85
+2025-01-10,Expense,EXP-5009,UPS,Shipping & Delivery,Operating expense,223.82
+2025-01-01,Expense,EXP-5010,Staples,Office & Supplies,Operating expense,72.67
+2025-01-09,Expense,EXP-5011,Google Ads,Advertising,Operating expense,554.91
+2025-01-25,Expense,EXP-5012,Ledger Lane Accounting,Professional Services,Operating expense,387.75
+2025-01-09,Expense,EXP-5013,Klaviyo,Advertising,Operating expense,678.29
+2025-01-17,Expense,EXP-5014,Canada Post,Shipping & Delivery,Operating expense,46.83
+2025-01-04,Expense,EXP-5015,Ledger Lane Accounting,Professional Services,Operating expense,281.6
+2025-01-15,Expense,EXP-5016,Google Ads,Advertising,Operating expense,1076.97
+2025-01-23,Expense,EXP-5017,Canada Post,Shipping & Delivery,Operating expense,43.36
+2025-01-19,Expense,EXP-5018,North Legal,Professional Services,Operating expense,499.95
+2025-01-31,Expense,EXP-5019,Google Workspace,Software & Subscriptions,Operating expense,66.62
+2025-01-28,Expense,EXP-5020,Uline,Office & Supplies,Operating expense,504.88
+2025-01-05,Expense,EXP-5021,Klaviyo,Advertising,Operating expense,649.6
+2025-01-18,Expense,EXP-5022,Ledger Lane Accounting,Professional Services,Operating expense,315.13
+2025-01-21,Expense,EXP-5023,Uline,Office & Supplies,Operating expense,139.84
+2025-01-29,Expense,EXP-5024,Shopify,Software & Subscriptions,Operating expense,86.52
+2025-01-04,Expense,EXP-5025,North Legal,Professional Services,Operating expense,298.85
+2025-01-25,Expense,EXP-5026,Staples,Office & Supplies,Operating expense,242.32
+2025-01-02,Expense,EXP-5027,North Legal,Professional Services,Operating expense,239.62
+2025-01-27,Expense,EXP-5028,Meta Ads,Advertising,Operating expense,674.32
+2025-01-26,Expense,EXP-5029,Klaviyo,Advertising,Operating expense,369.86
+2025-01-29,Expense,EXP-5030,Shopify,Software & Subscriptions,Operating expense,124.45
+2025-01-26,Expense,EXP-5031,Klaviyo,Advertising,Operating expense,680.91
+2025-01-31,Expense,EXP-5032,Staples,Office & Supplies,Operating expense,44.96
+2025-01-17,Expense,EXP-5033,Klaviyo,Software & Subscriptions,Operating expense,56.39
+2025-01-30,Expense,EXP-5034,Klaviyo,Software & Subscriptions,Operating expense,141.12
+2025-01-03,Expense,EXP-5035,Purolator,Shipping & Delivery,Operating expense,112.75
+2025-01-30,Expense,EXP-5036,Google Ads,Advertising,Operating expense,923.07
+2025-01-24,Expense,EXP-5037,Meta Ads,Advertising,Operating expense,461.75
+2025-01-03,Expense,EXP-5038,Klaviyo,Advertising,Operating expense,388.29
+2025-01-07,Expense,EXP-5039,Canada Post,Shipping & Delivery,Operating expense,695.82
+2025-01-10,Expense,EXP-5040,Google Ads,Advertising,Operating expense,192.74
+2025-01-04,Expense,EXP-5041,Google Ads,Advertising,Operating expense,466.21
+2025-01-29,Expense,EXP-5042,Staples,Office & Supplies,Operating expense,25.58
+2025-01-17,Expense,EXP-5043,UPS,Shipping & Delivery,Operating expense,69.51
+2025-01-20,Expense,EXP-5044,Canada Post,Shipping & Delivery,Operating expense,160.97
+2025-01-31,Expense,EXP-5045,Adobe,Software & Subscriptions,Operating expense,94.18
+2025-01-27,Expense,EXP-5046,Google Workspace,Software & Subscriptions,Operating expense,141.99
+2025-01-02,Expense,EXP-5047,Meta,Advertising,Operating expense,169.27
+2025-01-13,Expense,EXP-5048,Ledger Lane Accounting,Professional Services,Operating expense,320.7
+2025-01-16,Expense,EXP-5049,Staples,Office & Supplies,Operating expense,521.53
+2025-01-16,Expense,EXP-5050,Staples,Office & Supplies,Operating expense,147.68
+2025-01-03,Expense,EXP-5051,Staples,Office & Supplies,Operating expense,158.05
+2025-01-28,Expense,EXP-5052,Google Ads,Advertising,Operating expense,175.13
+2025-01-12,Expense,EXP-5053,Staples,Office & Supplies,Operating expense,21.35
+2025-02-03,Expense,EXP-5054,King Street Properties,Rent & Occupancy,Monthly operating expense,7200.0
+2025-02-01,Expense,EXP-5055,Shopify,Software & Subscriptions,Monthly operating expense,650.0
+2025-02-04,Expense,EXP-5056,Toronto Hydro,Utilities,Monthly operating expense,582.67
+2025-02-02,Expense,EXP-5057,Bell,Utilities,Monthly operating expense,310.0
+2025-02-02,Expense,EXP-5058,Intact Insurance,Insurance,Monthly operating expense,480.0
+2025-02-14,Expense,EXP-5059,Adobe,Software & Subscriptions,Operating expense,139.46
+2025-02-03,Expense,EXP-5060,Ledger Lane Accounting,Professional Services,Operating expense,270.47
+2025-02-13,Expense,EXP-5061,Staples,Office & Supplies,Operating expense,107.45
+2025-02-05,Expense,EXP-5062,Canada Post,Shipping & Delivery,Operating expense,452.44
+2025-02-21,Expense,EXP-5063,Google Ads,Advertising,Operating expense,428.9
+2025-02-05,Expense,EXP-5064,Klaviyo,Advertising,Operating expense,318.51
+2025-02-24,Expense,EXP-5065,UPS,Shipping & Delivery,Operating expense,169.39
+2025-02-25,Expense,EXP-5066,Klaviyo,Advertising,Operating expense,421.85
+2025-02-08,Expense,EXP-5067,Uline,Office & Supplies,Operating expense,143.91
+2025-02-14,Expense,EXP-5068,Ledger Lane Accounting,Professional Services,Operating expense,435.6
+2025-02-05,Expense,EXP-5069,Klaviyo,Advertising,Operating expense,56.24
+2025-02-01,Expense,EXP-5070,UPS,Shipping & Delivery,Operating expense,279.47
+2025-02-10,Expense,EXP-5071,Adobe,Software & Subscriptions,Operating expense,156.3
+2025-02-18,Expense,EXP-5072,Purolator,Shipping & Delivery,Operating expense,240.93
+2025-02-01,Expense,EXP-5073,Klaviyo,Advertising,Operating expense,911.4
+2025-02-02,Expense,EXP-5074,Staples,Office & Supplies,Operating expense,668.11
+2025-02-11,Expense,EXP-5075,Google Workspace,Software & Subscriptions,Operating expense,158.47
+2025-02-15,Expense,EXP-5076,Canada Post,Shipping & Delivery,Operating expense,858.98
+2025-02-12,Expense,EXP-5077,UPS,Shipping & Delivery,Operating expense,19.45
+2025-02-10,Expense,EXP-5078,Purolator,Shipping & Delivery,Operating expense,141.11
+2025-02-12,Expense,EXP-5079,UPS,Shipping & Delivery,Operating expense,298.02
+2025-02-11,Expense,EXP-5080,Uline,Office & Supplies,Operating expense,39.32
+2025-02-09,Expense,EXP-5081,Uline,Office & Supplies,Operating expense,19.62
+2025-02-06,Expense,EXP-5082,Uline,Office & Supplies,Operating expense,144.11
+2025-02-11,Expense,EXP-5083,Klaviyo,Advertising,Operating expense,142.59
+2025-02-07,Expense,EXP-5084,Google Ads,Advertising,Operating expense,287.61
+2025-02-13,Expense,EXP-5085,North Legal,Professional Services,Operating expense,685.75
+2025-02-25,Expense,EXP-5086,Meta Ads,Advertising,Operating expense,678.99
+2025-02-26,Expense,EXP-5087,Canada Post,Shipping & Delivery,Operating expense,527.74
+2025-02-16,Expense,EXP-5088,Meta Ads,Advertising,Operating expense,504.01
+2025-02-14,Expense,EXP-5089,UPS,Shipping & Delivery,Operating expense,493.33
+2025-02-26,Expense,EXP-5090,Uline,Office & Supplies,Operating expense,129.61
+2025-02-08,Expense,EXP-5091,Google Ads,Advertising,Operating expense,586.34
+2025-02-28,Expense,EXP-5092,UPS,Shipping & Delivery,Operating expense,67.19
+2025-02-04,Expense,EXP-5093,Staples,Office & Supplies,Operating expense,140.13
+2025-02-17,Expense,EXP-5094,Purolator,Shipping & Delivery,Operating expense,251.36
+2025-02-16,Expense,EXP-5095,Google Ads,Advertising,Operating expense,541.93
+2025-02-07,Expense,EXP-5096,Canada Post,Shipping & Delivery,Operating expense,215.76
+2025-02-07,Expense,EXP-5097,Klaviyo,Software & Subscriptions,Operating expense,196.6
+2025-02-04,Expense,EXP-5098,Google Ads,Advertising,Operating expense,1179.17
+2025-02-05,Expense,EXP-5099,Google Ads,Advertising,Operating expense,534.37
+2025-02-19,Expense,EXP-5100,Staples,Office & Supplies,Operating expense,178.31
+2025-02-01,Expense,EXP-5101,UPS,Shipping & Delivery,Operating expense,63.4
+2025-02-28,Expense,EXP-5102,Klaviyo,Advertising,Operating expense,318.44
+2025-02-25,Expense,EXP-5103,UPS,Shipping & Delivery,Operating expense,198.11
+2025-02-18,Expense,EXP-5104,Klaviyo,Advertising,Operating expense,464.81
+2025-02-14,Expense,EXP-5105,Meta Ads,Advertising,Operating expense,733.47
+2025-02-27,Expense,EXP-5106,Google Ads,Advertising,Operating expense,292.94
+2025-02-18,Expense,EXP-5107,Google Ads,Advertising,Operating expense,676.8
+2025-02-17,Expense,EXP-5108,Klaviyo,Advertising,Operating expense,107.96
+2025-02-09,Expense,EXP-5109,North Legal,Professional Services,Operating expense,337.66
+2025-02-28,Expense,EXP-5110,Staples,Office & Supplies,Operating expense,52.16
+2025-02-10,Expense,EXP-5111,Canada Post,Shipping & Delivery,Operating expense,319.49
+2025-02-08,Expense,EXP-5112,Uline,Office & Supplies,Operating expense,202.18
+2025-02-24,Expense,EXP-5113,Uline,Office & Supplies,Operating expense,364.6
+2025-02-13,Expense,EXP-5114,Purolator,Shipping & Delivery,Operating expense,408.71
+2025-02-06,Expense,EXP-5115,Canada Post,Shipping & Delivery,Operating expense,330.85
+2025-02-21,Expense,EXP-5116,Google Ads,Advertising,Operating expense,803.4
+2025-02-28,Expense,EXP-5117,Canada Post,Shipping & Delivery,Operating expense,235.66
+2025-02-23,Expense,EXP-5118,Uline,Office & Supplies,Operating expense,105.09
+2025-03-05,Expense,EXP-5119,King Street Properties,Rent & Occupancy,Monthly operating expense,7200.0
+2025-03-05,Expense,EXP-5120,Shopify,Software & Subscriptions,Monthly operating expense,650.0
+2025-03-05,Expense,EXP-5121,Toronto Hydro,Utilities,Monthly operating expense,661.6
+2025-03-04,Expense,EXP-5122,Bell,Utilities,Monthly operating expense,310.0
+2025-03-07,Expense,EXP-5123,Intact Insurance,Insurance,Monthly operating expense,480.0
+2025-03-03,Expense,EXP-5124,Uline,Office & Supplies,Operating expense,41.47
+2025-03-05,Expense,EXP-5125,Purolator,Shipping & Delivery,Operating expense,106.5
+2025-03-01,Expense,EXP-5126,Google Ads,Advertising,Operating expense,227.7
+2025-03-08,Expense,EXP-5127,Google Ads,Advertising,Operating expense,565.03
+2025-03-29,Expense,EXP-5128,Adobe,Software & Subscriptions,Operating expense,61.25
+2025-03-10,Expense,EXP-5129,Adobe,Software & Subscriptions,Operating expense,144.68
+2025-03-07,Expense,EXP-5130,Google Ads,Advertising,Operating expense,305.26
+2025-03-21,Expense,EXP-5131,Uline,Office & Supplies,Operating expense,307.43
+2025-03-16,Expense,EXP-5132,UPS,Shipping & Delivery,Operating expense,385.15
+2025-03-21,Expense,EXP-5133,Canada Post,Shipping & Delivery,Operating expense,248.84
+2025-03-28,Expense,EXP-5134,UPS,Shipping & Delivery,Operating expense,116.84
+2025-03-25,Expense,EXP-5135,North Legal,Professional Services,Operating expense,825.25
+2025-03-17,Expense,EXP-5136,Klaviyo,Software & Subscriptions,Operating expense,86.36
+2025-03-09,Expense,EXP-5137,Google Ads,Advertising,Operating expense,623.6
+2025-03-13,Expense,EXP-5138,Shopify,Software & Subscriptions,Operating expense,84.68
+2025-03-06,Expense,EXP-5139,UPS,Shipping & Delivery,Operating expense,207.26
+2025-03-22,Expense,EXP-5140,Uline,Office & Supplies,Operating expense,136.81
+2025-03-29,Expense,EXP-5141,Uline,Office & Supplies,Operating expense,242.36
+2025-03-15,Expense,EXP-5142,Staples,Office & Supplies,Operating expense,159.13
+2025-03-28,Expense,EXP-5143,Klaviyo,Advertising,Operating expense,207.46
+2025-03-11,Expense,EXP-5144,Meta Ads,Advertising,Operating expense,387.05
+2025-03-15,Expense,EXP-5145,Klaviyo,Software & Subscriptions,Operating expense,94.31
+2025-03-19,Expense,EXP-5146,Purolator,Shipping & Delivery,Operating expense,41.77
+2025-03-04,Expense,EXP-5147,Staples,Office & Supplies,Operating expense,191.24
+2025-03-04,Expense,EXP-5148,Uline,Office & Supplies,Operating expense,201.38
+2025-03-22,Expense,EXP-5149,Klaviyo,Software & Subscriptions,Operating expense,38.89
+2025-03-14,Expense,EXP-5150,Purolator,Shipping & Delivery,Operating expense,269.81
+2025-03-28,Expense,EXP-5151,Purolator,Shipping & Delivery,Operating expense,198.22
+2025-03-18,Expense,EXP-5152,Meta Ads,Advertising,Operating expense,154.77
+2025-03-27,Expense,EXP-5153,Staples,Office & Supplies,Operating expense,147.42
+2025-03-15,Expense,EXP-5154,UPS,Shipping & Delivery,Operating expense,124.85
+2025-03-23,Expense,EXP-5155,Meta Ads,Advertising,Operating expense,652.39
+2025-03-13,Expense,EXP-5156,Uline,Office & Supplies,Operating expense,131.71
+2025-03-17,Expense,EXP-5157,Uline,Office & Supplies,Operating expense,492.04
+2025-03-24,Expense,EXP-5158,Klaviyo,Advertising,Operating expense,1698.21
+2025-03-06,Expense,EXP-5159,Shopify,Software & Subscriptions,Operating expense,147.74
+2025-03-14,Expense,EXP-5160,Purolator,Shipping & Delivery,Operating expense,158.18
+2025-03-24,Expense,EXP-5161,Canada Post,Postage,Operating expense,115.05
+2025-03-18,Expense,EXP-5162,Staples,Office & Supplies,Operating expense,152.89
+2025-03-11,Expense,EXP-5163,Uline,Office & Supplies,Operating expense,103.34
+2025-03-27,Expense,EXP-5164,Klaviyo,Advertising,Operating expense,70.66
+2025-03-17,Expense,EXP-5165,Staples,Office & Supplies,Operating expense,119.11
+2025-03-19,Expense,EXP-5166,Meta Ads,Advertising,Operating expense,621.55
+2025-03-12,Expense,EXP-5167,Adobe,Software & Subscriptions,Operating expense,196.08
+2025-03-27,Expense,EXP-5168,Purolator,Shipping & Delivery,Operating expense,23.9
+2025-04-03,Expense,EXP-5169,King Street Properties,Rent & Occupancy,Monthly operating expense,7200.0
+2025-04-02,Expense,EXP-5170,Shopify,Software & Subscriptions,Monthly operating expense,650.0
+2025-04-06,Expense,EXP-5171,Toronto Hydro,Utilities,Monthly operating expense,521.12
+2025-04-07,Expense,EXP-5172,Bell,Utilities,Monthly operating expense,310.0
+2025-04-05,Expense,EXP-5173,Intact Insurance,Insurance,Monthly operating expense,480.0
+2025-04-28,Expense,EXP-5174,Meta Ads,Advertising,Operating expense,259.07
+2025-04-13,Expense,EXP-5175,Google Ads,Advertising,Operating expense,1238.75
+2025-04-29,Expense,EXP-5176,Staples,Office & Supplies,Operating expense,19.11
+2025-04-30,Expense,EXP-5177,Uline,Office & Supplies,Operating expense,196.17
+2025-04-26,Expense,EXP-5178,Google Ads,Advertising,Operating expense,1064.84
+2025-04-24,Expense,EXP-5179,UPS,Shipping & Delivery,Operating expense,80.6
+2025-04-09,Expense,EXP-5180,Canada Post,Shipping & Delivery,Operating expense,112.17
+2025-04-10,Expense,EXP-5181,Ledger Lane Accounting,Professional Services,Operating expense,501.53
+2025-04-22,Expense,EXP-5182,Shopify,Software & Subscriptions,Operating expense,35.91
+2025-04-22,Expense,EXP-5183,Ledger Lane Accounting,Professional Services,Operating expense,329.83
+2025-04-16,Expense,EXP-5184,Meta Ads,Advertising,Operating expense,1039.43
+2025-04-17,Expense,EXP-5185,Klaviyo,Advertising,Operating expense,993.25
+2025-04-10,Expense,EXP-5186,Meta Ads,Advertising,Operating expense,667.54
+2025-04-04,Expense,EXP-5187,Klaviyo,Advertising,Operating expense,195.67
+2025-04-28,Expense,EXP-5188,Uline,Office & Supplies,Operating expense,52.18
+2025-04-03,Expense,EXP-5189,UPS,Shipping & Delivery,Operating expense,297.87
+2025-04-25,Expense,EXP-5190,Staples,Office & Supplies,Operating expense,309.55
+2025-04-21,Expense,EXP-5191,Klaviyo,Software & Subscriptions,Operating expense,151.74
+2025-04-12,Expense,EXP-5192,Google Ads,Advertising,Operating expense,168.21
+2025-04-25,Expense,EXP-5193,Google Ads,Advertising,Operating expense,433.02
+2025-04-02,Expense,EXP-5194,Staples,Office & Supplies,Operating expense,132.66
+2025-04-05,Expense,EXP-5195,Ledger Lane Accounting,Professional Services,Operating expense,466.99
+2025-04-07,Expense,EXP-5196,Purolator,Shipping & Delivery,Operating expense,168.26
+2025-04-01,Expense,EXP-5197,Purolator,Shipping & Delivery,Operating expense,68.32
+2025-04-04,Expense,EXP-5198,Canada Post,Shipping & Delivery,Operating expense,154.45
+2025-04-28,Expense,EXP-5199,Staples,Office & Supplies,Operating expense,670.24
+2025-04-14,Expense,EXP-5200,UPS,Shipping & Delivery,Operating expense,83.38
+2025-04-08,Expense,EXP-5201,Klaviyo,Advertising,Operating expense,6.15
+2025-04-07,Expense,EXP-5202,Staples,Office & Supplies,Operating expense,91.08
+2025-04-16,Expense,EXP-5203,Uline,Office & Supplies,Operating expense,53.28
+2025-04-08,Expense,EXP-5204,Uline,Office & Supplies,Operating expense,46.48
+2025-04-30,Expense,EXP-5205,Staples,Office & Supplies,Operating expense,12.05
+2025-04-19,Expense,EXP-5206,Purolator,Shipping & Delivery,Operating expense,270.47
+2025-04-23,Expense,EXP-5207,Google Workspace,Software & Subscriptions,Operating expense,144.94
+2025-04-29,Expense,EXP-5208,Staples,Office & Supplies,Operating expense,104.75
+2025-04-27,Expense,EXP-5209,Ledger Lane Accounting,Professional Services,Operating expense,335.55
+2025-04-13,Expense,EXP-5210,Meta Ads,Advertising,Operating expense,856.64
+2025-04-02,Expense,EXP-5211,Klaviyo,Advertising,Operating expense,180.97
+2025-04-28,Expense,EXP-5212,Purolator,Shipping & Delivery,Operating expense,179.97
+2025-04-22,Expense,EXP-5213,Klaviyo,Advertising,Operating expense,67.56
+2025-04-02,Expense,EXP-5214,Adobe,Software & Subscriptions,Operating expense,306.88
+2025-04-11,Expense,EXP-5215,Canada Post,Shipping & Delivery,Operating expense,20.68
+2025-04-26,Expense,EXP-5216,Canada Post,Shipping & Delivery,Operating expense,484.97
+2025-04-05,Expense,EXP-5217,Klaviyo,Advertising,Operating expense,251.85
+2025-04-01,Expense,EXP-5218,Staples,Office & Supplies,Operating expense,193.38
+2025-04-21,Expense,EXP-5219,Shopify,Software & Subscriptions,Operating expense,208.3
+2025-04-30,Expense,EXP-5220,Klaviyo,Advertising,Operating expense,777.2
+2025-05-08,Expense,EXP-5221,King Street Properties,Rent & Occupancy,Monthly operating expense,7200.0
+2025-05-06,Expense,EXP-5222,Shopify,Software & Subscriptions,Monthly operating expense,650.0
+2025-05-06,Expense,EXP-5223,Toronto Hydro,Utilities,Monthly operating expense,549.36
+2025-05-04,Expense,EXP-5224,Bell,Utilities,Monthly operating expense,310.0
+2025-05-05,Expense,EXP-5225,Intact Insurance,Insurance,Monthly operating expense,480.0
+2025-05-24,Expense,EXP-5226,Klaviyo,Advertising,Operating expense,542.75
+2025-05-10,Expense,EXP-5227,UPS,Shipping & Delivery,Operating expense,381.72
+2025-05-19,Expense,EXP-5228,Meta Ads,Advertising,Operating expense,174.41
+2025-05-16,Expense,EXP-5229,Purolator,Shipping & Delivery,Operating expense,46.57
+2025-05-04,Expense,EXP-5230,North Legal,Professional Services,Operating expense,440.06
+2025-05-24,Expense,EXP-5231,North Legal,Professional Services,Operating expense,267.95
+2025-05-18,Expense,EXP-5232,Google Ads,Advertising,Operating expense,667.6
+2025-05-22,Expense,EXP-5233,Staples,Office & Supplies,Operating expense,45.89
+2025-05-23,Expense,EXP-5234,UPS,Shipping & Delivery,Operating expense,334.08
+2025-05-05,Expense,EXP-5235,Google Ads,Advertising,Operating expense,208.36
+2025-05-08,Expense,EXP-5236,Uline,Office & Supplies,Operating expense,95.61
+2025-05-17,Expense,EXP-5237,Ledger Lane Accounting,Professional Services,Operating expense,782.35
+2025-05-25,Expense,EXP-5238,Staples,Office & Supplies,Operating expense,174.78
+2025-05-20,Expense,EXP-5239,Google Ads,Advertising,Operating expense,712.79
+2025-05-19,Expense,EXP-5240,Klaviyo,Advertising,Operating expense,963.93
+2025-05-23,Expense,EXP-5241,Purolator,Shipping & Delivery,Operating expense,115.57
+2025-05-09,Expense,EXP-5242,Google Ads,Advertising,Operating expense,250.61
+2025-05-20,Expense,EXP-5243,Adobe,Software & Subscriptions,Operating expense,67.77
+2025-05-17,Expense,EXP-5244,Google Ads,Advertising,Operating expense,1062.48
+2025-05-25,Expense,EXP-5245,Google Ads,Advertising,Operating expense,274.85
+2025-05-06,Expense,EXP-5246,Meta Ads,Advertising,Operating expense,704.64
+2025-05-18,Expense,EXP-5247,Canada Post,Shipping & Delivery,Operating expense,49.76
+2025-05-14,Expense,EXP-5248,UPS,Shipping & Delivery,Operating expense,412.38
+2025-05-28,Expense,EXP-5249,Purolator,Shipping & Delivery,Operating expense,65.74
+2025-05-03,Expense,EXP-5250,UPS,Shipping & Delivery,Operating expense,36.41
+2025-05-03,Expense,EXP-5251,Google Ads,Advertising,Operating expense,856.7
+2025-05-07,Expense,EXP-5252,Uline,Office & Supplies,Operating expense,70.14
+2025-05-22,Expense,EXP-5253,Ledger Lane Accounting,Professional Services,Operating expense,250.7
+2025-05-24,Expense,EXP-5254,UPS,Shipping & Delivery,Operating expense,341.97
+2025-05-01,Expense,EXP-5255,Canada Post,Shipping & Delivery,Operating expense,243.57
+2025-05-24,Expense,EXP-5256,Uline,Office & Supplies,Operating expense,381.49
+2025-05-03,Expense,EXP-5257,Klaviyo,Advertising,Operating expense,168.64
+2025-05-21,Expense,EXP-5258,Google Ads,Advertising,Operating expense,235.72
+2025-05-05,Expense,EXP-5259,UPS,Shipping & Delivery,Operating expense,193.71
+2025-05-16,Expense,EXP-5260,Klaviyo,Advertising,Operating expense,384.36
+2025-05-13,Expense,EXP-5261,Klaviyo,Advertising,Operating expense,684.25
+2025-05-12,Expense,EXP-5262,Ledger Lane Accounting,Professional Services,Operating expense,479.59
+2025-05-20,Expense,EXP-5263,Uline,Office & Supplies,Operating expense,209.2
+2025-05-01,Expense,EXP-5264,Staples,Office & Supplies,Operating expense,191.69
+2025-05-18,Expense,EXP-5265,Purolator,Shipping & Delivery,Operating expense,164.33
+2025-05-21,Expense,EXP-5266,Ledger Lane Accounting,Professional Services,Operating expense,623.49
+2025-05-14,Expense,EXP-5267,Google Ads,Advertising,Operating expense,157.06
+2025-05-21,Expense,EXP-5268,Meta Ads,Advertising,Operating expense,1376.36
+2025-05-20,Expense,EXP-5269,UPS,Postage,Operating expense,24.87
+2025-05-29,Expense,EXP-5270,UPS,Shipping & Delivery,Operating expense,235.46
+2025-05-29,Expense,EXP-5271,UPS,Shipping & Delivery,Operating expense,36.63
+2025-05-29,Expense,EXP-5272,Klaviyo,Advertising,Operating expense,579.65
+2025-05-25,Expense,EXP-5273,Meta Ads,Advertising,Operating expense,434.62
+2025-05-01,Expense,EXP-5274,Klaviyo,Advertising,Operating expense,989.48
+2025-05-17,Expense,EXP-5275,UPS,Postage,Operating expense,620.88
+2025-05-18,Expense,EXP-5276,UPS,Shipping & Delivery,Operating expense,93.35
+2025-05-23,Expense,EXP-5277,Ledger Lane Accounting,Professional Services,Operating expense,787.59
+2025-05-23,Expense,EXP-5278,Purolator,Shipping & Delivery,Operating expense,283.29
+2025-05-12,Expense,EXP-5279,Canada Post,Shipping & Delivery,Operating expense,264.2
+2025-06-04,Expense,EXP-5280,King Street Properties,Rent & Occupancy,Monthly operating expense,7200.0
+2025-06-05,Expense,EXP-5281,Shopify,Software & Subscriptions,Monthly operating expense,650.0
+2025-06-03,Expense,EXP-5282,Toronto Hydro,Utilities,Monthly operating expense,525.15
+2025-06-06,Expense,EXP-5283,Bell,Utilities,Monthly operating expense,310.0
+2025-06-08,Expense,EXP-5284,Intact Insurance,Insurance,Monthly operating expense,480.0
+2025-06-04,Expense,EXP-5285,Meta Ads,Advertising,Operating expense,376.52
+2025-06-30,Expense,EXP-5286,Klaviyo,Advertising,Operating expense,501.63
+2025-06-07,Expense,EXP-5287,Canada Post,Shipping & Delivery,Operating expense,90.82
+2025-06-03,Expense,EXP-5288,Ledger Lane Accounting,Professional Services,Operating expense,510.63
+2025-06-02,Expense,EXP-5289,Adobe,Software & Subscriptions,Operating expense,55.61
+2025-06-10,Expense,EXP-5290,Purolator,Shipping & Delivery,Operating expense,129.13
+2025-06-17,Expense,EXP-5291,Canada Post,Shipping & Delivery,Operating expense,157.39
+2025-06-17,Expense,EXP-5292,Staples,Office & Supplies,Operating expense,22.13
+2025-06-20,Expense,EXP-5293,Ledger Lane Accounting,Professional Services,Operating expense,719.63
+2025-06-10,Expense,EXP-5294,UPS,Shipping & Delivery,Operating expense,415.98
+2025-06-16,Expense,EXP-5295,North Legal,Professional Services,Operating expense,358.93
+2025-06-19,Expense,EXP-5296,Klaviyo,Software & Subscriptions,Operating expense,32.78
+2025-06-10,Expense,EXP-5297,Canada Post,Shipping & Delivery,Operating expense,235.86
+2025-06-19,Expense,EXP-5298,Google Ads,Advertising,Operating expense,479.34
+2025-06-24,Expense,EXP-5299,Uline,Office & Supplies,Operating expense,78.52
+2025-06-13,Expense,EXP-5300,North Legal,Professional Services,Operating expense,383.15
+2025-06-01,Expense,EXP-5301,Uline,Office & Supplies,Operating expense,377.16
+2025-06-23,Expense,EXP-5302,Google Workspace,Software & Subscriptions,Operating expense,126.48
+2025-06-17,Expense,EXP-5303,Staples,Office & Supplies,Operating expense,149.65
+2025-06-13,Expense,EXP-5304,Canada Post,Shipping & Delivery,Operating expense,238.6
+2025-06-17,Expense,EXP-5305,Google Ads,Advertising,Operating expense,388.65
+2025-06-23,Expense,EXP-5306,Purolator,Shipping & Delivery,Operating expense,85.25
+2025-06-25,Expense,EXP-5307,Uline,Office & Supplies,Operating expense,107.89
+2025-06-11,Expense,EXP-5308,Shopify,Software & Subscriptions,Operating expense,276.86
+2025-06-21,Expense,EXP-5309,Google Ads,Advertising,Operating expense,154.9
+2025-06-09,Expense,EXP-5310,Klaviyo,Software & Subscriptions,Operating expense,173.42
+2025-06-15,Expense,EXP-5311,North Legal,Professional Services,Operating expense,178.25
+2025-06-15,Expense,EXP-5312,Uline,Office & Supplies,Operating expense,348.32
+2025-06-22,Expense,EXP-5313,Uline,Office & Supplies,Operating expense,62.82
+2025-06-20,Expense,EXP-5314,Klaviyo,Advertising,Operating expense,124.18
+2025-06-29,Expense,EXP-5315,Meta,Advertising,Operating expense,757.28
+2025-06-24,Expense,EXP-5316,Google Ads,Advertising,Operating expense,315.29
+2025-06-02,Expense,EXP-5317,Google Ads,Advertising,Operating expense,89.66
+2025-06-04,Expense,EXP-5318,Klaviyo,Advertising,Operating expense,453.11
+2025-06-09,Expense,EXP-5319,UPS,Shipping & Delivery,Operating expense,28.65
+2025-06-23,Expense,EXP-5320,Staples,Office & Supplies,Operating expense,70.3
+2025-06-26,Expense,EXP-5321,Shopify,Software & Subscriptions,Operating expense,101.98
+2025-06-24,Expense,EXP-5322,Uline,Office & Supplies,Operating expense,213.96
+2025-06-04,Expense,EXP-5323,Shopify,Software & Subscriptions,Operating expense,174.09
+2025-06-16,Expense,EXP-5324,Google Ads,Advertising,Operating expense,1264.16
+2025-06-30,Expense,EXP-5325,Ledger Lane Accounting,Professional Services,Operating expense,633.27
+2025-06-08,Expense,EXP-5326,Canada Post,Shipping & Delivery,Operating expense,266.06
+2025-06-01,Expense,EXP-5327,Meta Ads,Advertising,Operating expense,659.52
+2025-06-08,Expense,EXP-5328,Klaviyo,Advertising,Operating expense,322.88
+2025-06-01,Expense,EXP-5329,Klaviyo,Advertising,Operating expense,755.93
+2025-06-10,Expense,EXP-5330,Staples,Office & Supplies,Operating expense,55.3
+2025-06-15,Expense,EXP-5331,Canada Post,Shipping & Delivery,Operating expense,297.54
+2025-06-17,Expense,EXP-5332,Meta Ads,Advertising,Operating expense,365.05
+2025-06-14,Expense,EXP-5333,Uline,Office & Supplies,Operating expense,42.98
+2025-06-28,Expense,EXP-5334,Staples,Office & Supplies,Operating expense,193.48
+2025-06-29,Expense,EXP-5335,Shopify,Software & Subscriptions,Operating expense,334.7
+2025-06-22,Expense,EXP-5336,Google Ads,Advertising,Operating expense,241.47
+2025-06-04,Expense,EXP-5337,North Legal,Professional Services,Operating expense,285.46
+2025-06-04,Expense,EXP-5338,Ledger Lane Accounting,Professional Services,Operating expense,523.43
+2025-06-02,Expense,EXP-5339,Purolator,Shipping & Delivery,Operating expense,164.65
+2025-06-08,Expense,EXP-5340,Purolator,Shipping & Delivery,Operating expense,87.92
+2025-06-29,Expense,EXP-5341,North Legal,Professional Services,Operating expense,113.64
+2025-06-28,Expense,EXP-5342,Canada Post,Shipping & Delivery,Operating expense,277.67
+2025-06-08,Expense,EXP-5343,Purolator,Shipping & Delivery,Operating expense,64.27
+2025-06-10,Expense,EXP-5344,Klaviyo,Advertising,Operating expense,658.31
+2025-06-02,Expense,EXP-5345,Google Ads,Advertising,Operating expense,669.21
+2025-06-02,Expense,EXP-5346,Google Ads,Advertising,Operating expense,429.55
+2025-06-02,Expense,EXP-5347,Meta Ads,Advertising,Operating expense,285.92
+2025-07-08,Expense,EXP-5348,King Street Properties,Rent & Occupancy,Monthly operating expense,7200.0
+2025-07-02,Expense,EXP-5349,Shopify,Software & Subscriptions,Monthly operating expense,650.0
+2025-07-06,Expense,EXP-5350,Toronto Hydro,Utilities,Monthly operating expense,548.25
+2025-07-04,Expense,EXP-5351,Bell,Utilities,Monthly operating expense,310.0
+2025-07-07,Expense,EXP-5352,Intact Insurance,Insurance,Monthly operating expense,480.0
+2025-07-16,Expense,EXP-5353,Google Ads,Advertising,Operating expense,412.42
+2025-07-06,Expense,EXP-5354,Canada Post,Shipping & Delivery,Operating expense,263.74
+2025-07-01,Expense,EXP-5355,Uline,Office & Supplies,Operating expense,172.6
+2025-07-02,Expense,EXP-5356,UPS,Shipping & Delivery,Operating expense,398.25
+2025-07-29,Expense,EXP-5357,Purolator,Shipping & Delivery,Operating expense,131.02
+2025-07-20,Expense,EXP-5358,Uline,Office & Supplies,Operating expense,86.39
+2025-07-19,Expense,EXP-5359,Klaviyo,Advertising,Operating expense,65.97
+2025-07-13,Expense,EXP-5360,Google Workspace,Software & Subscriptions,Operating expense,182.26
+2025-07-26,Expense,EXP-5361,Google Workspace,Software & Subscriptions,Operating expense,475.65
+2025-07-15,Expense,EXP-5362,Purolator,Shipping & Delivery,Operating expense,125.77
+2025-07-27,Expense,EXP-5363,Klaviyo,Advertising,Operating expense,578.2
+2025-07-21,Expense,EXP-5364,Canada Post,Shipping & Delivery,Operating expense,234.46
+2025-07-22,Expense,EXP-5365,Canada Post,Shipping & Delivery,Operating expense,177.44
+2025-07-01,Expense,EXP-5366,Uline,Office & Supplies,Operating expense,318.13
+2025-07-01,Expense,EXP-5367,Purolator,Shipping & Delivery,Operating expense,41.03
+2025-07-16,Expense,EXP-5368,Klaviyo,Advertising,Operating expense,628.22
+2025-07-26,Expense,EXP-5369,Meta Ads,Advertising,Operating expense,1262.3
+2025-07-29,Expense,EXP-5370,Purolator,Shipping & Delivery,Operating expense,344.8
+2025-07-13,Expense,EXP-5371,Klaviyo,Advertising,Operating expense,633.93
+2025-07-01,Expense,EXP-5372,Google Workspace,Software & Subscriptions,Operating expense,23.45
+2025-07-15,Expense,EXP-5373,Uline,Office & Supplies,Operating expense,69.87
+2025-07-15,Expense,EXP-5374,UPS,Shipping & Delivery,Operating expense,225.38
+2025-07-31,Expense,EXP-5375,Google Ads,Advertising,Operating expense,323.01
+2025-07-10,Expense,EXP-5376,Meta Ads,Advertising,Operating expense,369.62
+2025-07-14,Expense,EXP-5377,Google Ads,Advertising,Operating expense,812.39
+2025-07-03,Expense,EXP-5378,Purolator,Postage,Operating expense,234.72
+2025-07-04,Expense,EXP-5379,Purolator,Shipping & Delivery,Operating expense,226.21
+2025-07-14,Expense,EXP-5380,Staples,Office & Supplies,Operating expense,83.01
+2025-07-12,Expense,EXP-5381,Canada Post,Shipping & Delivery,Operating expense,226.13
+2025-07-10,Expense,EXP-5382,Adobe,Software & Subscriptions,Operating expense,208.66
+2025-07-29,Expense,EXP-5383,Meta Ads,Advertising,Operating expense,85.35
+2025-07-08,Expense,EXP-5384,Google Ads,Advertising,Operating expense,145.95
+2025-07-28,Expense,EXP-5385,North Legal,Professional Services,Operating expense,255.37
+2025-07-22,Expense,EXP-5386,Meta Ads,Advertising,Operating expense,831.61
+2025-07-22,Expense,EXP-5387,Staples,Office & Supplies,Operating expense,447.06
+2025-07-14,Expense,EXP-5388,UPS,Shipping & Delivery,Operating expense,109.13
+2025-07-30,Expense,EXP-5389,Meta Ads,Advertising,Operating expense,885.69
+2025-07-19,Expense,EXP-5390,Staples,Office & Supplies,Operating expense,174.72
+2025-07-04,Expense,EXP-5391,North Legal,Professional Services,Operating expense,72.72
+2025-07-03,Expense,EXP-5392,Purolator,Shipping & Delivery,Operating expense,80.06
+2025-07-09,Expense,EXP-5393,Staples,Office & Supplies,Operating expense,73.58
+2025-07-17,Expense,EXP-5394,Canada Post,Shipping & Delivery,Operating expense,110.11
+2025-07-22,Expense,EXP-5395,Shopify,Software & Subscriptions,Operating expense,141.58
+2025-07-22,Expense,EXP-5396,Purolator,Postage,Operating expense,261.87
+2025-07-24,Expense,EXP-5397,North Legal,Professional Services,Operating expense,773.42
+2025-07-20,Expense,EXP-5398,Uline,Office & Supplies,Operating expense,111.92
+2025-07-09,Expense,EXP-5399,Canada Post,Shipping & Delivery,Operating expense,312.69
+2025-07-15,Expense,EXP-5400,Staples,Office & Supplies,Operating expense,232.65
+2025-07-23,Expense,EXP-5401,North Legal,Professional Services,Operating expense,287.1
+2025-07-03,Expense,EXP-5402,Staples,Office & Supplies,Operating expense,129.2
+2025-07-18,Expense,EXP-5403,Meta Ads,Advertising,Operating expense,214.69
+2025-07-05,Expense,EXP-5404,Google Ads,Advertising,Operating expense,186.74
+2025-07-02,Expense,EXP-5405,Klaviyo,Software & Subscriptions,Operating expense,170.24
+2025-07-18,Expense,EXP-5406,UPS,Shipping & Delivery,Operating expense,75.82
+2025-07-19,Expense,EXP-5407,Purolator,Shipping & Delivery,Operating expense,75.3
+2025-07-24,Expense,EXP-5408,Meta,Advertising,Operating expense,808.3
+2025-07-26,Expense,EXP-5409,Canada Post,Shipping & Delivery,Operating expense,229.45
+2025-07-01,Expense,EXP-5410,UPS,Shipping & Delivery,Operating expense,345.58
+2025-07-06,Expense,EXP-5411,Uline,Office & Supplies,Operating expense,276.19
+2025-07-21,Expense,EXP-5412,UPS,Shipping & Delivery,Operating expense,283.91
+2025-07-15,Expense,EXP-5413,Purolator,Shipping & Delivery,Operating expense,234.19
+2025-07-04,Expense,EXP-5414,Google Workspace,Software & Subscriptions,Operating expense,516.23
+2025-07-08,Expense,EXP-5415,North Legal,Professional Services,Operating expense,27.39
+2025-07-16,Expense,EXP-5416,Uline,Office & Supplies,Operating expense,36.54
+2025-07-26,Expense,EXP-5417,UPS,Shipping & Delivery,Operating expense,64.58
+2025-08-04,Expense,EXP-5418,King Street Properties,Rent & Occupancy,Monthly operating expense,7200.0
+2025-08-03,Expense,EXP-5419,Shopify,Software & Subscriptions,Monthly operating expense,650.0
+2025-08-06,Expense,EXP-5420,Toronto Hydro,Utilities,Monthly operating expense,593.97
+2025-08-04,Expense,EXP-5421,Bell,Utilities,Monthly operating expense,310.0
+2025-08-03,Expense,EXP-5422,Intact Insurance,Insurance,Monthly operating expense,480.0
+2025-08-21,Expense,EXP-5423,Klaviyo,Software & Subscriptions,Operating expense,124.11
+2025-08-23,Expense,EXP-5424,Staples,Office & Supplies,Operating expense,197.13
+2025-08-18,Expense,EXP-5425,Klaviyo,Advertising,Operating expense,340.97
+2025-08-02,Expense,EXP-5426,Staples,Office & Supplies,Operating expense,54.58
+2025-08-10,Expense,EXP-5427,Canada Post,Shipping & Delivery,Operating expense,791.23
+2025-08-04,Expense,EXP-5428,Klaviyo,Software & Subscriptions,Operating expense,249.32
+2025-08-08,Expense,EXP-5429,Uline,Office & Supplies,Operating expense,79.96
+2025-08-13,Expense,EXP-5430,Staples,Office & Supplies,Operating expense,152.43
+2025-08-16,Expense,EXP-5431,UPS,Shipping & Delivery,Operating expense,332.45
+2025-08-07,Expense,EXP-5432,Staples,Office & Supplies,Operating expense,308.61
+2025-08-28,Expense,EXP-5433,Canada Post,Shipping & Delivery,Operating expense,132.83
+2025-08-17,Expense,EXP-5434,Klaviyo,Advertising,Operating expense,365.22
+2025-08-29,Expense,EXP-5435,North Legal,Professional Services,Operating expense,541.37
+2025-08-10,Expense,EXP-5436,Google Workspace,Software & Subscriptions,Operating expense,4.71
+2025-08-26,Expense,EXP-5437,Google Workspace,Software & Subscriptions,Operating expense,86.0
+2025-08-02,Expense,EXP-5438,Klaviyo,Advertising,Operating expense,148.77
+2025-08-28,Expense,EXP-5439,Uline,Office & Supplies,Operating expense,123.25
+2025-08-29,Expense,EXP-5440,Canada Post,Shipping & Delivery,Operating expense,157.26
+2025-08-07,Expense,EXP-5441,Staples,Office & Supplies,Operating expense,130.94
+2025-08-28,Expense,EXP-5442,Ledger Lane Accounting,Professional Services,Operating expense,182.18
+2025-08-04,Expense,EXP-5443,Canada Post,Shipping & Delivery,Operating expense,228.73
+2025-08-19,Expense,EXP-5444,Canada Post,Shipping & Delivery,Operating expense,153.57
+2025-08-07,Expense,EXP-5445,Canada Post,Shipping & Delivery,Operating expense,235.12
+2025-08-18,Expense,EXP-5446,Purolator,Shipping & Delivery,Operating expense,134.69
+2025-08-08,Expense,EXP-5447,Ledger Lane Accounting,Professional Services,Operating expense,175.91
+2025-08-09,Expense,EXP-5448,Meta,Advertising,Operating expense,324.42
+2025-08-07,Expense,EXP-5449,Meta Ads,Advertising,Operating expense,1196.47
+2025-08-10,Expense,EXP-5450,Adobe,Software & Subscriptions,Operating expense,47.65
+2025-08-12,Expense,EXP-5451,Meta Ads,Advertising,Operating expense,165.41
+2025-08-01,Expense,EXP-5452,Google Ads,Advertising,Operating expense,312.94
+2025-08-25,Expense,EXP-5453,Canada Post,Shipping & Delivery,Operating expense,317.14
+2025-08-28,Expense,EXP-5454,Meta Ads,Advertising,Operating expense,782.26
+2025-08-07,Expense,EXP-5455,Meta Ads,Advertising,Operating expense,170.34
+2025-08-07,Expense,EXP-5456,North Legal,Professional Services,Operating expense,381.45
+2025-08-21,Expense,EXP-5457,Google Ads,Advertising,Operating expense,121.56
+2025-08-25,Expense,EXP-5458,Purolator,Shipping & Delivery,Operating expense,45.11
+2025-08-10,Expense,EXP-5459,Uline,Office & Supplies,Operating expense,96.63
+2025-08-07,Expense,EXP-5460,Uline,Office & Supplies,Operating expense,60.43
+2025-08-28,Expense,EXP-5461,UPS,Shipping & Delivery,Operating expense,322.26
+2025-08-22,Expense,EXP-5462,Purolator,Shipping & Delivery,Operating expense,222.49
+2025-08-18,Expense,EXP-5463,Shopify,Software & Subscriptions,Operating expense,110.01
+2025-08-02,Expense,EXP-5464,Staples,Office & Supplies,Operating expense,86.4
+2025-08-14,Expense,EXP-5465,Klaviyo,Advertising,Operating expense,686.65
+2025-08-03,Expense,EXP-5466,Uline,Office & Supplies,Operating expense,146.55
+2025-08-03,Expense,EXP-5467,UPS,Shipping & Delivery,Operating expense,43.53
+2025-08-29,Expense,EXP-5468,Google Ads,Advertising,Operating expense,210.5
+2025-08-12,Expense,EXP-5469,Adobe,Software & Subscriptions,Operating expense,153.7
+2025-09-08,Expense,EXP-5470,King Street Properties,Rent & Occupancy,Monthly operating expense,7200.0
+2025-09-04,Expense,EXP-5471,Shopify,Software & Subscriptions,Monthly operating expense,650.0
+2025-09-06,Expense,EXP-5472,Toronto Hydro,Utilities,Monthly operating expense,505.79
+2025-09-08,Expense,EXP-5473,Bell,Utilities,Monthly operating expense,310.0
+2025-09-03,Expense,EXP-5474,Intact Insurance,Insurance,Monthly operating expense,480.0
+2025-09-26,Expense,EXP-5475,UPS,Shipping & Delivery,Operating expense,155.27
+2025-09-10,Expense,EXP-5476,UPS,Shipping & Delivery,Operating expense,263.62
+2025-09-30,Expense,EXP-5477,Purolator,Shipping & Delivery,Operating expense,128.81
+2025-09-05,Expense,EXP-5478,UPS,Shipping & Delivery,Operating expense,576.88
+2025-09-29,Expense,EXP-5479,Klaviyo,Advertising,Operating expense,344.27
+2025-09-28,Expense,EXP-5480,Staples,Office & Supplies,Operating expense,91.53
+2025-09-17,Expense,EXP-5481,Staples,Office & Supplies,Operating expense,219.03
+2025-09-24,Expense,EXP-5482,Meta Ads,Advertising,Operating expense,353.42
+2025-09-13,Expense,EXP-5483,Uline,Office & Supplies,Operating expense,335.09
+2025-09-14,Expense,EXP-5484,Staples,Office & Supplies,Operating expense,180.11
+2025-09-04,Expense,EXP-5485,UPS,Shipping & Delivery,Operating expense,44.17
+2025-09-21,Expense,EXP-5486,Klaviyo,Advertising,Operating expense,262.96
+2025-09-12,Expense,EXP-5487,Adobe,Software & Subscriptions,Operating expense,39.35
+2025-09-25,Expense,EXP-5488,Google Ads,Advertising,Operating expense,780.57
+2025-09-10,Expense,EXP-5489,Uline,Office & Supplies,Operating expense,126.13
+2025-09-23,Expense,EXP-5490,Staples,Office & Supplies,Operating expense,133.38
+2025-09-19,Expense,EXP-5491,Klaviyo,Advertising,Operating expense,274.52
+2025-09-05,Expense,EXP-5492,UPS,Shipping & Delivery,Operating expense,54.58
+2025-09-04,Expense,EXP-5493,Google Workspace,Software & Subscriptions,Operating expense,365.44
+2025-09-10,Expense,EXP-5494,Canada Post,Shipping & Delivery,Operating expense,210.01
+2025-09-16,Expense,EXP-5495,Shopify,Software & Subscriptions,Operating expense,276.0
+2025-09-21,Expense,EXP-5496,UPS,Freight & Delivery,Operating expense,387.82
+2025-09-28,Expense,EXP-5497,Google Ads,Advertising,Operating expense,233.61
+2025-09-02,Expense,EXP-5498,Purolator,Shipping & Delivery,Operating expense,309.77
+2025-09-09,Expense,EXP-5499,North Legal,Professional Services,Operating expense,498.87
+2025-09-22,Expense,EXP-5500,Purolator,Shipping & Delivery,Operating expense,287.82
+2025-09-28,Expense,EXP-5501,UPS,Shipping & Delivery,Operating expense,73.85
+2025-09-15,Expense,EXP-5502,Meta Ads,Advertising,Operating expense,352.96
+2025-09-07,Expense,EXP-5503,Klaviyo,Advertising,Operating expense,342.74
+2025-09-06,Expense,EXP-5504,Staples,Office & Supplies,Operating expense,348.95
+2025-09-10,Expense,EXP-5505,Uline,Office & Supplies,Operating expense,152.99
+2025-09-30,Expense,EXP-5506,UPS,Shipping & Delivery,Operating expense,250.3
+2025-09-08,Expense,EXP-5507,Meta Ads,Advertising,Operating expense,1067.01
+2025-09-25,Expense,EXP-5508,Shopify,Software & Subscriptions,Operating expense,183.3
+2025-09-21,Expense,EXP-5509,Klaviyo,Software & Subscriptions,Operating expense,110.7
+2025-09-15,Expense,EXP-5510,Adobe,Software & Subscriptions,Operating expense,91.21
+2025-09-13,Expense,EXP-5511,Uline,Office & Supplies,Operating expense,102.87
+2025-09-22,Expense,EXP-5512,Klaviyo,Advertising,Operating expense,502.76
+2025-09-20,Expense,EXP-5513,Canada Post,Shipping & Delivery,Operating expense,88.53
+2025-09-16,Expense,EXP-5514,Meta Ads,Advertising,Operating expense,761.35
+2025-09-06,Expense,EXP-5515,Purolator,Shipping & Delivery,Operating expense,179.31
+2025-09-08,Expense,EXP-5516,Google Workspace,Software & Subscriptions,Operating expense,305.38
+2025-09-29,Expense,EXP-5517,UPS,Shipping & Delivery,Operating expense,290.82
+2025-09-03,Expense,EXP-5518,Meta Ads,Advertising,Operating expense,616.1
+2025-09-07,Expense,EXP-5519,UPS,Shipping & Delivery,Operating expense,158.54
+2025-09-17,Expense,EXP-5520,North Legal,Professional Services,Operating expense,554.68
+2025-09-26,Expense,EXP-5521,Staples,Office & Supplies,Operating expense,70.61
+2025-09-22,Expense,EXP-5522,Google Workspace,Software & Subscriptions,Operating expense,153.63
+2025-10-05,Expense,EXP-5523,King Street Properties,Rent & Occupancy,Monthly operating expense,7200.0
+2025-10-02,Expense,EXP-5524,Shopify,Software & Subscriptions,Monthly operating expense,650.0
+2025-10-02,Expense,EXP-5525,Toronto Hydro,Utilities,Monthly operating expense,520.23
+2025-10-01,Expense,EXP-5526,Bell,Utilities,Monthly operating expense,310.0
+2025-10-03,Expense,EXP-5527,Intact Insurance,Insurance,Monthly operating expense,480.0
+2025-10-01,Expense,EXP-5528,Canada Post,Shipping & Delivery,Operating expense,465.91
+2025-10-18,Expense,EXP-5529,Purolator,Shipping & Delivery,Operating expense,149.05
+2025-10-18,Expense,EXP-5530,UPS,Shipping & Delivery,Operating expense,88.18
+2025-10-14,Expense,EXP-5531,Klaviyo,Advertising,Operating expense,407.58
+2025-10-27,Expense,EXP-5532,Adobe,Software & Subscriptions,Operating expense,190.4
+2025-10-28,Expense,EXP-5533,Google Ads,Advertising,Operating expense,74.02
+2025-10-06,Expense,EXP-5534,Meta Ads,Advertising,Operating expense,639.48
+2025-10-11,Expense,EXP-5535,Klaviyo,Advertising,Operating expense,135.33
+2025-10-05,Expense,EXP-5536,Purolator,Shipping & Delivery,Operating expense,237.03
+2025-10-10,Expense,EXP-5537,Google Ads,Advertising,Operating expense,232.86
+2025-10-12,Expense,EXP-5538,UPS,Shipping & Delivery,Operating expense,143.54
+2025-10-19,Expense,EXP-5539,Shopify,Software & Subscriptions,Operating expense,60.11
+2025-10-29,Expense,EXP-5540,Ledger Lane Accounting,Professional Services,Operating expense,48.3
+2025-10-03,Expense,EXP-5541,Uline,Office & Supplies,Operating expense,79.99
+2025-10-19,Expense,EXP-5542,Klaviyo,Advertising,Operating expense,1316.32
+2025-10-22,Expense,EXP-5543,Purolator,Shipping & Delivery,Operating expense,459.06
+2025-10-15,Expense,EXP-5544,Uline,Office & Supplies,Operating expense,405.1
+2025-10-04,Expense,EXP-5545,Google Ads,Advertising,Operating expense,16.25
+2025-10-30,Expense,EXP-5546,Klaviyo,Software & Subscriptions,Operating expense,143.11
+2025-10-21,Expense,EXP-5547,UPS,Shipping & Delivery,Operating expense,74.59
+2025-10-21,Expense,EXP-5548,Staples,Office & Supplies,Operating expense,32.89
+2025-10-07,Expense,EXP-5549,Canada Post,Shipping & Delivery,Operating expense,85.9
+2025-10-19,Expense,EXP-5550,UPS,Shipping & Delivery,Operating expense,174.22
+2025-10-29,Expense,EXP-5551,Canada Post,Shipping & Delivery,Operating expense,173.38
+2025-10-04,Expense,EXP-5552,Purolator,Shipping & Delivery,Operating expense,43.75
+2025-10-28,Expense,EXP-5553,Staples,Office & Supplies,Operating expense,131.05
+2025-10-13,Expense,EXP-5554,Klaviyo,Advertising,Operating expense,199.22
+2025-10-27,Expense,EXP-5555,Klaviyo,Software & Subscriptions,Operating expense,37.24
+2025-10-11,Expense,EXP-5556,Klaviyo,Software & Subscriptions,Operating expense,142.49
+2025-10-01,Expense,EXP-5557,Shopify,Software & Subscriptions,Operating expense,103.55
+2025-10-01,Expense,EXP-5558,Uline,Office & Supplies,Operating expense,238.85
+2025-10-14,Expense,EXP-5559,Meta,Advertising,Operating expense,476.11
+2025-10-08,Expense,EXP-5560,Canada Post,Shipping & Delivery,Operating expense,223.03
+2025-10-20,Expense,EXP-5561,Google Ads,Advertising,Operating expense,577.55
+2025-10-21,Expense,EXP-5562,Klaviyo,Advertising,Operating expense,383.34
+2025-10-24,Expense,EXP-5563,Klaviyo,Advertising,Operating expense,230.2
+2025-10-09,Expense,EXP-5564,Staples,Office & Supplies,Operating expense,53.85
+2025-10-01,Expense,EXP-5565,Google Ads,Advertising,Operating expense,73.72
+2025-10-07,Expense,EXP-5566,Canada Post,Shipping & Delivery,Operating expense,298.84
+2025-10-30,Expense,EXP-5567,Klaviyo,Advertising,Operating expense,305.9
+2025-10-05,Expense,EXP-5568,UPS,Shipping & Delivery,Operating expense,61.92
+2025-10-15,Expense,EXP-5569,Staples,Office & Supplies,Operating expense,181.34
+2025-10-11,Expense,EXP-5570,Shopify,Software & Subscriptions,Operating expense,91.02
+2025-10-15,Expense,EXP-5571,Uline,Office & Supplies,Operating expense,82.49
+2025-10-04,Expense,EXP-5572,Klaviyo,Advertising,Operating expense,181.07
+2025-10-04,Expense,EXP-5573,Uline,Office & Supplies,Operating expense,562.03
+2025-10-16,Expense,EXP-5574,Klaviyo,Advertising,Operating expense,441.97
+2025-11-02,Expense,EXP-5575,King Street Properties,Rent & Occupancy,Monthly operating expense,7200.0
+2025-11-06,Expense,EXP-5576,Shopify,Software & Subscriptions,Monthly operating expense,650.0
+2025-11-04,Expense,EXP-5577,Toronto Hydro,Utilities,Monthly operating expense,478.46
+2025-11-03,Expense,EXP-5578,Bell,Utilities,Monthly operating expense,310.0
+2025-11-07,Expense,EXP-5579,Intact Insurance,Insurance,Monthly operating expense,480.0
+2025-11-08,Expense,EXP-5580,Canada Post,Shipping & Delivery,Operating expense,178.0
+2025-11-17,Expense,EXP-5581,Purolator,Shipping & Delivery,Operating expense,428.45
+2025-11-21,Expense,EXP-5582,Klaviyo,Advertising,Operating expense,365.41
+2025-11-09,Expense,EXP-5583,Google Ads,Advertising,Operating expense,1161.3
+2025-11-26,Expense,EXP-5584,Purolator,Shipping & Delivery,Operating expense,228.21
+2025-11-10,Expense,EXP-5585,Meta Ads,Advertising,Operating expense,1011.95
+2025-11-12,Expense,EXP-5586,North Legal,Professional Services,Operating expense,498.39
+2025-11-13,Expense,EXP-5587,UPS,Shipping & Delivery,Operating expense,265.63
+2025-11-20,Expense,EXP-5588,Ledger Lane Accounting,Professional Services,Operating expense,426.68
+2025-11-24,Expense,EXP-5589,Shopify,Software & Subscriptions,Operating expense,9.3
+2025-11-23,Expense,EXP-5590,Facebook Ads,Advertising,Operating expense,265.94
+2025-11-09,Expense,EXP-5591,Ledger Lane Accounting,Professional Services,Operating expense,443.68
+2025-11-11,Expense,EXP-5592,Klaviyo,Advertising,Operating expense,990.22
+2025-11-05,Expense,EXP-5593,UPS,Shipping & Delivery,Operating expense,1779.14
+2025-11-28,Expense,EXP-5594,Meta Ads,Advertising,Operating expense,965.08
+2025-11-09,Expense,EXP-5595,Canada Post,Shipping & Delivery,Operating expense,577.84
+2025-11-03,Expense,EXP-5596,Uline,Office & Supplies,Operating expense,265.08
+2025-11-20,Expense,EXP-5597,Meta Ads,Advertising,Operating expense,552.48
+2025-11-29,Expense,EXP-5598,Uline,Office & Supplies,Operating expense,47.76
+2025-11-17,Expense,EXP-5599,Staples,Office & Supplies,Operating expense,87.22
+2025-11-02,Expense,EXP-5600,Uline,Office & Supplies,Operating expense,48.36
+2025-11-25,Expense,EXP-5601,Staples,Office & Supplies,Operating expense,147.52
+2025-11-28,Expense,EXP-5602,Klaviyo,Advertising,Operating expense,624.14
+2025-11-02,Expense,EXP-5603,Shopify,Software & Subscriptions,Operating expense,137.61
+2025-11-20,Expense,EXP-5604,UPS,Shipping & Delivery,Operating expense,230.84
+2025-11-08,Expense,EXP-5605,Uline,Office & Supplies,Operating expense,239.63
+2025-11-08,Expense,EXP-5606,Purolator,Shipping & Delivery,Operating expense,131.18
+2025-11-06,Expense,EXP-5607,Uline,Office & Supplies,Operating expense,112.71
+2025-11-20,Expense,EXP-5608,Ledger Lane Accounting,Professional Services,Operating expense,489.59
+2025-11-04,Expense,EXP-5609,Google Ads,Advertising,Operating expense,448.46
+2025-11-18,Expense,EXP-5610,Google Ads,Advertising,Operating expense,1064.93
+2025-11-12,Expense,EXP-5611,Ledger Lane Accounting,Professional Services,Operating expense,172.92
+2025-11-20,Expense,EXP-5612,Purolator,Shipping & Delivery,Operating expense,531.98
+2025-11-07,Expense,EXP-5613,Google Ads,Advertising,Operating expense,487.52
+2025-11-20,Expense,EXP-5614,Canada Post,Shipping & Delivery,Operating expense,254.54
+2025-11-08,Expense,EXP-5615,Canada Post,Shipping & Delivery,Operating expense,144.58
+2025-11-28,Expense,EXP-5616,Meta Ads,Advertising,Operating expense,1444.12
+2025-11-03,Expense,EXP-5617,Klaviyo,Software & Subscriptions,Operating expense,106.42
+2025-11-21,Expense,EXP-5618,Staples,Office & Supplies,Operating expense,634.42
+2025-11-26,Expense,EXP-5619,Meta Ads,Advertising,Operating expense,328.58
+2025-11-23,Expense,EXP-5620,UPS,Shipping & Delivery,Operating expense,178.05
+2025-11-10,Expense,EXP-5621,Purolator,Shipping & Delivery,Operating expense,211.14
+2025-11-20,Expense,EXP-5622,Klaviyo,Advertising,Operating expense,1173.36
+2025-11-20,Expense,EXP-5623,Shopify,Software & Subscriptions,Operating expense,166.91
+2025-11-01,Expense,EXP-5624,Canada Post,Shipping & Delivery,Operating expense,268.92
+2025-11-23,Expense,EXP-5625,Shopify,Software & Subscriptions,Operating expense,149.97
+2025-11-13,Expense,EXP-5626,Ledger Lane Accounting,Professional Services,Operating expense,76.69
+2025-11-08,Expense,EXP-5627,Klaviyo,Advertising,Operating expense,159.77
+2025-11-24,Expense,EXP-5628,Google Ads,Advertising,Operating expense,169.97
+2025-11-13,Expense,EXP-5629,North Legal,Professional Services,Operating expense,67.34
+2025-11-26,Expense,EXP-5630,Meta Ads,Advertising,Operating expense,634.48
+2025-11-24,Expense,EXP-5631,Ledger Lane Accounting,Professional Services,Operating expense,254.42
+2025-11-13,Expense,EXP-5632,Google Ads,Advertising,Operating expense,538.99
+2025-11-15,Expense,EXP-5633,Staples,Office & Supplies,Operating expense,275.39
+2025-11-15,Expense,EXP-5634,Staples,Office & Supplies,Operating expense,163.87
+2025-11-06,Expense,EXP-5635,Google Ads,Advertising,Operating expense,477.9
+2025-11-10,Expense,EXP-5636,Meta Ads,Advertising,Operating expense,617.95
+2025-11-13,Expense,EXP-5637,Google Ads,Advertising,Operating expense,865.98
+2025-11-14,Expense,EXP-5638,Klaviyo,Advertising,Operating expense,700.71
+2025-11-16,Expense,EXP-5639,Google Workspace,Software & Subscriptions,Operating expense,113.76
+2025-11-15,Expense,EXP-5640,Meta Ads,Advertising,Operating expense,455.07
+2025-11-25,Expense,EXP-5641,UPS,Shipping & Delivery,Operating expense,334.39
+2025-11-23,Expense,EXP-5642,Facebook Ads,Advertising,Operating expense,627.25
+2025-11-24,Expense,EXP-5643,Purolator,Shipping & Delivery,Operating expense,374.11
+2025-11-19,Expense,EXP-5644,Google Ads,Advertising,Operating expense,1091.64
+2025-12-07,Expense,EXP-5645,King Street Properties,Rent & Occupancy,Monthly operating expense,7200.0
+2025-12-02,Expense,EXP-5646,Shopify,Software & Subscriptions,Monthly operating expense,650.0
+2025-12-06,Expense,EXP-5647,Toronto Hydro,Utilities,Monthly operating expense,512.86
+2025-12-02,Expense,EXP-5648,Bell,Utilities,Monthly operating expense,310.0
+2025-12-08,Expense,EXP-5649,Intact Insurance,Insurance,Monthly operating expense,480.0
+2025-12-07,Expense,EXP-5650,Adobe,Software & Subscriptions,Operating expense,171.66
+2025-12-13,Expense,EXP-5651,Canada Post,Shipping & Delivery,Operating expense,604.18
+2025-12-06,Expense,EXP-5652,Staples,Office & Supplies,Operating expense,56.88
+2025-12-25,Expense,EXP-5653,Google Ads,Advertising,Operating expense,1142.21
+2025-12-27,Expense,EXP-5654,Staples,Office & Supplies,Operating expense,119.78
+2025-12-12,Expense,EXP-5655,Meta Ads,Advertising,Operating expense,906.3
+2025-12-17,Expense,EXP-5656,Google Ads,Advertising,Operating expense,100.22
+2025-12-17,Expense,EXP-5657,Google Workspace,Software & Subscriptions,Operating expense,160.98
+2025-12-26,Expense,EXP-5658,Purolator,Shipping & Delivery,Operating expense,257.14
+2025-12-12,Expense,EXP-5659,Google Ads,Advertising,Operating expense,344.04
+2025-12-15,Expense,EXP-5660,Google Workspace,Software & Subscriptions,Operating expense,107.3
+2025-12-30,Expense,EXP-5661,Canada Post,Shipping & Delivery,Operating expense,394.48
+2025-12-18,Expense,EXP-5662,Adobe,Software & Subscriptions,Operating expense,79.7
+2025-12-08,Expense,EXP-5663,Google Ads,Advertising,Operating expense,537.79
+2025-12-18,Expense,EXP-5664,Uline,Office & Supplies,Operating expense,687.4
+2025-12-01,Expense,EXP-5665,UPS,Shipping & Delivery,Operating expense,506.63
+2025-12-15,Expense,EXP-5666,Uline,Office & Supplies,Operating expense,91.92
+2025-12-18,Expense,EXP-5667,Purolator,Shipping & Delivery,Operating expense,645.27
+2025-12-04,Expense,EXP-5668,Klaviyo,Advertising,Operating expense,327.67
+2025-12-29,Expense,EXP-5669,Staples,Office & Supplies,Operating expense,585.75
+2025-12-16,Expense,EXP-5670,Staples,Office & Supplies,Operating expense,290.5
+2025-12-29,Expense,EXP-5671,Purolator,Shipping & Delivery,Operating expense,209.17
+2025-12-11,Expense,EXP-5672,UPS,Shipping & Delivery,Operating expense,94.32
+2025-12-21,Expense,EXP-5673,Klaviyo,Software & Subscriptions,Operating expense,203.24
+2025-12-31,Expense,EXP-5674,Purolator,Shipping & Delivery,Operating expense,862.92
+2025-12-31,Expense,EXP-5675,Ledger Lane Accounting,Professional Services,Operating expense,538.56
+2025-12-21,Expense,EXP-5676,Adobe,Software & Subscriptions,Operating expense,9.61
+2025-12-26,Expense,EXP-5677,Uline,Office & Supplies,Operating expense,48.15
+2025-12-16,Expense,EXP-5678,Uline,Office & Supplies,Operating expense,106.41
+2025-12-11,Expense,EXP-5679,Canada Post,Shipping & Delivery,Operating expense,279.59
+2025-12-18,Expense,EXP-5680,North Legal,Professional Services,Operating expense,525.57
+2025-12-21,Expense,EXP-5681,Purolator,Shipping & Delivery,Operating expense,542.5
+2025-12-21,Expense,EXP-5682,Uline,Office & Supplies,Operating expense,90.13
+2025-12-31,Expense,EXP-5683,Staples,Office & Supplies,Operating expense,68.91
+2025-12-19,Expense,EXP-5684,Staples,Office & Supplies,Operating expense,161.39
+2025-12-06,Expense,EXP-5685,UPS,Shipping & Delivery,Operating expense,315.62
+2025-12-08,Expense,EXP-5686,Canada Post,Shipping & Delivery,Operating expense,12.16
+2025-12-24,Expense,EXP-5687,North Legal,Professional Services,Operating expense,268.55
+2025-12-22,Expense,EXP-5688,North Legal,Professional Services,Operating expense,209.83
+2025-12-31,Expense,EXP-5689,Canada Post,Shipping & Delivery,Operating expense,757.94
+2025-12-19,Expense,EXP-5690,Canada Post,Shipping & Delivery,Operating expense,757.91
+2025-12-27,Expense,EXP-5691,Ledger Lane Accounting,Professional Services,Operating expense,393.73
+2025-12-30,Expense,EXP-5692,Uline,Office & Supplies,Operating expense,115.97
+2025-12-11,Expense,EXP-5693,Canada Post,Shipping & Delivery,Operating expense,137.07
+2025-12-01,Expense,EXP-5694,UPS,Shipping & Delivery,Operating expense,140.6
+2025-12-09,Expense,EXP-5695,Uline,Office & Supplies,Operating expense,153.96
+2025-12-04,Expense,EXP-5696,Google Ads,Advertising,Operating expense,1037.44
+2025-12-02,Expense,EXP-5697,Klaviyo,Advertising,Operating expense,797.82
+2025-12-03,Expense,EXP-5698,Google Ads,Advertising,Operating expense,703.46
+2025-12-29,Expense,EXP-5699,Staples,Office & Supplies,Operating expense,211.95
+2025-12-04,Expense,EXP-5700,Google Workspace,Software & Subscriptions,Operating expense,8.59
+2025-12-23,Expense,EXP-5701,Klaviyo,Advertising,Operating expense,155.16
+2025-12-11,Expense,EXP-5702,Staples,Office & Supplies,Operating expense,180.18
+2025-12-09,Expense,EXP-5703,Uline,Office & Supplies,Operating expense,169.25
+2025-12-23,Expense,EXP-5704,Canada Post,Shipping & Delivery,Operating expense,145.3
+2025-12-27,Expense,EXP-5705,Meta Ads,Advertising,Operating expense,347.27
+2025-12-23,Expense,EXP-5706,Google Ads,Advertising,Operating expense,823.31
+2025-12-13,Expense,EXP-5707,UPS,Shipping & Delivery,Operating expense,162.59
+2025-12-04,Expense,EXP-5708,Google Workspace,Software & Subscriptions,Operating expense,60.86
+2025-12-08,Expense,EXP-5709,North Legal,Professional Services,Operating expense,528.88
+2025-12-23,Expense,EXP-5710,Klaviyo,Advertising,Operating expense,80.42

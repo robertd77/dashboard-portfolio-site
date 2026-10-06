@@ -1,0 +1,82 @@
+sku_clean,product_name,category,variant,current_retail_price,unit_cost,inventory_quantity,product_status,inventory_value_at_cost
+NW-1001,Everyday Tee,Tops,Black / S,38,14,13,active,182
+NW-1002,Everyday Tee,Tops,Black / M,38,14,59,active,826
+NW-1003,Everyday Tee,Tops,White / M,38,14,51,active,714
+NW-1004,Everyday Tee,Tops,Forest / L,38,14,37,active,518
+NW-1005,Heavyweight Tee,Tops,Black / S,48,18,37,active,666
+NW-1006,Heavyweight Tee,Tops,Black / M,48,18,65,active,1170
+NW-1007,Heavyweight Tee,Tops,Natural / L,48,18,13,active,234
+NW-1008,Heavyweight Tee,Tops,Natural / XL,48,18,54,active,972
+NW-1009,Trail Shirt,Tops,Olive / M,72,27,21,active,567
+NW-1010,Trail Shirt,Tops,Olive / L,72,27,14,active,378
+NW-1011,Trail Shirt,Tops,Navy / M,72,27,43,active,1161
+NW-1012,Trail Shirt,Tops,Navy / XL,72,27,73,active,1971
+NW-1013,Flannel Overshirt,Tops,Red Plaid / M,98,39,57,active,2223
+NW-1014,Flannel Overshirt,Tops,Red Plaid / L,98,39,58,active,2262
+NW-1015,Flannel Overshirt,Tops,Green Plaid / M,98,39,56,active,2184
+NW-1016,Flannel Overshirt,Tops,Green Plaid / XL,98,39,60,active,2340
+NW-1017,Crewneck Sweatshirt,Sweaters & Hoodies,Grey / S,88,34,42,active,1428
+NW-1018,Crewneck Sweatshirt,Sweaters & Hoodies,Grey / M,88,34,16,active,544
+NW-1019,Crewneck Sweatshirt,Sweaters & Hoodies,Navy / L,88,34,64,active,2176
+NW-1020,Crewneck Sweatshirt,Sweaters & Hoodies,Navy / XL,88,34,38,active,1292
+NW-1021,Classic Hoodie,Sweaters & Hoodies,Black / M,108,42,41,active,1722
+NW-1022,Classic Hoodie,Sweaters & Hoodies,Black / L,108,42,32,active,1344
+NW-1023,Classic Hoodie,Sweaters & Hoodies,Forest / M,108,42,20,active,840
+NW-1024,Classic Hoodie,Sweaters & Hoodies,Forest / XL,108,42,70,active,2940
+NW-1025,Zip Hoodie,Sweaters & Hoodies,Charcoal / M,118,46,60,active,2760
+NW-1026,Zip Hoodie,Sweaters & Hoodies,Charcoal / L,118,46,51,active,2346
+NW-1027,Zip Hoodie,Sweaters & Hoodies,Navy / M,118,46,34,active,1564
+NW-1028,Zip Hoodie,Sweaters & Hoodies,Navy / XL,118,46,63,active,2898
+NW-1029,Fleece Pullover,Sweaters & Hoodies,Cream / M,128,51,44,active,2244
+NW-1030,Fleece Pullover,Sweaters & Hoodies,Cream / L,128,51,37,active,1887
+NW-1031,Fleece Pullover,Sweaters & Hoodies,Forest / M,128,51,38,active,1938
+NW-1032,Fleece Pullover,Sweaters & Hoodies,Forest / XL,128,51,23,active,1173
+NW-1033,Canvas Pant,Pants & Shorts,Khaki / 30,112,44,14,active,616
+NW-1034,Canvas Pant,Pants & Shorts,Khaki / 32,112,44,45,active,1980
+NW-1035,Canvas Pant,Pants & Shorts,Black / 34,112,44,67,active,2948
+NW-1036,Canvas Pant,Pants & Shorts,Black / 36,112,44,12,active,528
+NW-1037,Utility Pant,Pants & Shorts,Olive / 30,128,52,65,active,3380
+NW-1038,Utility Pant,Pants & Shorts,Olive / 32,128,52,63,active,3276
+NW-1039,Utility Pant,Pants & Shorts,Charcoal / 34,128,52,26,active,1352
+NW-1040,Utility Pant,Pants & Shorts,Charcoal / 36,128,52,50,active,2600
+NW-1041,Everyday Short,Pants & Shorts,Khaki / 30,78,29,19,active,551
+NW-1042,Everyday Short,Pants & Shorts,Khaki / 32,78,29,58,active,1682
+NW-1043,Everyday Short,Pants & Shorts,Navy / 34,78,29,54,active,1566
+NW-1044,Everyday Short,Pants & Shorts,Navy / 36,78,29,31,active,899
+NW-1045,Trail Short,Pants & Shorts,Olive / 30,88,34,12,active,408
+NW-1046,Trail Short,Pants & Shorts,Olive / 32,88,34,73,active,2482
+NW-1047,Trail Short,Pants & Shorts,Black / 34,88,34,37,active,1258
+NW-1048,Trail Short,Pants & Shorts,Black / 36,88,34,67,active,2278
+NW-1049,Rain Shell,Outerwear,Black / S,198,83,53,active,4399
+NW-1050,Rain Shell,Outerwear,Black / M,198,83,60,active,4980
+NW-1051,Rain Shell,Outerwear,Moss / L,198,83,58,active,4814
+NW-1052,Rain Shell,Outerwear,Moss / XL,198,83,21,active,1743
+NW-1053,Insulated Jacket,Outerwear,Black / M,248,109,32,active,3488
+NW-1054,Insulated Jacket,Outerwear,Black / L,248,109,39,active,4251
+NW-1055,Insulated Jacket,Outerwear,Rust / M,248,109,41,active,4469
+NW-1056,Insulated Jacket,Outerwear,Rust / XL,248,109,10,active,1090
+NW-1057,Field Jacket,Outerwear,Olive / M,218,91,44,active,4004
+NW-1058,Field Jacket,Outerwear,Olive / L,218,91,18,active,1638
+NW-1059,Field Jacket,Outerwear,Navy / M,218,91,57,active,5187
+NW-1060,Field Jacket,Outerwear,Navy / XL,218,91,53,active,4823
+NW-1061,Quilted Vest,Outerwear,Black / M,158,64,69,active,4416
+NW-1062,Quilted Vest,Outerwear,Black / L,158,64,57,active,3648
+NW-1063,Quilted Vest,Outerwear,Olive / M,158,64,32,active,2048
+NW-1064,Quilted Vest,Outerwear,Olive / XL,158,64,72,active,4608
+NW-1065,Merino Beanie,Accessories,Black / OS,42,13,35,active,455
+NW-1066,Merino Beanie,Accessories,Grey / OS,42,13,29,active,377
+NW-1067,Merino Beanie,Accessories,Rust / OS,42,13,68,active,884
+NW-1068,Canvas Cap,Accessories,Navy / OS,38,11,32,active,352
+NW-1069,Canvas Cap,Accessories,Olive / OS,38,11,13,active,143
+NW-1070,Canvas Cap,Accessories,Natural / OS,38,11,39,active,429
+NW-1071,Wool Scarf,Accessories,Grey / OS,58,19,61,active,1159
+NW-1072,Wool Scarf,Accessories,Forest / OS,58,19,20,active,380
+NW-1073,Leather Belt,Accessories,Brown / S,68,24,39,active,936
+NW-1074,Leather Belt,Accessories,Brown / M,68,24,16,active,384
+NW-1075,Leather Belt,Accessories,Black / L,68,24,53,active,1272
+NW-1076,Canvas Tote,Accessories,Natural / OS,32,9,39,active,351
+NW-1077,Canvas Tote,Accessories,Black / OS,32,9,30,active,270
+NW-1078,Wool Socks,Accessories,Grey / M,28,8,23,active,184
+NW-1079,Wool Socks,Accessories,Grey / L,28,8,45,active,360
+NW-1080,Wool Socks,Accessories,Navy / M,28,8,52,active,416
+NW-1081,Wool Socks,Accessories,Navy / L,28,8,71,active,568

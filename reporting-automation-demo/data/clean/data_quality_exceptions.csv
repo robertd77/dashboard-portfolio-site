@@ -1,0 +1,7 @@
+source,order_id,sku_raw,lineitem_name,sku_match_status,action
+orders.csv,#NW11443,,Classic Hoodie,Missing SKU,Review product match; retained with product attributes blank
+orders.csv,#NW13947,,Classic Hoodie,Missing SKU,Review product match; retained with product attributes blank
+orders.csv,#NW14102,,Wool Socks,Missing SKU,Review product match; retained with product attributes blank
+orders.csv,#NW14445,,Fleece Pullover,Missing SKU,Review product match; retained with product attributes blank
+orders.csv,#NW16034,,Rain Shell,Missing SKU,Review product match; retained with product attributes blank
+orders.csv,#NW16097,,Wool Socks,Missing SKU,Review product match; retained with product attributes blank

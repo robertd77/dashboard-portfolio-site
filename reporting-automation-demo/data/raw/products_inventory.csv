@@ -1,0 +1,82 @@
+Handle,Title,Vendor,Product Category,Variant Title,Variant SKU,Variant Price,Cost per Item,Inventory Quantity,Status
+everyday-tee,Everyday Tee,Northwood Supply Co.,Tops,Black / S,NW-1001,38,14,13,active
+everyday-tee,Everyday Tee,Northwood Supply Co.,Tops,Black / M,NW-1002,38,14,59,active
+everyday-tee,Everyday Tee,Northwood Supply Co.,Tops,White / M,NW-1003,38,14,51,active
+everyday-tee,Everyday Tee,Northwood Supply Co.,Tops,Forest / L,NW-1004,38,14,37,active
+heavyweight-tee,Heavyweight Tee,Northwood Supply Co.,Tops,Black / S,NW-1005,48,18,37,active
+heavyweight-tee,Heavyweight Tee,Northwood Supply Co.,Tops,Black / M,NW-1006,48,18,65,active
+heavyweight-tee,Heavyweight Tee,Northwood Supply Co.,Tops,Natural / L,NW-1007,48,18,13,active
+heavyweight-tee,Heavyweight Tee,Northwood Supply Co.,Tops,Natural / XL,NW-1008,48,18,54,active
+trail-shirt,Trail Shirt,Northwood Supply Co.,Tops,Olive / M,NW-1009,72,27,21,active
+trail-shirt,Trail Shirt,Northwood Supply Co.,Tops,Olive / L,NW-1010,72,27,14,active
+trail-shirt,Trail Shirt,Northwood Supply Co.,Tops,Navy / M,NW-1011,72,27,43,active
+trail-shirt,Trail Shirt,Northwood Supply Co.,Tops,Navy / XL,NW-1012,72,27,73,active
+flannel-overshirt,Flannel Overshirt,Northwood Supply Co.,Tops,Red Plaid / M,NW-1013,98,39,57,active
+flannel-overshirt,Flannel Overshirt,Northwood Supply Co.,Tops,Red Plaid / L,NW-1014,98,39,58,active
+flannel-overshirt,Flannel Overshirt,Northwood Supply Co.,Tops,Green Plaid / M,NW-1015,98,39,56,active
+flannel-overshirt,Flannel Overshirt,Northwood Supply Co.,Tops,Green Plaid / XL,NW-1016,98,39,60,active
+crewneck-sweatshirt,Crewneck Sweatshirt,Northwood Supply Co.,Sweaters & Hoodies,Grey / S,NW-1017,88,34,42,active
+crewneck-sweatshirt,Crewneck Sweatshirt,Northwood Supply Co.,Sweaters & Hoodies,Grey / M,NW-1018,88,34,16,active
+crewneck-sweatshirt,Crewneck Sweatshirt,Northwood Supply Co.,Sweaters & Hoodies,Navy / L,NW-1019,88,34,64,active
+crewneck-sweatshirt,Crewneck Sweatshirt,Northwood Supply Co.,Sweaters & Hoodies,Navy / XL,NW-1020,88,34,38,active
+classic-hoodie,Classic Hoodie,Northwood Supply Co.,Sweaters & Hoodies,Black / M,NW-1021,108,42,41,active
+classic-hoodie,Classic Hoodie,Northwood Supply Co.,Sweaters & Hoodies,Black / L,NW-1022,108,42,32,active
+classic-hoodie,Classic Hoodie,Northwood Supply Co.,Sweaters & Hoodies,Forest / M,NW-1023,108,42,20,active
+classic-hoodie,Classic Hoodie,Northwood Supply Co.,Sweaters & Hoodies,Forest / XL,NW-1024,108,42,70,active
+zip-hoodie,Zip Hoodie,Northwood Supply Co.,Sweaters & Hoodies,Charcoal / M,NW-1025,118,46,60,active
+zip-hoodie,Zip Hoodie,Northwood Supply Co.,Sweaters & Hoodies,Charcoal / L,NW-1026,118,46,51,active
+zip-hoodie,Zip Hoodie,Northwood Supply Co.,Sweaters & Hoodies,Navy / M,NW-1027,118,46,34,active
+zip-hoodie,Zip Hoodie,Northwood Supply Co.,Sweaters & Hoodies,Navy / XL,NW-1028,118,46,63,active
+fleece-pullover,Fleece Pullover,Northwood Supply Co.,Sweaters & Hoodies,Cream / M,NW-1029,128,51,44,active
+fleece-pullover,Fleece Pullover,Northwood Supply Co.,Sweaters & Hoodies,Cream / L,NW-1030,128,51,37,active
+fleece-pullover,Fleece Pullover,Northwood Supply Co.,Sweaters & Hoodies,Forest / M,NW-1031,128,51,38,active
+fleece-pullover,Fleece Pullover,Northwood Supply Co.,Sweaters & Hoodies,Forest / XL,NW-1032,128,51,23,active
+canvas-pant,Canvas Pant,Northwood Supply Co.,Pants & Shorts,Khaki / 30,NW-1033,112,44,14,active
+canvas-pant,Canvas Pant,Northwood Supply Co.,Pants & Shorts,Khaki / 32,NW-1034,112,44,45,active
+canvas-pant,Canvas Pant,Northwood Supply Co.,Pants & Shorts,Black / 34,NW-1035,112,44,67,active
+canvas-pant,Canvas Pant,Northwood Supply Co.,Pants & Shorts,Black / 36,NW-1036,112,44,12,active
+utility-pant,Utility Pant,Northwood Supply Co.,Pants & Shorts,Olive / 30,NW-1037,128,52,65,active
+utility-pant,Utility Pant,Northwood Supply Co.,Pants & Shorts,Olive / 32,NW-1038,128,52,63,active
+utility-pant,Utility Pant,Northwood Supply Co.,Pants & Shorts,Charcoal / 34,NW-1039,128,52,26,active
+utility-pant,Utility Pant,Northwood Supply Co.,Pants & Shorts,Charcoal / 36,NW-1040,128,52,50,active
+everyday-short,Everyday Short,Northwood Supply Co.,Pants & Shorts,Khaki / 30,NW-1041,78,29,19,active
+everyday-short,Everyday Short,Northwood Supply Co.,Pants & Shorts,Khaki / 32,NW-1042,78,29,58,active
+everyday-short,Everyday Short,Northwood Supply Co.,Pants & Shorts,Navy / 34,NW-1043,78,29,54,active
+everyday-short,Everyday Short,Northwood Supply Co.,Pants & Shorts,Navy / 36,NW-1044,78,29,31,active
+trail-short,Trail Short,Northwood Supply Co.,Pants & Shorts,Olive / 30,NW-1045,88,34,12,active
+trail-short,Trail Short,Northwood Supply Co.,Pants & Shorts,Olive / 32,NW-1046,88,34,73,active
+trail-short,Trail Short,Northwood Supply Co.,Pants & Shorts,Black / 34,NW-1047,88,34,37,active
+trail-short,Trail Short,Northwood Supply Co.,Pants & Shorts,Black / 36,NW-1048,88,34,67,active
+rain-shell,Rain Shell,Northwood Supply Co.,Outerwear,Black / S,NW-1049,198,83,53,active
+rain-shell,Rain Shell,Northwood Supply Co.,Outerwear,Black / M,NW-1050,198,83,60,active
+rain-shell,Rain Shell,Northwood Supply Co.,Outerwear,Moss / L,NW-1051,198,83,58,active
+rain-shell,Rain Shell,Northwood Supply Co.,Outerwear,Moss / XL,NW-1052,198,83,21,active
+insulated-jacket,Insulated Jacket,Northwood Supply Co.,Outerwear,Black / M,NW-1053,248,109,32,active
+insulated-jacket,Insulated Jacket,Northwood Supply Co.,Outerwear,Black / L,NW-1054,248,109,39,active
+insulated-jacket,Insulated Jacket,Northwood Supply Co.,Outerwear,Rust / M,NW-1055,248,109,41,active
+insulated-jacket,Insulated Jacket,Northwood Supply Co.,Outerwear,Rust / XL,NW-1056,248,109,10,active
+field-jacket,Field Jacket,Northwood Supply Co.,Outerwear,Olive / M,NW-1057,218,91,44,active
+field-jacket,Field Jacket,Northwood Supply Co.,Outerwear,Olive / L,NW-1058,218,91,18,active
+field-jacket,Field Jacket,Northwood Supply Co.,Outerwear,Navy / M,NW-1059,218,91,57,active
+field-jacket,Field Jacket,Northwood Supply Co.,Outerwear,Navy / XL,NW-1060,218,91,53,active
+quilted-vest,Quilted Vest,Northwood Supply Co.,Outerwear,Black / M,NW-1061,158,64,69,active
+quilted-vest,Quilted Vest,Northwood Supply Co.,Outerwear,Black / L,NW-1062,158,64,57,active
+quilted-vest,Quilted Vest,Northwood Supply Co.,Outerwear,Olive / M,NW-1063,158,64,32,active
+quilted-vest,Quilted Vest,Northwood Supply Co.,Outerwear,Olive / XL,NW-1064,158,64,72,active
+merino-beanie,Merino Beanie,Northwood Supply Co.,Accessories,Black / OS,NW-1065,42,13,35,active
+merino-beanie,Merino Beanie,Northwood Supply Co.,Accessories,Grey / OS,NW-1066,42,13,29,active
+merino-beanie,Merino Beanie,Northwood Supply Co.,Accessories,Rust / OS,NW-1067,42,13,68,active
+canvas-cap,Canvas Cap,Northwood Supply Co.,Accessories,Navy / OS,NW-1068,38,11,32,active
+canvas-cap,Canvas Cap,Northwood Supply Co.,Accessories,Olive / OS,NW-1069,38,11,13,active
+canvas-cap,Canvas Cap,Northwood Supply Co.,Accessories,Natural / OS,NW-1070,38,11,39,active
+wool-scarf,Wool Scarf,Northwood Supply Co.,Accessories,Grey / OS,NW-1071,58,19,61,active
+wool-scarf,Wool Scarf,Northwood Supply Co.,Accessories,Forest / OS,NW-1072,58,19,20,active
+leather-belt,Leather Belt,Northwood Supply Co.,Accessories,Brown / S,NW-1073,68,24,39,active
+leather-belt,Leather Belt,Northwood Supply Co.,Accessories,Brown / M,NW-1074,68,24,16,active
+leather-belt,Leather Belt,Northwood Supply Co.,Accessories,Black / L,NW-1075,68,24,53,active
+canvas-tote,Canvas Tote,Northwood Supply Co.,Accessories,Natural / OS,NW-1076,32,9,39,active
+canvas-tote,Canvas Tote,Northwood Supply Co.,Accessories,Black / OS,NW-1077,32,9,30,active
+wool-socks,Wool Socks,Northwood Supply Co.,Accessories,Grey / M,NW-1078,28,8,23,active
+wool-socks,Wool Socks,Northwood Supply Co.,Accessories,Grey / L,NW-1079,28,8,45,active
+wool-socks,Wool Socks,Northwood Supply Co.,Accessories,Navy / M,NW-1080,28,8,52,active
+wool-socks,Wool Socks,Northwood Supply Co.,Accessories,Navy / L,NW-1081,28,8,71,active
