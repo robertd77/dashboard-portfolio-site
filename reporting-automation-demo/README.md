@@ -56,11 +56,12 @@ to `/raw-data`, `/process`, and `/dashboard`. All three routes are
 available directly and share the application header, navigation, and
 fictional-data disclosure.
 
-This first increment contains the application shell, a source-file
-overview, and clearly labeled placeholders for processing and reporting.
-It does not run transformations, render dataset previews, or calculate
-dashboard metrics. The original CSVs remain in `data/` and are not
-published as public assets. No credentials or external services are
+The application includes the shell, a source-file overview with row
+counts, selectable raw-data previews, and downloads of the original CSVs.
+Processing and dashboard reporting remain clearly labeled placeholders.
+It does not run transformations or calculate dashboard metrics. The
+original CSVs remain in `data/`; allowlisted download routes serve them
+without copying them into public assets. No credentials or external services are
 required. The UI uses TypeScript, Tailwind CSS, and shadcn/ui-style local
 components; Recharts can be added when the chart implementation begins.
 
@@ -75,3 +76,23 @@ npm start
 
 If the environment's default npm cache is not writable, use
 `npm --cache /tmp/northwood-npm-cache ci` for installation.
+
+## Raw Data previews
+
+`src/lib/datasets.ts` defines the four source descriptions and filenames.
+The server-only `src/lib/csv.ts` loader uses `csv-parse` to read CSV syntax
+correctly, including quoted commas, escaped quotes, and embedded newlines.
+It preserves source headers and values as strings without trimming,
+casting, normalization, or repairs.
+
+`src/lib/raw-data.ts` counts all records (excluding the header) and sends
+only the first 20 rows per file to the interactive preview. Orders are
+selected initially. All original columns are available in a horizontally
+scrollable, keyboard-focusable table; no records are sorted or filtered.
+The source overview and samples are generated at build time, so rebuild
+after any intentional future dataset replacement to refresh the previews.
+
+`/raw-data/[dataset]/download` accepts only known catalog IDs and returns
+the complete original file bytes as a CSV attachment. Filesystem reads
+run on the server, and the route's file tracing includes the source CSVs
+for deployments that package server functions. No datasets are modified.
