@@ -12,7 +12,7 @@ export function DatasetPreview({ dataset, headingRef }: {
       <div className="flex flex-wrap items-center justify-between gap-4 p-6">
         <div className="min-w-0">
           <p className="eyebrow mb-2">Source preview · Simulated data</p>
-          <h2 id="preview-heading" ref={headingRef} tabIndex={-1} className="text-lg font-semibold focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring">
+          <h2 id="preview-heading" ref={headingRef} tabIndex={-1} className="scroll-mt-6 text-lg font-semibold focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring">
             {dataset.name} preview
           </h2>
           <p className="mt-2 break-all font-mono text-xs text-muted-foreground">{dataset.filename}</p>

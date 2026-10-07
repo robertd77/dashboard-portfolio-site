@@ -17,7 +17,16 @@ export function RawDataExplorer({ datasets }: { datasets: Preview[] }) {
 
   function selectDataset(id: RawDatasetId) {
     setSelectedId(id);
-    requestAnimationFrame(() => previewHeading.current?.focus());
+    requestAnimationFrame(() => {
+      const heading = previewHeading.current;
+      if (!heading) return;
+
+      heading.focus({ preventScroll: true });
+      heading.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
+        block: "start",
+      });
+    });
   }
 
   return (
@@ -50,6 +59,7 @@ export function RawDataExplorer({ datasets }: { datasets: Preview[] }) {
                   </div>
                   <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
                     <Button
+                      className="cursor-pointer"
                       variant={active ? "default" : "outline"}
                       aria-label={`Preview ${dataset.name}`}
                       aria-pressed={active}
