@@ -11,7 +11,7 @@
     "start": "next start --hostname 0.0.0.0",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "test": "node --conditions=react-server --import tsx --test src/lib/processing/transform.test.ts src/lib/processing/workflow.test.ts"
+    "test": "node --conditions=react-server --import tsx --test src/lib/processing/transform.test.ts src/lib/processing/workflow.test.ts src/lib/dashboard/selectors.test.ts"
   },
   "dependencies": {
     "@radix-ui/react-slot": "1.4.0",
