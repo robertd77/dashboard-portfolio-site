@@ -35,7 +35,8 @@ newly computed records; they never return copies of the reference CSVs.
   is populated only when its net sales is positive. The server result's
   `financials` includes weighted gross margin calculated as total gross
   profit / total merchandise net sales, plus a count of unverified-cost
-  lines. No dashboard visualizations are implemented.
+  lines. The dashboard KPI layer consumes these generated datasets;
+  dashboard charts remain planned for a later task.
 - Keep full calculation precision; round currency only for presentation.
   Comparison tolerances are 0.005 CAD per numeric value and per aggregate
   total, and 1e-10 for margin ratios. No per-line rounding is introduced.

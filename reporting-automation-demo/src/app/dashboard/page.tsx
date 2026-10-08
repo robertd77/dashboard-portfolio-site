@@ -1,29 +1,43 @@
 import type { Metadata } from "next";
-import { ChartNoAxesCombined } from "lucide-react";
+import { ChartNoAxesCombined, ChartColumnBig, Package, Users } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { PageHeading } from "@/components/page-heading";
 import { StageNavigation } from "@/components/stage-navigation";
+import { DashboardProvider } from "@/components/dashboard/dashboard-provider";
+import { DashboardFilters } from "@/components/dashboard/dashboard-filters";
+import { KpiCards } from "@/components/dashboard/kpi-cards";
+import { runReportingWorkflow } from "@/lib/processing/workflow";
+import { dashboardDataFromWorkflow } from "@/lib/dashboard/data";
 
 export const metadata: Metadata = { title: "Dashboard" };
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
+  const data = dashboardDataFromWorkflow(await runReportingWorkflow());
   return (
     <>
       <PageHeading step="03 / Dashboard" title="A clearer view of the business."
-        description="The final stage will bring consistent management reporting together, connecting sales performance, product economics, inventory, and customer purchasing patterns." />
-      <Card className="stage-placeholder">
-        <span className="icon-tile mb-5"><ChartNoAxesCombined size={25} aria-hidden="true" /></span>
-        <p className="status-label">Planned reporting</p>
-        <h2 className="mt-3 text-2xl font-semibold tracking-tight">Insights will take shape here.</h2>
-        <p className="mt-3 max-w-xl text-sm leading-7 text-muted-foreground">KPI cards, charts, and filters are planned for a later step. This page contains no calculated metrics or reporting results yet.</p>
-        <ul className="mt-7 grid gap-3 text-sm sm:grid-cols-2">
-          <li className="planned-item">Monthly sales trend</li>
-          <li className="planned-item">Revenue & gross profit by category</li>
-          <li className="planned-item">Top products & inventory coverage</li>
-          <li className="planned-item">First vs repeat customer sales</li>
-        </ul>
-      </Card>
-      <p className="mt-5 text-sm leading-6 text-muted-foreground">Reporting will distinguish order-level net sales (including tax and shipping) from merchandise sales. The expense sample will not be used to claim net profit.</p>
+        description="Explore the reporting-ready figures for Northwood Supply Co., a fictional retailer. Choose a month range and sales channel to see a consistent view of its simulated sales and merchandise performance." />
+      <DashboardProvider data={data}>
+        <DashboardFilters />
+        <KpiCards />
+        <section aria-labelledby="reporting-views-heading" className="mt-8">
+          <h2 id="reporting-views-heading" className="text-lg font-semibold">Reporting views</h2>
+          <p className="mt-2 text-sm text-muted-foreground">Four charts will build on this reporting view in the next stage of the demo.</p>
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            {[
+              { name: "Monthly sales trend", icon: ChartNoAxesCombined },
+              { name: "Revenue & gross profit by category", icon: ChartColumnBig },
+              { name: "Top products & inventory coverage", icon: Package },
+              { name: "First vs repeat customer sales", icon: Users },
+            ].map(({ name, icon: Icon }) => (
+              <Card key={name} className="min-h-40 border-dashed shadow-none">
+                <div className="flex items-center justify-between gap-3"><span className="icon-tile"><Icon size={21} aria-hidden="true" /></span><span className="text-xs text-muted-foreground">Planned chart</span></div>
+                <h3 className="mt-4 text-sm font-semibold">{name}</h3>
+              </Card>
+            ))}
+          </div>
+        </section>
+      </DashboardProvider>
       <StageNavigation index={2} />
     </>
   );

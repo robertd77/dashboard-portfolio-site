@@ -116,8 +116,8 @@ are shown, and failures never advance to a false completion. Leaving the
 page cancels the presentation and its pending request/timers. API calls
 and generated downloads do not incur the demonstration delay.
 
-Future dashboard code can call `runReportingWorkflow()` and consume its
-`datasets` directly without duplicating transformations. Each run is
+The dashboard calls `runReportingWorkflow()` and consumes its generated
+`datasets` without duplicating transformations. Each run is
 stateless: no CSV writes, database, or cross-user session state. A page
 refresh starts a new view; generated downloads recompute deterministic
 outputs using the same entry point. Source and reference files are
@@ -127,3 +127,31 @@ Read [Processing conventions and reconciliation](docs/PROCESSING_NOTES.md)
 for financial assumptions and known reference limitations. `npm test`
 runs business-rule and whole-dataset reconciliation tests using Node's
 test runner and `tsx`.
+
+## Dashboard KPI layer
+
+`/dashboard` displays Net Sales, Orders, Average Order Value, Gross Profit,
+and Gross Margin. Its inclusive month range defaults to January–December
+2025, with All / Online / POS channel selection. Changing a month beyond
+the other boundary moves both boundaries to that month.
+
+`src/lib/dashboard/data.ts` projects reconciled processing results into
+compact order and line records at build time. Reference CSVs are used
+only for reconciliation, never as the dashboard's reporting source.
+Rebuild after intentional future input changes to refresh the dashboard.
+Visiting it directly does not require a previous guided processing run.
+
+Pure selectors in `src/lib/dashboard/selectors.ts` filter both grains
+consistently. Order net sales and AOV use distinct orders; gross profit
+and weighted margin use merchandise lines. Empty totals display zero
+with unavailable ratios shown as an em dash. A filter-aware notice keeps
+missing product costs visible and profit/margin provisional.
+
+`DashboardProvider` and `useDashboard()` expose filters, original and
+filtered reporting records, and calculated KPIs for Task 5 charts.
+Extend the compact projection with the required product/customer fields
+when those charts are implemented; keep the same processing and filtering
+foundation. Four chart placeholders reserve space without implementing
+visualizations. Tests compare all five metrics independently with the
+reference CSVs for every month/channel and verify empty selections,
+distinct order counts, weighted margin, and month boundary behavior.
