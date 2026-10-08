@@ -17,7 +17,7 @@ export default async function RawDataPage() {
       <aside className="scope-note mt-6" aria-label="Next workflow stage">
         <ArrowUpRight size={20} className="shrink-0 text-primary" aria-hidden="true" />
         <div><h2 className="text-sm font-semibold">Separate exports → consistent reporting</h2>
-          <p className="mt-1 text-sm leading-6 text-muted-foreground">The next stage will bring these inputs together, apply consistent rules, and surface exceptions for review. Processing and validation are planned for a later step; these previews show the raw starting point.</p>
+          <p className="mt-1 text-sm leading-6 text-muted-foreground">The next stage brings these inputs together, applies consistent rules, and surfaces exceptions for review. Continue to Process & Validate to run the reporting workflow; these previews show the raw starting point.</p>
         </div>
       </aside>
       <StageNavigation index={0} />
