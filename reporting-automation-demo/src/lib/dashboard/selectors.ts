@@ -31,11 +31,12 @@ export function filterDashboardData(data: DashboardData, filters: DashboardFilte
   return {
     orders,
     orderLines: data.orderLines.filter((line) => orderIds.has(line.orderId) && matches(line)),
+    products: data.products,
   };
 }
 
 /** Calculate order KPIs from orders and merchandise KPIs from lines; never join totals onto lines. */
-export function calculateDashboardKpis(data: DashboardData): DashboardKpis {
+export function calculateDashboardKpis(data: Pick<DashboardData, "orders" | "orderLines">): DashboardKpis {
   const orders = [...new Map(data.orders.map((order) => [order.orderId, order])).values()];
   const netSales = orders.reduce((sum, order) => sum + order.netSales, 0);
   const merchandiseNetSales = data.orderLines.reduce((sum, line) => sum + line.merchandiseNetSales, 0);

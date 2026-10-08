@@ -36,7 +36,9 @@ newly computed records; they never return copies of the reference CSVs.
   `financials` includes weighted gross margin calculated as total gross
   profit / total merchandise net sales, plus a count of unverified-cost
   lines. The dashboard KPI layer consumes these generated datasets;
-  dashboard charts remain planned for a later task.
+  the monthly sales chart groups the same filtered order records.
+  Category, product inventory, and customer mix charts consume the same
+  reporting layer; see `DASHBOARD_CALCULATIONS.md` for selector conventions.
 - Keep full calculation precision; round currency only for presentation.
   Comparison tolerances are 0.005 CAD per numeric value and per aggregate
   total, and 1e-10 for margin ratios. No per-line rounding is introduced.
@@ -74,4 +76,4 @@ net-profit claim.
 - All six output schemas, row counts, field values, and numeric totals
   reconcile to the supplied references within the stated tolerances.
 
-No source/reference files are altered and no dashboard charts are added.
+No source/reference files are altered.

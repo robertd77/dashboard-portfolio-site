@@ -59,12 +59,12 @@ fictional-data disclosure.
 The application includes the shell, a source-file overview with row
 counts, selectable raw-data previews, and downloads of the original CSVs.
 Process & Validate runs real deterministic transformations and compares
-generated results with the supplied references. Dashboard charts remain
-planned for a later task. The
+generated results with the supplied references. The dashboard includes
+five KPIs and four interactive reporting charts. The
 original CSVs remain in `data/`; allowlisted download routes serve them
 without copying them into public assets. No credentials or external services are
 required. The UI uses TypeScript, Tailwind CSS, and shadcn/ui-style local
-components; Recharts can be added when the chart implementation begins.
+components, shadcn/ui chart primitives, and Recharts.
 
 Validation and production startup:
 
@@ -134,9 +134,11 @@ test runner and `tsx`.
 and Gross Margin. Its inclusive month range defaults to January–December
 2025, with All / Online / POS channel selection. Changing a month beyond
 the other boundary moves both boundaries to that month.
+The compact filter bar stays visible while scrolling through dashboard
+results, so visitors can adjust the reporting view while viewing the charts.
 
 `src/lib/dashboard/data.ts` projects reconciled processing results into
-compact order and line records at build time. Reference CSVs are used
+compact order, line, and product inventory records at build time. Reference CSVs are used
 only for reconciliation, never as the dashboard's reporting source.
 Rebuild after intentional future input changes to refresh the dashboard.
 Visiting it directly does not require a previous guided processing run.
@@ -148,10 +150,53 @@ with unavailable ratios shown as an em dash. A filter-aware notice keeps
 missing product costs visible and profit/margin provisional.
 
 `DashboardProvider` and `useDashboard()` expose filters, original and
-filtered reporting records, and calculated KPIs for Task 5 charts.
-Extend the compact projection with the required product/customer fields
-when those charts are implemented; keep the same processing and filtering
-foundation. Four chart placeholders reserve space without implementing
-visualizations. Tests compare all five metrics independently with the
+filtered reporting records, and calculated KPIs for all four charts.
+The projection includes SKU/category/quantity/status fields, product
+inventory, and customer IDs and timestamps required by chart selectors.
+Tests compare all five metrics independently with the
 reference CSVs for every month/channel and verify empty selections,
 distinct order counts, weighted margin, and month boundary behavior.
+
+## Monthly sales chart
+
+The Recharts area chart uses `ChartContainer`, `ChartTooltip`, and
+`ChartTooltipContent` from the local shadcn/ui chart primitives. Shared
+reporting card, tooltip metric rows, chart theme, and compact currency
+formatters establish the visual foundation for the remaining charts.
+
+`selectMonthlySales()` groups the already-filtered order records using
+the existing KPI calculator. All 12 months remain on the 2025 timeline;
+excluded months are null gaps, while included months with no orders are
+zero totals with unavailable AOV. The chart and table never read raw or
+reference CSVs directly. Hover, touch, and keyboard tooltips show monthly
+Net Sales, distinct Orders, and AOV; an expandable monthly table provides
+the same figures without relying on the visualization.
+
+Q4 has a subtle amber background with November/December markers. Peak
+month, selected Q4 sales, and its share are computed from the current
+selection; partial selections do not claim full-year comparisons.
+Zero-sales selections avoid undefined percentages. Tooltip motion
+respects reduced-motion preferences. Tests reconcile monthly points and
+their totals against the existing KPIs and reference order exports for
+all month/channel combinations.
+
+Recharts and its React-version-matched `react-is` peer are now dependencies.
+After pulling this change, run `npm ci`
+before `npm run dev`.
+
+## Category, product inventory, and customer charts
+
+`src/lib/dashboard/chart-selectors.ts` contains pure category, product,
+stock coverage, and customer purchase calculations. The three chart
+components reuse reporting cards, shadcn chart primitives, tooltips,
+color configurations, currency formatting, and shared filters. New
+legend, summary, insight, empty-state, and figures-table helpers keep the
+chart language consistent. Tooltips support desktop hover, touch taps,
+and keyboard navigation, with expandable tables as accessible alternatives.
+
+See [Dashboard chart calculations](docs/DASHBOARD_CALCULATIONS.md) for
+the trailing three-month velocity window, product-style grouping,
+two-month stock review threshold, recorded-unit limitations, unmapped
+revenue reconciliation, and full-history customer classification rules.
+`npm test` verifies those calculations independently against the reference
+exports across every month/channel, Q4, and the annual view.
