@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { ChartColumnBig, Package, Users } from "lucide-react";
-import { Card } from "@/components/ui/card";
 import { PageHeading } from "@/components/page-heading";
 import { StageNavigation } from "@/components/stage-navigation";
 import { DashboardProvider } from "@/components/dashboard/dashboard-provider";
 import { DashboardFilters } from "@/components/dashboard/dashboard-filters";
 import { KpiCards } from "@/components/dashboard/kpi-cards";
 import { MonthlySalesChart } from "@/components/dashboard/charts/monthly-sales-chart";
+import { CategoryPerformanceChart } from "@/components/dashboard/charts/category-performance-chart";
+import { ProductInventoryChart } from "@/components/dashboard/charts/product-inventory-chart";
+import { CustomerPurchaseMixChart } from "@/components/dashboard/charts/customer-purchase-mix-chart";
 import { runReportingWorkflow } from "@/lib/processing/workflow";
 import { dashboardDataFromWorkflow } from "@/lib/dashboard/data";
 
@@ -23,20 +24,9 @@ export default async function DashboardPage() {
         <KpiCards />
         <section aria-labelledby="reporting-views-heading" className="mt-8">
           <h2 id="reporting-views-heading" className="text-lg font-semibold">Reporting views</h2>
-          <p className="mt-2 text-sm text-muted-foreground">Explore the sales trend for the selected reporting view. Three more views are planned.</p>
+          <p className="mt-2 text-sm text-muted-foreground">Explore sales, product economics, stock coverage, and customer purchasing in the selected reporting view.</p>
           <MonthlySalesChart />
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            {[
-              { name: "Revenue & gross profit by category", icon: ChartColumnBig },
-              { name: "Top products & inventory coverage", icon: Package },
-              { name: "First vs repeat customer sales", icon: Users },
-            ].map(({ name, icon: Icon }) => (
-              <Card key={name} className="min-h-40 border-dashed shadow-none">
-                <div className="flex items-center justify-between gap-3"><span className="icon-tile"><Icon size={21} aria-hidden="true" /></span><span className="text-xs text-muted-foreground">Planned chart</span></div>
-                <h3 className="mt-4 text-sm font-semibold">{name}</h3>
-              </Card>
-            ))}
-          </div>
+          <div className="mt-5 grid gap-5"><CategoryPerformanceChart /><ProductInventoryChart /><CustomerPurchaseMixChart /></div>
         </section>
       </DashboardProvider>
       <StageNavigation index={2} />

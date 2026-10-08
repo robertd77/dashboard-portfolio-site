@@ -11,6 +11,8 @@ export type DashboardOrder = {
   month: string;
   channel: SalesChannel;
   netSales: number;
+  orderDate: string;
+  customerId: string;
 };
 
 export type DashboardOrderLine = {
@@ -20,11 +22,19 @@ export type DashboardOrderLine = {
   merchandiseNetSales: number;
   grossProfit: number;
   unitCost: number | null;
+  sku: string;
+  productName: string;
+  category: string;
+  quantity: number;
+  financialStatus: string;
 };
+
+export type DashboardProduct = { sku: string; name: string; category: string; inventory: number };
 
 export type DashboardData = {
   orders: DashboardOrder[];
   orderLines: DashboardOrderLine[];
+  products: DashboardProduct[];
 };
 
 export type DashboardKpis = {

@@ -21,3 +21,7 @@ export function formatShortMonth(month: string) {
 export function formatCompactCurrency(value: number, maximumFractionDigits = 1) {
   return new Intl.NumberFormat("en-CA", { style: "currency", currency: "CAD", currencyDisplay: "narrowSymbol", notation: "compact", maximumFractionDigits }).format(value);
 }
+
+export function formatStockCoverage(value: number | null) {
+  return value === null ? "No recent sales" : `${new Intl.NumberFormat("en-CA", { maximumFractionDigits: 1 }).format(value)} mo`;
+}

@@ -16,15 +16,16 @@ const close = (actual: number | null, expected: number, tolerance = 1e-9) => {
 function fixture(): DashboardData {
   return {
     orders: [
-      { orderId: "A", month: "2025-01", channel: "Online", netSales: 125 },
-      { orderId: "B", month: "2025-02", channel: "POS", netSales: 12 },
-      { orderId: "C", month: "2025-03", channel: "Online", netSales: 0 },
+      { orderId: "A", month: "2025-01", channel: "Online", netSales: 125, orderDate: "2025-01-15 12:00:00", customerId: "C1" },
+      { orderId: "B", month: "2025-02", channel: "POS", netSales: 12, orderDate: "2025-02-15 12:00:00", customerId: "C1" },
+      { orderId: "C", month: "2025-03", channel: "Online", netSales: 0, orderDate: "2025-03-15 12:00:00", customerId: "C1" },
     ],
+    products: [],
     orderLines: [
-      { orderId: "A", month: "2025-01", channel: "Online", merchandiseNetSales: 60, grossProfit: 42, unitCost: 18 },
-      { orderId: "A", month: "2025-01", channel: "Online", merchandiseNetSales: 40, grossProfit: 28, unitCost: 12 },
-      { orderId: "B", month: "2025-02", channel: "POS", merchandiseNetSales: 10, grossProfit: 1, unitCost: null },
-      { orderId: "C", month: "2025-03", channel: "Online", merchandiseNetSales: 0, grossProfit: 0, unitCost: 20 },
+      { orderId: "A", month: "2025-01", channel: "Online", merchandiseNetSales: 60, grossProfit: 42, unitCost: 18, sku: "SKU-1", productName: "Demo product", category: "Tops", quantity: 1, financialStatus: "paid" },
+      { orderId: "A", month: "2025-01", channel: "Online", merchandiseNetSales: 40, grossProfit: 28, unitCost: 12, sku: "SKU-1", productName: "Demo product", category: "Tops", quantity: 1, financialStatus: "paid" },
+      { orderId: "B", month: "2025-02", channel: "POS", merchandiseNetSales: 10, grossProfit: 1, unitCost: null, sku: "SKU-1", productName: "Demo product", category: "Tops", quantity: 1, financialStatus: "paid" },
+      { orderId: "C", month: "2025-03", channel: "Online", merchandiseNetSales: 0, grossProfit: 0, unitCost: 20, sku: "SKU-1", productName: "Demo product", category: "Tops", quantity: 1, financialStatus: "paid" },
     ],
   };
 }
@@ -114,7 +115,7 @@ test("excluded months are gaps, not zero-sales observations, and single-month in
 
 test("holiday insights are calculated from selected sales, including partial Q4 and zero-total views", () => {
   const data = fixture();
-  data.orders.push({ orderId: "D", month: "2025-11", channel: "POS", netSales: 200 }, { orderId: "E", month: "2025-12", channel: "Online", netSales: 300 });
+  data.orders.push({ orderId: "D", month: "2025-11", channel: "POS", netSales: 200, orderDate: "2025-11-15 12:00:00", customerId: "C1" }, { orderId: "E", month: "2025-12", channel: "Online", netSales: 300, orderDate: "2025-12-15 12:00:00", customerId: "C1" });
   const insight = selectMonthlySalesInsight(selectMonthlySales(data, DEFAULT_DASHBOARD_FILTERS))!;
   assert.equal(insight.peak.month, "2025-12");
   assert.equal(insight.q4Sales, 500);
@@ -131,7 +132,7 @@ test("holiday insights are calculated from selected sales, including partial Q4 
 });
 
 test("empty reporting views retain the calendar without inventing insights", () => {
-  const points = selectMonthlySales({ orders: [], orderLines: [] }, DEFAULT_DASHBOARD_FILTERS);
+  const points = selectMonthlySales({ orders: [], orderLines: [], products: [] }, DEFAULT_DASHBOARD_FILTERS);
   assert.ok(points.every((point) => point.netSales === 0 && point.orders === 0 && point.averageOrderValue === null));
   assert.equal(selectMonthlySalesInsight(points), null);
 });

@@ -37,7 +37,8 @@ newly computed records; they never return copies of the reference CSVs.
   profit / total merchandise net sales, plus a count of unverified-cost
   lines. The dashboard KPI layer consumes these generated datasets;
   the monthly sales chart groups the same filtered order records.
-  Three further charts remain planned for later tasks.
+  Category, product inventory, and customer mix charts consume the same
+  reporting layer; see `DASHBOARD_CALCULATIONS.md` for selector conventions.
 - Keep full calculation precision; round currency only for presentation.
   Comparison tolerances are 0.005 CAD per numeric value and per aggregate
   total, and 1e-10 for margin ratios. No per-line rounding is introduced.
