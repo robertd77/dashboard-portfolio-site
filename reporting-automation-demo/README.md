@@ -135,6 +135,8 @@ test runner and `tsx`.
 and Gross Margin. Its inclusive month range defaults to January–December
 2025, with All / Online / POS channel selection. Changing a month beyond
 the other boundary moves both boundaries to that month.
+The compact filter bar stays visible while scrolling through dashboard
+results, so visitors can adjust the reporting view while viewing the charts.
 
 `src/lib/dashboard/data.ts` projects reconciled processing results into
 compact order and line records at build time. Reference CSVs are used

@@ -1,8 +1,8 @@
 import type { ChartConfig } from "@/components/ui/chart";
 
 export const salesChartConfig = {
-  netSales: { label: "Net Sales", color: "var(--primary)" },
-  holiday: { label: "Q4 holiday period", color: "#9a642b" },
+  netSales: { label: "Net Sales", color: "#138660" },
+  holiday: { label: "Q4 holiday period", color: "#bd741d" },
 } satisfies ChartConfig;
 
 export const reportingChartStyle = {
