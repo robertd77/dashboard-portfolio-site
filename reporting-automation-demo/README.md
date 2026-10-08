@@ -109,6 +109,13 @@ real counts, exceptions, and reconciliation results; complete reporting
 records stay on the server. The UI handles pending, failed, mismatched,
 and successfully reconciled states separately.
 
+The interface presents four stages at approximately five seconds each
+after real processing returns, making the guided run roughly 20 seconds.
+The pacing is explicitly labeled as illustrative. Only calculated results
+are shown, and failures never advance to a false completion. Leaving the
+page cancels the presentation and its pending request/timers. API calls
+and generated downloads do not incur the demonstration delay.
+
 Future dashboard code can call `runReportingWorkflow()` and consume its
 `datasets` directly without duplicating transformations. Each run is
 stateless: no CSV writes, database, or cross-user session state. A page
