@@ -58,8 +58,9 @@ fictional-data disclosure.
 
 The application includes the shell, a source-file overview with row
 counts, selectable raw-data previews, and downloads of the original CSVs.
-Processing and dashboard reporting remain clearly labeled placeholders.
-It does not run transformations or calculate dashboard metrics. The
+Process & Validate runs real deterministic transformations and compares
+generated results with the supplied references. Dashboard charts remain
+planned for a later task. The
 original CSVs remain in `data/`; allowlisted download routes serve them
 without copying them into public assets. No credentials or external services are
 required. The UI uses TypeScript, Tailwind CSS, and shadcn/ui-style local
@@ -70,6 +71,7 @@ Validation and production startup:
 ```sh
 npm run lint
 npm run typecheck
+npm test
 npm run build
 npm start
 ```
@@ -96,3 +98,32 @@ after any intentional future dataset replacement to refresh the previews.
 the complete original file bytes as a CSV attachment. Filesystem reads
 run on the server, and the route's file tracing includes the source CSVs
 for deployments that package server functions. No datasets are modified.
+
+## Processing and validation
+
+On `/process`, **Run Reporting Workflow** calls `POST /api/process`.
+`src/lib/processing/workflow.ts` loads and checks all four raw schemas,
+calls the pure TypeScript transformation module, and then compares all
+six generated datasets against the reference files. The response includes
+real counts, exceptions, and reconciliation results; complete reporting
+records stay on the server. The UI handles pending, failed, mismatched,
+and successfully reconciled states separately.
+
+The interface presents four stages at approximately five seconds each
+after real processing returns, making the guided run roughly 20 seconds.
+The pacing is explicitly labeled as illustrative. Only calculated results
+are shown, and failures never advance to a false completion. Leaving the
+page cancels the presentation and its pending request/timers. API calls
+and generated downloads do not incur the demonstration delay.
+
+Future dashboard code can call `runReportingWorkflow()` and consume its
+`datasets` directly without duplicating transformations. Each run is
+stateless: no CSV writes, database, or cross-user session state. A page
+refresh starts a new view; generated downloads recompute deterministic
+outputs using the same entry point. Source and reference files are
+included in server route file tracing.
+
+Read [Processing conventions and reconciliation](docs/PROCESSING_NOTES.md)
+for financial assumptions and known reference limitations. `npm test`
+runs business-rule and whole-dataset reconciliation tests using Node's
+test runner and `tsx`.
