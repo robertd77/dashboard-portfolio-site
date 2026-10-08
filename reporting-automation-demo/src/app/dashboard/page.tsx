@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { ChartNoAxesCombined, ChartColumnBig, Package, Users } from "lucide-react";
+import { ChartColumnBig, Package, Users } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { PageHeading } from "@/components/page-heading";
 import { StageNavigation } from "@/components/stage-navigation";
 import { DashboardProvider } from "@/components/dashboard/dashboard-provider";
 import { DashboardFilters } from "@/components/dashboard/dashboard-filters";
 import { KpiCards } from "@/components/dashboard/kpi-cards";
+import { MonthlySalesChart } from "@/components/dashboard/charts/monthly-sales-chart";
 import { runReportingWorkflow } from "@/lib/processing/workflow";
 import { dashboardDataFromWorkflow } from "@/lib/dashboard/data";
 
@@ -22,10 +23,10 @@ export default async function DashboardPage() {
         <KpiCards />
         <section aria-labelledby="reporting-views-heading" className="mt-8">
           <h2 id="reporting-views-heading" className="text-lg font-semibold">Reporting views</h2>
-          <p className="mt-2 text-sm text-muted-foreground">Four charts will build on this reporting view in the next stage of the demo.</p>
+          <p className="mt-2 text-sm text-muted-foreground">Explore the sales trend for the selected reporting view. Three more views are planned.</p>
+          <MonthlySalesChart />
           <div className="mt-5 grid gap-4 md:grid-cols-2">
             {[
-              { name: "Monthly sales trend", icon: ChartNoAxesCombined },
               { name: "Revenue & gross profit by category", icon: ChartColumnBig },
               { name: "Top products & inventory coverage", icon: Package },
               { name: "First vs repeat customer sales", icon: Users },

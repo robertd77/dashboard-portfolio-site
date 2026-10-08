@@ -7,6 +7,7 @@ import { dashboardDataFromWorkflow } from "./data";
 import { calculateDashboardKpis, filterDashboardData, updateMonthRange, DEFAULT_DASHBOARD_FILTERS, DASHBOARD_MONTHS } from "./selectors";
 import { formatCurrency, formatMonth, formatPercentage } from "./format";
 import type { DashboardData, DashboardFilters } from "./types";
+import { selectMonthlySales, selectMonthlySalesInsight } from "./monthly-sales";
 
 const close = (actual: number | null, expected: number, tolerance = 1e-9) => {
   assert.ok(actual !== null && Math.abs(actual - expected) < tolerance, `${actual} != ${expected}`);
@@ -85,6 +86,56 @@ test("CAD, percentages, unavailable ratios and months have clear display formatt
   assert.equal(formatMonth("2025-01"), "January 2025");
 });
 
+test("monthly sales retain all 12 months and deduplicate order totals while zero-order months have no AOV", () => {
+  const data = fixture();
+  data.orders.push({ ...data.orders[0] });
+  const points = selectMonthlySales(data, DEFAULT_DASHBOARD_FILTERS);
+  assert.equal(points.length, 12);
+  assert.deepEqual(points[0], { month: "2025-01", inRange: true, netSales: 125, orders: 1, averageOrderValue: 125 });
+  assert.equal(points[2].orders, 1);
+  assert.equal(points[2].averageOrderValue, 0);
+  assert.equal(points[3].netSales, 0);
+  assert.equal(points[3].orders, 0);
+  assert.equal(points[3].averageOrderValue, null);
+  assert.equal(points.reduce((sum, point) => sum + (point.netSales ?? 0), 0), calculateDashboardKpis(data).netSales);
+});
+
+test("excluded months are gaps, not zero-sales observations, and single-month insights respect the selection", () => {
+  const filters: DashboardFilters = { startMonth: "2025-02", endMonth: "2025-02", channel: "POS" };
+  const points = selectMonthlySales(filterDashboardData(fixture(), filters), filters);
+  assert.deepEqual(points[0], { month: "2025-01", inRange: false, netSales: null, orders: null, averageOrderValue: null });
+  assert.equal(points[1].netSales, 12);
+  const insight = selectMonthlySalesInsight(points)!;
+  assert.equal(insight.peak.month, "2025-02");
+  assert.equal(insight.q4MonthCount, 0);
+  assert.equal(insight.selectedMonthCount, 1);
+  assert.equal(insight.totalSales, 12);
+});
+
+test("holiday insights are calculated from selected sales, including partial Q4 and zero-total views", () => {
+  const data = fixture();
+  data.orders.push({ orderId: "D", month: "2025-11", channel: "POS", netSales: 200 }, { orderId: "E", month: "2025-12", channel: "Online", netSales: 300 });
+  const insight = selectMonthlySalesInsight(selectMonthlySales(data, DEFAULT_DASHBOARD_FILTERS))!;
+  assert.equal(insight.peak.month, "2025-12");
+  assert.equal(insight.q4Sales, 500);
+  close(insight.q4Share, 500 / 637);
+  assert.equal(insight.q4MonthCount, 3);
+  const filters: DashboardFilters = { startMonth: "2025-11", endMonth: "2025-11", channel: "POS" };
+  const partial = selectMonthlySalesInsight(selectMonthlySales(filterDashboardData(data, filters), filters))!;
+  assert.equal(partial.q4MonthCount, 1);
+  assert.equal(partial.q4Sales, 200);
+  assert.equal(partial.q4Share, 1);
+  const zeroFilters = { ...filters, startMonth: "2025-03", endMonth: "2025-03", channel: "Online" as const };
+  const zero = selectMonthlySalesInsight(selectMonthlySales(filterDashboardData(data, zeroFilters), zeroFilters))!;
+  assert.equal(zero.q4Share, null);
+});
+
+test("empty reporting views retain the calendar without inventing insights", () => {
+  const points = selectMonthlySales({ orders: [], orderLines: [] }, DEFAULT_DASHBOARD_FILTERS);
+  assert.ok(points.every((point) => point.netSales === 0 && point.orders === 0 && point.averageOrderValue === null));
+  assert.equal(selectMonthlySalesInsight(points), null);
+});
+
 test("processed dashboard metrics reconcile independently with references for the year and every month/channel", async () => {
   const result = await runReportingWorkflow();
   const data = dashboardDataFromWorkflow(result);
@@ -109,6 +160,21 @@ test("processed dashboard metrics reconcile independently with references for th
       const merchandise = expectedLines.reduce((sum, row) => sum + Number(row.net_line_sales), 0);
       const profit = expectedLines.reduce((sum, row) => sum + Number(row.gross_profit), 0);
       const actual = calculateDashboardKpis(filterDashboardData(data, filters));
+      const monthly = selectMonthlySales(filterDashboardData(data, filters), filters);
+      close(monthly.reduce((sum, point) => sum + (point.netSales ?? 0), 0), actual.netSales, 0.005);
+      assert.equal(monthly.reduce((sum, point) => sum + (point.orders ?? 0), 0), actual.orders);
+      for (const point of monthly) {
+        if (!point.inRange) {
+          assert.equal(point.netSales, null);
+          continue;
+        }
+        const monthOrders = expectedOrders.filter((row) => row.order_month === point.month);
+        const monthNet = monthOrders.reduce((sum, row) => sum + Number(row.net_sales), 0);
+        close(point.netSales, monthNet, 0.005);
+        assert.equal(point.orders, monthOrders.length);
+        if (monthOrders.length) close(point.averageOrderValue, monthNet / monthOrders.length);
+        else assert.equal(point.averageOrderValue, null);
+      }
       assert.equal(actual.orders, count);
       close(actual.netSales, net, 0.005);
       close(actual.averageOrderValue, net / count);

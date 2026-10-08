@@ -59,12 +59,13 @@ fictional-data disclosure.
 The application includes the shell, a source-file overview with row
 counts, selectable raw-data previews, and downloads of the original CSVs.
 Process & Validate runs real deterministic transformations and compares
-generated results with the supplied references. Dashboard charts remain
-planned for a later task. The
+generated results with the supplied references. The dashboard includes
+five KPIs and an interactive monthly sales chart; three charts remain
+planned for later tasks. The
 original CSVs remain in `data/`; allowlisted download routes serve them
 without copying them into public assets. No credentials or external services are
 required. The UI uses TypeScript, Tailwind CSS, and shadcn/ui-style local
-components; Recharts can be added when the chart implementation begins.
+components, shadcn/ui chart primitives, and Recharts.
 
 Validation and production startup:
 
@@ -151,7 +152,34 @@ missing product costs visible and profit/margin provisional.
 filtered reporting records, and calculated KPIs for Task 5 charts.
 Extend the compact projection with the required product/customer fields
 when those charts are implemented; keep the same processing and filtering
-foundation. Four chart placeholders reserve space without implementing
-visualizations. Tests compare all five metrics independently with the
+foundation. Three chart placeholders reserve space for later tasks.
+Tests compare all five metrics independently with the
 reference CSVs for every month/channel and verify empty selections,
 distinct order counts, weighted margin, and month boundary behavior.
+
+## Monthly sales chart
+
+The Recharts area chart uses `ChartContainer`, `ChartTooltip`, and
+`ChartTooltipContent` from the local shadcn/ui chart primitives. Shared
+reporting card, tooltip metric rows, chart theme, and compact currency
+formatters establish the visual foundation for the remaining charts.
+
+`selectMonthlySales()` groups the already-filtered order records using
+the existing KPI calculator. All 12 months remain on the 2025 timeline;
+excluded months are null gaps, while included months with no orders are
+zero totals with unavailable AOV. The chart and table never read raw or
+reference CSVs directly. Hover, touch, and keyboard tooltips show monthly
+Net Sales, distinct Orders, and AOV; an expandable monthly table provides
+the same figures without relying on the visualization.
+
+Q4 has a subtle amber background with November/December markers. Peak
+month, selected Q4 sales, and its share are computed from the current
+selection; partial selections do not claim full-year comparisons.
+Zero-sales selections avoid undefined percentages. Tooltip motion
+respects reduced-motion preferences. Tests reconcile monthly points and
+their totals against the existing KPIs and reference order exports for
+all month/channel combinations.
+
+Recharts and its React-version-matched `react-is` peer are now dependencies.
+After pulling this change, run `npm ci`
+before `npm run dev`.
