@@ -51,7 +51,9 @@ npm ci
 npm run dev
 ```
 
-The home route redirects to `/raw-data`. The workflow navigation links
+The home route `/` is the consulting landing page. Its navigation links to
+services, the Northwood feature, the approach, and contact. Demo CTAs start
+at `/raw-data`. The workflow navigation links
 to `/raw-data`, `/process`, and `/dashboard`. All three routes are
 available directly and share the application header, navigation, and
 fictional-data disclosure.
@@ -59,7 +61,8 @@ fictional-data disclosure.
 The `/case-study` page is available from the header's **Case study** link.
 It explains the fictional manual workflow, the automated solution, and
 the intended business benefits, with live-calculated 2025 insight previews
-and links into the interactive demo. The home route still starts at Raw Data.
+and links into the interactive demo. The Northwood header also links back
+to the consulting homepage.
 
 The application includes the shell, a source-file overview with row
 counts, selectable raw-data previews, and downloads of the original CSVs.
@@ -223,6 +226,32 @@ merchandise revenue excludes those components. New reference-based tests
 verify the case-study figures and empty-history behavior.
 
 This is a fictional portfolio scenario: no client testimonials, measured
-time savings, ROI, attribution claims, contact forms, or broader consulting
-homepage are included. Business benefits describe what the workflow is
+time savings, ROI, attribution claims, or contact forms are included. Business benefits describe what the workflow is
 intended to illustrate.
+
+## Consulting homepage
+
+`/` presents the service, three capabilities, a Northwood dashboard preview,
+the delivery approach, and a contact CTA. `hello@example.com` is explicitly
+marked as a placeholder and uses a working `mailto:` link; there is no form.
+Replace that address before publishing the site as a real contact channel.
+
+The Northwood routes now share `src/app/(northwood)/layout.tsx`. The route
+group changes their filesystem location, not their URLs or behavior. The
+consulting page uses its own navigation and footer. If existing generated
+Next.js types reference old route locations after pulling this change,
+stop the development server, remove the generated `.next` directory,
+and run `npm run build` to regenerate them.
+
+The featured sales preview reuses Recharts, shadcn chart primitives, the
+dashboard palette, and its monthly tooltip. Its twelve monthly summaries
+and statistics come from the same reconciled workflow and selectors;
+transaction records are not sent to the homepage client. The hero's
+illustrative sales bars also use those actual monthly figures.
+
+CSS handles staggered entrance, hover, and brief data-flow animations.
+The flow finishes within four seconds rather than looping indefinitely.
+A small `IntersectionObserver` component reveals sections once and cleans
+up its listeners. Reduced-motion preferences disable all homepage movement
+and expose every section immediately, including when the preference changes.
+Content is visible without JavaScript. No animation dependency was added.
