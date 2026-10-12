@@ -23,7 +23,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 <span className="block text-xs text-muted-foreground">Reporting automation demo</span>
               </span>
             </Link>
-            <span className="demo-badge"><span aria-hidden="true" />Fictional business · Simulated data</span>
+            <div className="flex flex-wrap items-center gap-4">
+              <Link href="/case-study" className="rounded-md py-2 text-sm font-semibold text-primary hover:underline">Case study</Link>
+              <span className="demo-badge"><span aria-hidden="true" />Fictional business · Simulated data</span>
+            </div>
           </div>
         </header>
         <div className="shell-container">

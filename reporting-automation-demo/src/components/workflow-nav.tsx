@@ -9,6 +9,9 @@ import { cn } from "@/lib/utils";
 export function WorkflowNav() {
   const pathname = usePathname();
 
+  // The editorial case study introduces the stages in its solution section.
+  if (pathname === "/case-study") return null;
+
   return (
     <nav aria-label="Reporting workflow" className="workflow-nav">
       <ol className="grid grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-3">
