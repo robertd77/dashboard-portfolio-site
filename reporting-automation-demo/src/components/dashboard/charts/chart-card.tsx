@@ -17,7 +17,7 @@ export function ReportingChartCard({ id, title, subtitle, summary, children, foo
       <section aria-labelledby={`${id}-title`}>
         <div className="flex flex-wrap items-start justify-between gap-5">
           <div>
-            <h3 id={`${id}-title`} className="text-lg font-semibold tracking-tight">{title}</h3>
+            <h3 id={`${id}-title`} className="scroll-mt-40 text-lg font-semibold tracking-tight">{title}</h3>
             <p className="mt-1.5 max-w-xl text-sm leading-6 text-muted-foreground">{subtitle}</p>
           </div>
           {summary}

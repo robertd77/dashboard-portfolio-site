@@ -56,6 +56,11 @@ to `/raw-data`, `/process`, and `/dashboard`. All three routes are
 available directly and share the application header, navigation, and
 fictional-data disclosure.
 
+The `/case-study` page is available from the header's **Case study** link.
+It explains the fictional manual workflow, the automated solution, and
+the intended business benefits, with live-calculated 2025 insight previews
+and links into the interactive demo. The home route still starts at Raw Data.
+
 The application includes the shell, a source-file overview with row
 counts, selectable raw-data previews, and downloads of the original CSVs.
 Process & Validate runs real deterministic transformations and compares
@@ -200,3 +205,24 @@ two-month stock review threshold, recorded-unit limitations, unmapped
 revenue reconciliation, and full-history customer classification rules.
 `npm test` verifies those calculations independently against the reference
 exports across every month/channel, Q4, and the annual view.
+
+## Northwood case study
+
+The server-rendered `/case-study` page runs the same reconciled reporting
+workflow as the dashboard. `src/lib/case-study/insights.ts` reuses its KPI,
+monthly, category, and product selectors; no preview figures are hardcoded.
+Lightweight HTML/CSS figures provide readable, accessible quarterly and
+category previews without adding another interactive chart layer.
+
+Q4 growth compares October–December with July–September **of 2025**, not a
+previous year. Category shares use all merchandise revenue, with unmatched
+lines disclosed separately. Inventory previews use the established current
+snapshot, SKU-style aggregation, October–December sales velocity, and
+under-two-month review threshold. Order net sales include tax and shipping;
+merchandise revenue excludes those components. New reference-based tests
+verify the case-study figures and empty-history behavior.
+
+This is a fictional portfolio scenario: no client testimonials, measured
+time savings, ROI, attribution claims, contact forms, or broader consulting
+homepage are included. Business benefits describe what the workflow is
+intended to illustrate.
