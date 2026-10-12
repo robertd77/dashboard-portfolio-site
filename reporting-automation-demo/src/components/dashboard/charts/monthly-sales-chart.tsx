@@ -11,7 +11,7 @@ import { ReportingChartCard } from "./chart-card";
 import { ReportingChartTooltip, TooltipMetric, useChartTooltipTrigger } from "./chart-tooltip";
 import { reportingChartStyle, salesChartConfig } from "./chart-theme";
 
-function MonthlySalesTooltip(props: TooltipContentProps<TooltipValueType, string | number>) {
+export function MonthlySalesTooltip(props: TooltipContentProps<TooltipValueType, string | number>) {
   const point: MonthlySalesPoint | undefined = props.payload?.[0]?.payload;
   if (!props.active || !point?.inRange) return null;
   return (
