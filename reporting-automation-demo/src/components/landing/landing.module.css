@@ -95,7 +95,7 @@
 @media (max-width: 639px) { .container { width: calc(100% - 32px); } .headerInner { gap: 20px; padding-block: 20px; } .nav { gap: 18px; font-size: 11px; } .hero { padding-block: 44px 50px; } .heroCopy { font-size: 15px; } .heroTitle { font-size: clamp(2.5rem, 10.5vw, 3.5rem); } .section { padding-block: 45px; } .services, .process { grid-template-columns: 1fr; gap: 16px; } .service h3 { margin-top: 16px; } .process { gap: 24px; } .flowBoard { padding: 16px 12px; } .flowGrid { grid-template-columns: 1fr 40px 1.08fr; gap: 4px; } .source { padding: 10px 6px; gap: 5px; font-size: 9px; } .source span { display: none; } .report { padding: 12px 9px; } .processorIcon { width: 31px; height: 31px; } .miniBars { gap: 2px; } .reportTitle { font-size: 9px; } .visual::before { inset-inline: -4px; } .boardFooter { font-size: 8px; } .contact { padding-block: 45px; } }
 @media (prefers-reduced-motion: reduce) { .landing *, .landing *::before, .landing *::after { animation: none !important; transition: none !important; } .landing [data-reveal-state] { opacity: 1 !important; transform: none !important; } }
 
-.contactEmphasis { color: inherit; text-decoration-line: underline; text-decoration-color: var(--accent); text-decoration-thickness: .12em; text-underline-offset: .16em; text-decoration-skip-ink: none; }
+.contactEmphasis { color: var(--accent); text-decoration: none; }
 
 /* Constrain nested columns and chart preview on narrow viewports. */
 .hero > *, .feature > *, .contactInner > * { min-width: 0; }
