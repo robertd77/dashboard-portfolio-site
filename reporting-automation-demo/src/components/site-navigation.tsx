@@ -8,7 +8,9 @@ import styles from "./site-navigation.module.css";
 
 type Variant = "home" | "northwood";
 
-const links = {
+type NavigationLink = { href: string; label: string; contact?: boolean };
+
+const links: Record<Variant, NavigationLink[]> = {
   home: [
     { href: "/#services", label: "Services" },
     { href: "/#work", label: "Featured work" },
