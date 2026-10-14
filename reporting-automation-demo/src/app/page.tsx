@@ -28,7 +28,7 @@ export default async function HomePage() {
       <header className={styles.header}>
         <div className={`${styles.container} ${styles.headerInner}`}>
           <Link href="/" className={styles.logo} aria-label="Reporting Automation home"><span className={styles.logoMark}><Workflow size={21} strokeWidth={1.6} aria-hidden="true" /></span><span>Reporting<br />Automation</span></Link>
-          <nav aria-label="Main navigation" className={styles.nav}><a href="#services">Services</a><a href="#work">Featured work</a><a href="#approach">How it works</a><a href="#contact" className={styles.navContact}>Get in touch<ArrowUpRight className="ml-1 inline size-3" aria-hidden="true" /></a></nav>
+          <nav aria-label="Main navigation" className={styles.nav}><a href="#services">Services</a><a href="#work">Featured work</a><Link href="/raw-data">Demo</Link><a href="#approach">How it works</a><a href="#contact" className={styles.navContact}>Get in touch<ArrowUpRight className="ml-1 inline size-3" aria-hidden="true" /></a></nav>
         </div>
       </header>
     </div>
@@ -52,13 +52,13 @@ export default async function HomePage() {
               </div>
               <div className={styles.boardFooter}><span>01 / EXPORT</span><span>02 / PREPARE</span><span>03 / REPORT</span></div>
             </div>
-            <figcaption className={styles.visualCaption}>Workflow illustration · Sales pattern from the simulated Northwood data</figcaption>
+            <figcaption className={styles.visualCaption}>Workflow illustration · Northwood sales pattern</figcaption>
           </figure>
         </section>
       </div>
       <div className={styles.container}>
         <section id="services" className={styles.section} data-reveal aria-labelledby="services-title">
-          <p className="eyebrow">What I help with</p><h2 id="services-title" className={styles.sectionHeading}>Make the work behind the report simpler.</h2>
+          <p className="eyebrow">What I help with</p><h2 id="services-title" className={styles.sectionHeading}>Make the work behind the report <span className="heading-highlight">simpler.</span></h2>
           <div className={styles.services}>{[
             { icon: Workflow, title: "Reporting automation", text: "Replace recurring copy-and-paste routines with a repeatable path from source exports to reports." },
             { icon: Layers, title: "Data cleanup & integration", text: "Bring disconnected files together, standardize everyday inconsistencies, and make exceptions easy to review." },
@@ -66,16 +66,16 @@ export default async function HomePage() {
           ].map((service) => <article key={service.title} className={styles.service}><span className="icon-tile"><service.icon size={22} strokeWidth={1.5} aria-hidden="true" /></span><h3>{service.title}</h3><p>{service.text}</p></article>)}</div>
         </section>
         <section id="work" className={`${styles.section} ${styles.feature}`} data-reveal aria-labelledby="work-title">
-          <div><p className="eyebrow">Featured workflow</p><p className={styles.caseLabel}>Fictional business · Simulated data</p><h2 id="work-title" className={styles.sectionHeading}>Northwood Supply Co.</h2><p className={styles.sectionIntro}>Four ordinary exports. One connected reporting workflow. Follow an Ontario apparel retailer’s data from Shopify-style and accounting files through validation to useful management reporting.</p>
+          <div><p className="eyebrow">Featured workflow</p><p className={styles.caseLabel}>Northwood sample · Fictional business, simulated data</p><h2 id="work-title" className={styles.sectionHeading}>Northwood Supply Co.</h2><p className={styles.sectionIntro}>Four ordinary exports. One connected reporting workflow. Follow an Ontario apparel retailer’s data from Shopify-style and accounting files through validation to useful management reporting.</p>
             <dl className={styles.stats}><div><dt>2025 net sales · CAD</dt><dd data-testid="landing-annual-sales">{formatCompactCurrency(insights.kpis.netSales, 2)}</dd></div><div><dt>Distinct orders</dt><dd data-testid="landing-orders">{formatNumber(insights.kpis.orders)}</dd></div><div><dt>Source exports</dt><dd>{rawDatasets.length}</dd></div></dl>
             <p className="text-sm leading-6 text-muted-foreground">The reporting reveals {formatCompactCurrency(insights.q4Sales)} in Q4 sales ({formatPercentage(insights.q4Share)} of the year) while keeping data-quality exceptions visible.</p>
             <div className={styles.actions}><Button asChild><Link href="/case-study">Read the Case Study<ArrowUpRight aria-hidden="true" /></Link></Button><Link href="/raw-data" className={styles.inlineLink}>Explore the Demo<ArrowRight size={15} aria-hidden="true" /></Link></div>
-            <p className="mt-4 text-[11px] leading-5 text-muted-foreground">A portfolio demonstration, not a real client engagement. These are simulated business figures, not measured consulting outcomes.</p>
+            
           </div>
           <SalesPreview points={points} total={insights.kpis.netSales} />
         </section>
         <section id="approach" className={styles.section} data-reveal aria-labelledby="approach-title">
-          <p className="eyebrow">How it works</p><h2 id="approach-title" className={styles.sectionHeading}>Start with the routine. Build a better way to run it.</h2>
+          <p className="eyebrow">How it works</p><h2 id="approach-title" className={styles.sectionHeading}>Start with the routine. Build a <span className="heading-highlight">better way</span> to run it.</h2>
           <ol className={styles.process}>{[
             { title: "Understand the Workflow", text: "Map the files, spreadsheet steps, recurring questions, and review points with the people doing the work." },
             { title: "Automate the Process", text: "Turn repeatable cleanup and calculations into a dependable flow, with clear checks and exception handling." },
@@ -84,7 +84,7 @@ export default async function HomePage() {
         </section>
       </div>
       <section id="contact" className={`${styles.dark} ${styles.contact}`} data-reveal aria-labelledby="contact-title">
-        <div className={`${styles.container} ${styles.contactInner}`}><div><p className={styles.kicker}>Let’s simplify the next reporting cycle</p><h2 id="contact-title" className={styles.sectionHeading}>Got a spreadsheet routine that keeps coming back?</h2><p>Tell me what you export, what you do with it, and which report you need at the end. That’s a useful place to start.</p></div><div><a href="mailto:hello@example.com" className={styles.email}>hello@example.com<Mail size={22} strokeWidth={1.5} aria-hidden="true" /></a><p className={styles.placeholder}>Placeholder email · Replace before publishing</p></div></div>
+        <div className={`${styles.container} ${styles.contactInner}`}><div><p className={styles.kicker}>Let’s simplify the next reporting cycle</p><h2 id="contact-title" className={styles.sectionHeading}>Got a spreadsheet routine that <span className={styles.contactEmphasis}>keeps coming back?</span></h2><p>Tell me what you export, what you do with it, and which report you need at the end. Then we'll get started.</p></div><div><a href="mailto:hello@example.com" className={styles.email}>hello@example.com<Mail size={22} strokeWidth={1.5} aria-hidden="true" /></a><p className={styles.placeholder}>Placeholder email · Replace before publishing</p></div></div>
       </section>
     </main>
     <footer className={`${styles.dark} ${styles.footer}`}><div className={`${styles.container} ${styles.footerInner}`}><p>Reporting Automation · Independent consulting</p><div className="flex flex-wrap gap-5"><Link href="/case-study">Northwood case study</Link><Link href="/raw-data">Interactive demo</Link><a href="#contact">Get in touch</a></div></div></footer>

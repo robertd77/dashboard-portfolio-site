@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Mail } from "lucide-react";
+import landingStyles from "@/components/landing/landing.module.css";
 import { PageHeading } from "@/components/page-heading";
 import { StageNavigation } from "@/components/stage-navigation";
 import { DashboardProvider } from "@/components/dashboard/dashboard-provider";
@@ -18,7 +20,7 @@ export default async function DashboardPage() {
   return (
     <>
       <PageHeading step="03 / Dashboard" title="A clearer view of the business."
-        description="Explore the reporting-ready figures for Northwood Supply Co., a fictional retailer. Choose a month range and sales channel to see a consistent view of its simulated sales and merchandise performance." />
+        description="Explore the reporting-ready figures for Northwood Supply Co. Choose a month range and sales channel to see a consistent view of its sales and merchandise performance." />
       <DashboardProvider data={data}>
         <DashboardFilters />
         <KpiCards />
@@ -29,6 +31,19 @@ export default async function DashboardPage() {
           <div className="mt-5 grid gap-5"><CategoryPerformanceChart /><ProductInventoryChart /><CustomerPurchaseMixChart /></div>
         </section>
       </DashboardProvider>
+      <section id="contact" aria-labelledby="dashboard-contact-title" className={`${landingStyles.landing} ${landingStyles.dark} ${landingStyles.contact} mt-10 overflow-hidden rounded-2xl`}>
+        <div className={`${landingStyles.contactInner} px-6 sm:px-10`}>
+          <div>
+            <p className={landingStyles.kicker}>Let&apos;s simplify the next reporting cycle</p>
+            <h2 id="dashboard-contact-title" className={landingStyles.sectionHeading}>Make reporting <span className={landingStyles.contactEmphasis}>work for you.</span></h2>
+            <p>Tell me what you export, what you do with it, and which report you need at the end. Then we&apos;ll get started.</p>
+          </div>
+          <div className="shrink-0">
+            <a href="mailto:hello@example.com" className={landingStyles.email}>hello@example.com<Mail size={22} strokeWidth={1.5} aria-hidden="true" /></a>
+            <p className={landingStyles.placeholder}>Placeholder email · Replace before publishing</p>
+          </div>
+        </div>
+      </section>
       <StageNavigation index={2} />
     </>
   );

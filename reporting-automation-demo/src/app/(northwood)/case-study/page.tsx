@@ -13,7 +13,7 @@ import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Northwood Case Study",
-  description: "A fictional retailer, four simulated exports, and a repeatable reporting workflow. Explore the Northwood reporting automation case study and interactive demo.",
+  description: "Four business exports and a repeatable reporting workflow. Explore the Northwood reporting automation case study and interactive demo.",
 };
 
 const sectionClass = "border-t border-border py-12 sm:py-16";
@@ -32,12 +32,12 @@ export default async function CaseStudyPage() {
       <div>
         <p className="eyebrow">Northwood / Reporting automation case study</p>
         <h1 id="case-study-title" className={styles.heroTitle}>From scattered exports to a clearer view of the business.</h1>
-        <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">Meet Northwood Supply Co., a fictional Ontario apparel retailer selling online and in store. See how a recurring spreadsheet routine becomes a guided, repeatable reporting workflow.</p>
+        <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">Meet Northwood Supply Co., an Ontario apparel retailer selling online and in store. See how a recurring spreadsheet routine becomes a guided, repeatable reporting workflow.</p>
         <div className="mt-8 flex flex-wrap items-center gap-4">
           <Button asChild><Link href="/raw-data">Explore Interactive Demo<ArrowRight aria-hidden="true" /></Link></Button>
           <Link href="#solution" className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-primary hover:underline">See the workflow<ArrowUpRight className="size-4" aria-hidden="true" /></Link>
         </div>
-        <p className="mt-5 max-w-xl text-xs leading-5 text-muted-foreground">Fictional business · Simulated 2025 data · A portfolio demonstration, not a real client engagement.</p>
+        
       </div>
       <aside className="relative overflow-hidden rounded-2xl border border-primary bg-primary p-7 text-white shadow-lg sm:p-8" aria-labelledby="snapshot-title">
         <div className="absolute -right-16 -top-16 size-56 rounded-full border border-white/10" aria-hidden="true" />
@@ -50,7 +50,7 @@ export default async function CaseStudyPage() {
             <div><dt className="text-xs text-white/80">Order lines</dt><dd className="mt-2 text-2xl font-semibold">{formatNumber(insights.lineCount)}</dd></div>
           </div>
         </dl>
-        <p className="relative mt-7 flex items-start gap-2 border-t border-white/20 pt-5 text-xs leading-5 text-white/80"><Check className="mt-0.5 size-4 shrink-0" aria-hidden="true" />Prepared from {rawDatasets.length} simulated source exports. Net sales include tax and shipping.</p>
+        <p className="relative mt-7 flex items-start gap-2 border-t border-white/20 pt-5 text-xs leading-5 text-white/80"><Check className="mt-0.5 size-4 shrink-0" aria-hidden="true" />Prepared from {rawDatasets.length} source exports. Net sales include tax and shipping.</p>
       </aside>
     </section>
 
@@ -58,8 +58,8 @@ export default async function CaseStudyPage() {
       <div className="grid gap-8 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
         <div>
           <p className="eyebrow">The problem</p>
-          <h2 id="problem-title" className={headingClass}>Every report starts with the same spreadsheet work.</h2>
-          <p className="mt-5 text-base leading-7 text-muted-foreground">In this fictional scenario, operations staff pull Shopify and accounting exports, update workbooks, and rebuild the monthly view. The work is familiar, but it repeats every reporting cycle.</p>
+          <h2 id="problem-title" className={headingClass}>Every report starts with the <span className="heading-highlight">same spreadsheet work.</span></h2>
+          <p className="mt-5 text-base leading-7 text-muted-foreground">Operations staff pull Shopify and accounting exports, update workbooks, and rebuild the monthly view. The work is familiar, but it repeats every reporting cycle.</p>
           <p className="mt-4 text-base leading-7 text-muted-foreground">A differently formatted SKU can break a lookup. A refund can change a total. A formula copied inconsistently can leave two reports telling different stories.</p>
         </div>
         <ol className="overflow-hidden rounded-2xl border border-border bg-card">
@@ -81,7 +81,7 @@ export default async function CaseStudyPage() {
 
     <section id="solution" className={`${sectionClass} scroll-mt-6`} aria-labelledby="solution-title">
       <p className="eyebrow">The solution</p>
-      <h2 id="solution-title" className={headingClass}>Make the process repeatable. Keep the review visible.</h2>
+      <h2 id="solution-title" className={headingClass}>Make the process <span className="heading-highlight">repeatable.</span> Keep the review visible.</h2>
       <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">The exports become the starting point for a defined workflow: validate, normalize, apply consistent calculations, review exceptions, and report. The dashboard is the useful end result of that process.</p>
       <ol className="mt-8 grid gap-5 md:grid-cols-3">
         {stages.map((stage, index) => <li key={stage.title} className="relative flex flex-col rounded-2xl border border-border bg-card p-6">
@@ -90,19 +90,19 @@ export default async function CaseStudyPage() {
           <Link href={workflowSteps[index].href} className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-primary hover:underline">{workflowSteps[index].label}<ArrowUpRight className="size-4" aria-hidden="true" /></Link>
         </li>)}
       </ol>
-      <div className="mt-6 flex items-start gap-4 rounded-xl border border-[#ecd6b5] bg-[#fff7ea] p-5 sm:p-6"><ClipboardCheck className="mt-1 size-5 shrink-0 text-[#985914]" aria-hidden="true" /><div><h3 className="text-sm font-semibold">Automation still leaves room for judgment.</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">The demo flags {formatNumber(result.summary.missingSkus)} lines with missing SKUs for review, rather than guessing a product match. Guest orders stay visible, and refund and cancellation rules stay consistent.</p></div></div>
+      <div className="warning-panel mt-6 flex items-start gap-4 rounded-xl p-5 sm:p-6"><ClipboardCheck className="mt-1 size-5 shrink-0 text-[#9a640f]" aria-hidden="true" /><div><h3 className="text-sm font-semibold">Automation still leaves room for judgment.</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">The demo flags {formatNumber(result.summary.missingSkus)} lines with missing SKUs for review, rather than guessing a product match. Guest orders stay visible, and refund and cancellation rules stay consistent.</p></div></div>
     </section>
 
     <section className={sectionClass} aria-labelledby="insights-title">
       <p className="eyebrow">Example insights</p>
-      <h2 id="insights-title" className={headingClass}>Less time assembling the report. More room to ask useful questions.</h2>
+      <h2 id="insights-title" className={headingClass}>Less time assembling the report. More room to ask <span className="heading-highlight">useful questions.</span></h2>
       <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">These findings come from the same prepared data as the interactive dashboard. Full-year 2025, all sales channels, with amounts in Canadian dollars.</p>
       <InsightPreviews insights={insights} />
     </section>
 
     <section className={sectionClass} aria-labelledby="value-title">
       <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
-        <div><p className="eyebrow">Business value</p><h2 id="value-title" className={headingClass}>A reporting routine the team can repeat.</h2><p className="mt-5 text-base leading-7 text-muted-foreground">The value is in replacing recurring preparation work with a consistent process, while keeping the numbers and unresolved issues open to review.</p><p className="mt-4 text-xs leading-6 text-muted-foreground">These are the intended benefits illustrated by the demo. No measured time savings, ROI, or real-client outcomes are claimed.</p></div>
+        <div><p className="eyebrow">Business value</p><h2 id="value-title" className={headingClass}>A reporting routine the team can repeat.</h2><p className="mt-5 text-base leading-7 text-muted-foreground">The value is in replacing recurring preparation work with a consistent process, while keeping the numbers and unresolved issues open to review.</p></div>
         <div className="grid gap-6 sm:grid-cols-2">
           {[
             { icon: RefreshCw, title: "Repeatable reporting", text: "Follow the same preparation and review steps each cycle, rather than rebuilding the workbook." },

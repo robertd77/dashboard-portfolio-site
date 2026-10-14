@@ -5,7 +5,7 @@ import { WorkflowNav } from "@/components/workflow-nav";
 
 export const metadata: Metadata = {
   title: { default: "Northwood | Reporting Automation Demo", template: "%s | Northwood Demo" },
-  description: "A portfolio demo of reporting automation for Northwood Supply Co., a fictional Ontario apparel retailer. All included data is simulated.",
+  description: "Reporting automation for Northwood Supply Co. Explore source data, validation, and management reporting.",
 };
 
 export default function NorthwoodLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -17,13 +17,13 @@ export default function NorthwoodLayout({ children }: Readonly<{ children: React
             <span className="brand-mark"><Trees size={26} strokeWidth={1.5} aria-hidden="true" /></span>
             <span>
               <span className="block text-lg font-bold tracking-tight">Northwood Supply Co.</span>
-              <span className="block text-xs text-muted-foreground">Reporting automation demo</span>
+              <span className="block text-xs text-muted-foreground">Reporting workflow</span>
             </span>
           </Link>
           <div className="flex flex-wrap items-center gap-4">
             <Link href="/" className="rounded-md py-2 text-sm font-semibold text-primary hover:underline">Home</Link>
             <Link href="/case-study" className="rounded-md py-2 text-sm font-semibold text-primary hover:underline">Case study</Link>
-            <span className="demo-badge"><span aria-hidden="true" />Fictional business · Simulated data</span>
+
           </div>
         </div>
       </header>
@@ -31,8 +31,8 @@ export default function NorthwoodLayout({ children }: Readonly<{ children: React
         <WorkflowNav />
         <main id="main-content" tabIndex={-1} className="pb-14 outline-none">{children}</main>
         <footer className="site-footer">
-          <p>Northwood Supply Co. is a fictional Ontario apparel retailer.</p>
-          <p>A portfolio demonstration · All data is simulated</p>
+          <p>Northwood Supply Co. · Reporting automation</p>
+          <p>Fictional retailer · Simulated data · Not a real client engagement</p>
         </footer>
       </div>
     </>
