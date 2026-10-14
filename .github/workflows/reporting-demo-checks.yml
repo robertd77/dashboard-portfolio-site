@@ -1,0 +1,32 @@
+name: Validate reporting demo
+
+on:
+  push:
+    branches: [dev]
+    paths:
+      - "reporting-automation-demo/**"
+      - ".github/workflows/reporting-demo-checks.yml"
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: reporting-automation-demo
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: reporting-automation-demo/package-lock.json
+      - run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: TypeScript
+        run: npm run typecheck
+      - name: Tests
+        run: npm test
+      - name: Production build
+        run: npm run build

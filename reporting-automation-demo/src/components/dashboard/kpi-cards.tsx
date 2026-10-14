@@ -31,8 +31,8 @@ export function KpiCards() {
       </div>
       {kpis.orders === 0 && <p className="mt-5 rounded-lg border border-border bg-card p-4 text-sm leading-6 text-muted-foreground">No orders match this view. Totals are zero; Average Order Value and Gross Margin are unavailable. Try another month range or channel.</p>}
       {kpis.unverifiedCostLines > 0 && (
-        <aside className="scope-note mt-5" aria-label="Product cost exceptions">
-          <TriangleAlert size={20} className="shrink-0 text-primary" aria-hidden="true" />
+        <aside className="scope-note warning-panel mt-5" aria-label="Product cost exceptions">
+          <TriangleAlert size={20} className="shrink-0 text-[#9a640f]" aria-hidden="true" />
           <p className="text-sm leading-6 text-muted-foreground">{formatNumber(kpis.unverifiedCostLines)} selected order lines have unresolved product costs. Gross Profit and Gross Margin include the reference zero-cost convention for these lines and remain provisional until review.</p>
         </aside>
       )}

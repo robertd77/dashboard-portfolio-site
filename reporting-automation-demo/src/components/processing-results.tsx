@@ -40,10 +40,10 @@ export function ProcessingResults({ result }: { result: WorkflowView }) {
         </Card>
       </section>
 
-      <section aria-labelledby="exceptions-heading" className="min-w-0 overflow-hidden rounded-xl border border-border bg-card shadow-sm">
+      <section aria-labelledby="exceptions-heading" className="warning-panel min-w-0 overflow-hidden rounded-xl shadow-sm">
         <div className="p-6">
           <h2 id="exceptions-heading" className="flex items-center gap-2 text-lg font-semibold">
-            <TriangleAlert size={20} aria-hidden="true" className="text-primary" />Exceptions for review
+            <TriangleAlert size={20} aria-hidden="true" className="text-[#9a640f]" />Exceptions for review
           </h2>
           <p className="mt-3 text-sm leading-6 text-muted-foreground">{count(summary.missingSkus)} lines have no SKU; {count(summary.unmatchedSkus)} have an unmatched SKU. They remain in the reporting data, with product attributes and unit costs left unknown. Refunds, cancellations, and guest orders are ordinary transactions, not data-quality errors.</p>
         </div>
@@ -71,9 +71,9 @@ export function ProcessingResults({ result }: { result: WorkflowView }) {
       </section>
 
       <section aria-labelledby="reconciliation-heading">
-        <Card>
+        <Card className={ready ? "" : "warning-panel"}>
           <h2 id="reconciliation-heading" className="flex items-center gap-2 text-lg font-semibold">
-            {ready ? <CheckCircle2 size={20} aria-hidden="true" className="text-primary" /> : <TriangleAlert size={20} aria-hidden="true" />}
+            {ready ? <CheckCircle2 size={20} aria-hidden="true" className="text-primary" /> : <TriangleAlert size={20} aria-hidden="true" className="text-[#9a640f]" />}
             {ready ? "Reference reconciliation passed" : "Reference differences need review"}
           </h2>
           <p className="mt-3 text-sm leading-6 text-muted-foreground">The workflow generated new datasets from the raw files, then compared their columns, record counts, values, and totals against the supplied references.</p>
@@ -93,17 +93,9 @@ export function ProcessingResults({ result }: { result: WorkflowView }) {
             </table>
           </div>
           {!ready && <ul className="mt-4 space-y-2 text-sm leading-6 text-muted-foreground">{reconciliation.checks.filter((check) => !check.passed).map((check) => <li key={check.filename}>{check.filename}: {check.examples.join(" ")}</li>)}</ul>}
-          <p className="mt-4 text-xs leading-6 text-muted-foreground">Figures are rounded for display. Original and reference files remain unchanged, and unresolved source records stay available for review.</p>
+          <p className="mt-4 text-xs leading-6 text-muted-foreground">Figures are rounded for display. Missing product costs remain unknown, so profitability on those lines is unverified; refund allocations can include tax or shipping. Reference files remain unchanged.</p>
         </Card>
       </section>
-
-      <aside className="scope-note" aria-label="Reporting conventions">
-        <TriangleAlert size={20} className="shrink-0 text-primary" aria-hidden="true" />
-        <div>
-          <h2 className="text-sm font-semibold">Keep the reporting context visible</h2>
-          <p className="mt-1 text-sm leading-6 text-muted-foreground">The reference convention subtracts recorded line refunds as supplied, which can produce negative merchandise sales when refunds include tax or shipping. Unmatched lines use zero COGS for reconciliation, but their costs are unknown and their profit is unverified. The expense sample is not a complete ledger.</p>
-        </div>
-      </aside>
 
       {ready && (
         <section aria-labelledby="outputs-heading">

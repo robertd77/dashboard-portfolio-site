@@ -12,7 +12,7 @@ export default async function RawDataPage() {
   return (
     <>
       <PageHeading step="01 / Raw Data" title="Every report starts with the source."
-        description="These simulated exports show what Northwood Supply Co., a fictional retailer, might provide for recurring reporting. Four separate files from different systems are the starting point. Select a file to inspect its original records." />
+        description="These exports show what Northwood Supply Co. provides for recurring reporting. Four separate files from different systems are the starting point. Select a file to inspect its original records." />
       <RawDataExplorer datasets={datasets} />
       <aside className="scope-note mt-6" aria-label="Next workflow stage">
         <ArrowUpRight size={20} className="shrink-0 text-primary" aria-hidden="true" />

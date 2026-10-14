@@ -13,18 +13,18 @@ export function DashboardFilters() {
   const { filters, setMonth, setChannel } = useDashboard();
   return (
     <Card data-testid="dashboard-filter-bar" className="sticky top-3 z-30 border-primary/15 bg-card/95 p-3 shadow-[0_6px_24px_-10px_#23352e40] backdrop-blur-md sm:p-4">
-      <div className="flex items-center gap-5">
+      <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-5">
         <div className="hidden shrink-0 items-center gap-3 lg:flex">
           <span className="grid size-9 place-items-center rounded-lg bg-secondary text-primary"><SlidersHorizontal size={17} aria-hidden="true" /></span>
           <div><h2 className="text-sm font-semibold">Reporting filters</h2><p className="mt-1 text-xs text-muted-foreground">2025 reporting · CAD</p></div>
         </div>
-        <fieldset className="grid min-w-0 flex-1 grid-cols-3 gap-2 sm:gap-4">
+        <fieldset className="grid min-w-0 flex-1 grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
           <legend className="sr-only">Dashboard filters: inclusive month range and sales channel</legend>
             {(["startMonth", "endMonth"] as const).map((boundary) => (
               <div key={boundary} className="min-w-0 text-xs text-muted-foreground">
                 <label htmlFor={`dashboard-${boundary}`}>{boundary === "startMonth" ? "From month" : "To month"}</label>
                 <select id={`dashboard-${boundary}`} aria-describedby="dashboard-range-help" value={filters[boundary]} onChange={(event) => setMonth(boundary, event.target.value)} className={controlClass}>
-                  {DASHBOARD_MONTHS.map((month) => <option key={month} value={month} title={formatMonth(month)}>{formatShortMonth(month)} ’{month.slice(2, 4)}</option>)}
+                  {DASHBOARD_MONTHS.map((month) => <option key={month} value={month} title={formatMonth(month)}>{formatShortMonth(month)} {month.slice(0, 4)}</option>)}
                 </select>
               </div>
             ))}
