@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight, ChartNoAxesCombined, Check, CircleCheck, FileSpreadsheet, Layers, Mail, ScanLine, Workflow } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SalesPreview } from "@/components/landing/sales-preview";
+import { SiteNavigation } from "@/components/site-navigation";
 import { SectionReveals } from "@/components/landing/section-reveals";
 import styles from "@/components/landing/landing.module.css";
 import { selectCaseStudyInsights } from "@/lib/case-study/insights";
@@ -28,7 +29,7 @@ export default async function HomePage() {
       <header className={styles.header}>
         <div className={`${styles.container} ${styles.headerInner}`}>
           <Link href="/" className={styles.logo} aria-label="Reporting Automation home"><span className={styles.logoMark}><Workflow size={21} strokeWidth={1.6} aria-hidden="true" /></span><span>Reporting<br />Automation</span></Link>
-          <nav aria-label="Main navigation" className={styles.nav}><a href="#services">Services</a><a href="#work">Featured work</a><Link href="/raw-data">Demo</Link><a href="#approach">How it works</a><a href="#contact" className={styles.navContact}>Get in touch<ArrowUpRight className="ml-1 inline size-3" aria-hidden="true" /></a></nav>
+          <SiteNavigation variant="home" />
         </div>
       </header>
     </div>
@@ -66,7 +67,7 @@ export default async function HomePage() {
           ].map((service) => <article key={service.title} className={styles.service}><span className="icon-tile"><service.icon size={22} strokeWidth={1.5} aria-hidden="true" /></span><h3>{service.title}</h3><p>{service.text}</p></article>)}</div>
         </section>
         <section id="work" className={`${styles.section} ${styles.feature}`} data-reveal aria-labelledby="work-title">
-          <div><p className="eyebrow">Featured workflow</p><p className={styles.caseLabel}>Northwood sample · Fictional business, simulated data</p><h2 id="work-title" className={styles.sectionHeading}>Northwood Supply Co.</h2><p className={styles.sectionIntro}>Four ordinary exports. One connected reporting workflow. Follow an Ontario apparel retailer’s data from Shopify-style and accounting files through validation to useful management reporting.</p>
+          <div><p className="eyebrow">Featured workflow</p><p className={styles.caseLabel}>Sample case study · Fictional business using simulated data</p><h2 id="work-title" className={styles.sectionHeading}>Northwood Supply Co.</h2><p className={styles.sectionIntro}>Four ordinary exports. One connected reporting workflow. Follow an Ontario apparel retailer’s data from Shopify-style and accounting files through validation to useful management reporting.</p>
             <dl className={styles.stats}><div><dt>2025 net sales · CAD</dt><dd data-testid="landing-annual-sales">{formatCompactCurrency(insights.kpis.netSales, 2)}</dd></div><div><dt>Distinct orders</dt><dd data-testid="landing-orders">{formatNumber(insights.kpis.orders)}</dd></div><div><dt>Source exports</dt><dd>{rawDatasets.length}</dd></div></dl>
             <p className="text-sm leading-6 text-muted-foreground">The reporting reveals {formatCompactCurrency(insights.q4Sales)} in Q4 sales ({formatPercentage(insights.q4Share)} of the year) while keeping data-quality exceptions visible.</p>
             <div className={styles.actions}><Button asChild><Link href="/case-study">Read the Case Study<ArrowUpRight aria-hidden="true" /></Link></Button><Link href="/raw-data" className={styles.inlineLink}>Explore the Demo<ArrowRight size={15} aria-hidden="true" /></Link></div>

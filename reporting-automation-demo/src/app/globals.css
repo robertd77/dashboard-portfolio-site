@@ -69,6 +69,11 @@ h1 { max-width: 780px; font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; le
 }
 
 /* Shared warm-yellow accents: dark text remains readable on light surfaces. */
-.heading-highlight { color: inherit; background: linear-gradient(transparent 64%, #f4c95d 64%); box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.heading-highlight { color: inherit; text-decoration-line: underline; text-decoration-color: #e6b63e; text-decoration-thickness: .1em; text-underline-offset: .15em; text-decoration-skip-ink: none; }
 .warning-panel { border: 1px solid #e4c36f !important; background: #fff6d8 !important; color: #3d3520; }
 .warning-panel .text-muted-foreground { color: #65583c; }
+
+/* Keep page layouts within the viewport; data tables scroll in their own containers. */
+html, body { max-width: 100%; overflow-x: clip; }
+.shell-container, main, section, article { min-width: 0; }
+@media (max-width: 639px) { .site-header .brand { min-width: 0; } .site-header .brand > span:last-child { min-width: 0; } .site-header .brand-mark { width: 40px; height: 40px; flex-shrink: 0; } .workflow-nav ol { min-width: 0; } .step-link { min-width: 0; } .step-link span { min-width: 0; } .stage-placeholder { padding: 20px; } }

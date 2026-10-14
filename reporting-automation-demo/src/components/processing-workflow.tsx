@@ -87,7 +87,7 @@ export function ProcessingWorkflow() {
         <p className="status-label">{pending ? "Workflow running" : result ? ready ? "Workflow complete" : "Review required" : "Ready to process"}</p>
         <h2 className="mt-3 text-2xl font-semibold tracking-tight">{pending ? "Your reporting workflow is running." : result ? ready ? "Reporting data is ready." : "The generated results need review." : "Four exports. One repeatable workflow."}</h2>
         <p className="mt-3 max-w-2xl text-sm leading-7 text-muted-foreground">Run the workflow to load the exports, normalize known inconsistencies, apply reporting rules, and compare newly generated datasets with the reference outputs. Original files are preserved.</p>
-        <p className="mt-3 text-xs leading-6 text-muted-foreground">Guided demo: stages are paced over about 20 seconds to make the workflow visible. Timing is illustrative; results are calculated from the supplied files.</p>
+
         <ol className="mt-7 space-y-3">
           {stages.map((stage, index) => {
             const done = index < completed;

@@ -62,8 +62,8 @@
 .service h3 { margin-top: 24px; font-size: 17px; font-weight: 600; letter-spacing: -.02em; }
 .service p { margin-top: 10px; font-size: 14px; line-height: 1.75; color: var(--muted-foreground); }
 .feature { display: grid; grid-template-columns: .9fr 1.35fr; align-items: center; gap: 46px; }
-.caseLabel { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 20px; border: 1px solid var(--border); border-radius: 30px; background: white; padding: 8px 12px; font-size: 10px; color: var(--muted-foreground); }
-.caseLabel::before { content: ''; height: 5px; width: 5px; border-radius: 50%; background: #138660; }
+.caseLabel { margin-bottom: 16px; font-size: 11px; line-height: 1.6; color: var(--muted-foreground); }
+
 .stats { display: flex; flex-wrap: wrap; gap: 26px; margin-block: 26px; }
 .stats > div { display: flex; flex-direction: column; }
 .stats dt { order: 1; margin-top: 7px; font-size: 11px; color: var(--muted-foreground); }
@@ -95,4 +95,8 @@
 @media (max-width: 639px) { .container { width: calc(100% - 32px); } .headerInner { gap: 20px; padding-block: 20px; } .nav { gap: 18px; font-size: 11px; } .hero { padding-block: 44px 50px; } .heroCopy { font-size: 15px; } .heroTitle { font-size: clamp(2.5rem, 10.5vw, 3.5rem); } .section { padding-block: 45px; } .services, .process { grid-template-columns: 1fr; gap: 16px; } .service h3 { margin-top: 16px; } .process { gap: 24px; } .flowBoard { padding: 16px 12px; } .flowGrid { grid-template-columns: 1fr 40px 1.08fr; gap: 4px; } .source { padding: 10px 6px; gap: 5px; font-size: 9px; } .source span { display: none; } .report { padding: 12px 9px; } .processorIcon { width: 31px; height: 31px; } .miniBars { gap: 2px; } .reportTitle { font-size: 9px; } .visual::before { inset-inline: -4px; } .boardFooter { font-size: 8px; } .contact { padding-block: 45px; } }
 @media (prefers-reduced-motion: reduce) { .landing *, .landing *::before, .landing *::after { animation: none !important; transition: none !important; } .landing [data-reveal-state] { opacity: 1 !important; transform: none !important; } }
 
-.contactEmphasis { color: var(--accent); }
+.contactEmphasis { color: inherit; text-decoration-line: underline; text-decoration-color: var(--accent); text-decoration-thickness: .12em; text-underline-offset: .16em; text-decoration-skip-ink: none; }
+
+/* Constrain nested columns and chart preview on narrow viewports. */
+.hero > *, .feature > *, .contactInner > * { min-width: 0; }
+@media (max-width: 639px) { .visual::before { display: none; } .flowBoard { width: 100%; } .flowGrid { grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1.1fr); } .sources, .report, .source, .source p { min-width: 0; } .source p { overflow-wrap: anywhere; } .processor { min-width: 0; } .processorIcon { width: 28px; height: 28px; } .email { overflow-wrap: anywhere; font-size: 1.18rem; } }

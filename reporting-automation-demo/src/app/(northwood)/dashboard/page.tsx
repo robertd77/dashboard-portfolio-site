@@ -38,7 +38,7 @@ export default async function DashboardPage() {
             <h2 id="dashboard-contact-title" className={landingStyles.sectionHeading}>Make reporting <span className={landingStyles.contactEmphasis}>work for you.</span></h2>
             <p>Tell me what you export, what you do with it, and which report you need at the end. Then we&apos;ll get started.</p>
           </div>
-          <div className="shrink-0">
+          <div className="min-w-0">
             <a href="mailto:hello@example.com" className={landingStyles.email}>hello@example.com<Mail size={22} strokeWidth={1.5} aria-hidden="true" /></a>
             <p className={landingStyles.placeholder}>Placeholder email · Replace before publishing</p>
           </div>
