@@ -1,0 +1,4 @@
+[build]
+  base = "reporting-automation-demo"
+  command = "npm run build"
+  publish = ".next"
