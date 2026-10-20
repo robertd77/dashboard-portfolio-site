@@ -1,4 +1,6 @@
-# Reporting Automation Consulting Demo
+# Clearflow Reporting Consulting Demo
+
+Clearflow Reporting — **Less manual work. Clearer reporting.**
 
 A portfolio demonstration of a small-business reporting automation
 workflow using a fictional apparel retailer, **Northwood Supply Co.**
@@ -232,9 +234,10 @@ intended to illustrate.
 ## Consulting homepage
 
 `/` presents the service, three capabilities, a Northwood dashboard preview,
-the delivery approach, and a contact CTA. `hello@example.com` is explicitly
-marked as a placeholder and uses a working `mailto:` link; there is no form.
-Replace that address before publishing the site as a real contact channel.
+the delivery approach, and a contact CTA. Homepage and dashboard contact
+links use `mailto:clearflowreporting@gmail.com`; there is no form. Consulting
+branding and page metadata use Clearflow Reporting; the Northwood case
+study and retailer branding remain distinct.
 
 The Northwood routes now share `src/app/(northwood)/layout.tsx`. The route
 group changes their filesystem location, not their URLs or behavior. The

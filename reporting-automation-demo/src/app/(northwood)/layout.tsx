@@ -5,7 +5,7 @@ import { SiteNavigation } from "@/components/site-navigation";
 import { WorkflowNav } from "@/components/workflow-nav";
 
 export const metadata: Metadata = {
-  title: { default: "Northwood | Reporting Automation Demo", template: "%s | Northwood Demo" },
+  title: { default: "Northwood | Clearflow Reporting Demo", template: "%s | Northwood Demo | Clearflow Reporting" },
   description: "Reporting automation for Northwood Supply Co. Explore source data, validation, and management reporting.",
 };
 
@@ -28,7 +28,7 @@ export default function NorthwoodLayout({ children }: Readonly<{ children: React
         <WorkflowNav />
         <main id="main-content" tabIndex={-1} className="pb-14 outline-none">{children}</main>
         <footer className="site-footer">
-          <p>Northwood Supply Co. · Reporting automation</p>
+          <p>Northwood Supply Co. · A Clearflow Reporting demo</p>
           <p>Fictional retailer · Simulated data · Not a real client engagement</p>
         </footer>
       </div>
