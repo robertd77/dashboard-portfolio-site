@@ -39,8 +39,8 @@ export default async function DashboardPage() {
             <p>Tell me what you export, what you do with it, and which report you need at the end. Then we&apos;ll get started.</p>
           </div>
           <div className="min-w-0">
-            <a href="mailto:hello@example.com" className={landingStyles.email}>hello@example.com<Mail size={22} strokeWidth={1.5} aria-hidden="true" /></a>
-            <p className={landingStyles.placeholder}>Placeholder email · Replace before publishing</p>
+            <a href="mailto:clearflowreporting@gmail.com" className={landingStyles.email}>clearflowreporting@gmail.com<Mail size={22} strokeWidth={1.5} aria-hidden="true" /></a>
+            <p className={landingStyles.contactTagline}>Less manual work. Clearer reporting.</p>
           </div>
         </div>
       </section>

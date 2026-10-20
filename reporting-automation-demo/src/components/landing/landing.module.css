@@ -81,7 +81,7 @@
 .contact p { margin-top: 16px; color: #cbd9ce; line-height: 1.8; font-size: 14px; max-width: 570px; }
 .email { display: inline-flex; align-items: center; gap: 12px; font-size: clamp(1.25rem, 2.7vw, 1.8rem); font-weight: 600; letter-spacing: -.035em; color: var(--accent); padding-block: 16px; border-bottom: 1px solid #f4c95d50; }
 .email:hover { border-color: var(--accent); }
-.contact .placeholder { font-size: 10px; margin-top: 12px; color: #cbd9ce; }
+.contact .contactTagline { font-size: 10px; margin-top: 12px; color: #cbd9ce; }
 .footer { border-top: 1px solid #ffffff20; padding-block: 22px; }
 .footerInner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 15px; font-size: 11px; color: #cbd9ce; }
 .footer a:hover { color: var(--accent); }

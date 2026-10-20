@@ -15,8 +15,8 @@ import { rawDatasets } from "@/lib/datasets";
 import { runReportingWorkflow } from "@/lib/processing/workflow";
 
 export const metadata: Metadata = {
-  title: { absolute: "Reporting Automation | Less Spreadsheet Work. Better Business Reporting." },
-  description: "I automate repetitive spreadsheet and reporting workflows for small businesses. Explore the Northwood demo, from ordinary exports to consistent reporting.",
+  title: { absolute: "Clearflow Reporting | Less manual work. Clearer reporting." },
+  description: "Clearflow Reporting automates repetitive spreadsheet and reporting workflows for small businesses. Explore the Northwood demo, from ordinary exports to consistent reporting.",
 };
 
 export default async function HomePage() {
@@ -28,7 +28,7 @@ export default async function HomePage() {
     <div className={styles.dark}>
       <header className={styles.header}>
         <div className={`${styles.container} ${styles.headerInner}`}>
-          <Link href="/" className={styles.logo} aria-label="Reporting Automation home"><span className={styles.logoMark}><Workflow size={21} strokeWidth={1.6} aria-hidden="true" /></span><span>Reporting<br />Automation</span></Link>
+          <Link href="/" className={styles.logo} aria-label="Clearflow Reporting home"><span className={styles.logoMark}><Workflow size={21} strokeWidth={1.6} aria-hidden="true" /></span><span>Clearflow<br />Reporting</span></Link>
           <SiteNavigation variant="home" />
         </div>
       </header>
@@ -38,7 +38,7 @@ export default async function HomePage() {
         <section className={`${styles.container} ${styles.hero}`} aria-labelledby="hero-title">
           <div>
             <p className={`${styles.kicker} ${styles.heroEnter}`}>Independent consulting / Small business workflows</p>
-            <h1 id="hero-title" className={`${styles.heroTitle} ${styles.heroEnter} ${styles.delay1}`}>Less spreadsheet work.<span>Better business reporting.</span></h1>
+            <h1 id="hero-title" className={`${styles.heroTitle} ${styles.heroEnter} ${styles.delay1}`}>Less manual work.<span>Clearer reporting.</span></h1>
             <p className={`${styles.heroCopy} ${styles.heroEnter} ${styles.delay2}`}>I automate repetitive spreadsheet and reporting workflows for small businesses. Turn exports, cleanup, and recurring calculations into a process your team can repeat.</p>
             <div className={`${styles.actions} ${styles.heroEnter} ${styles.delay3}`}><Button asChild className={styles.accentButton}><Link href="/raw-data">Explore the Demo<ArrowRight aria-hidden="true" /></Link></Button><Button asChild variant="outline" className={styles.outlineButton}><a href="#contact">Get in Touch<ArrowUpRight aria-hidden="true" /></a></Button></div>
             <p className={`${styles.heroNote} ${styles.heroEnter} ${styles.delay3}`}><CircleCheck size={14} aria-hidden="true" />Built around your workflow. Clear enough to hand over.</p>
@@ -85,9 +85,9 @@ export default async function HomePage() {
         </section>
       </div>
       <section id="contact" className={`${styles.dark} ${styles.contact}`} data-reveal aria-labelledby="contact-title">
-        <div className={`${styles.container} ${styles.contactInner}`}><div><p className={styles.kicker}>Let’s simplify the next reporting cycle</p><h2 id="contact-title" className={styles.sectionHeading}>Got a spreadsheet routine that <span className={styles.contactEmphasis}>keeps coming back?</span></h2><p>Tell me what you export, what you do with it, and which report you need at the end. Then we&apos;ll get started.</p></div><div><a href="mailto:hello@example.com" className={styles.email}>hello@example.com<Mail size={22} strokeWidth={1.5} aria-hidden="true" /></a><p className={styles.placeholder}>Placeholder email · Replace before publishing</p></div></div>
+        <div className={`${styles.container} ${styles.contactInner}`}><div><p className={styles.kicker}>Let’s simplify the next reporting cycle</p><h2 id="contact-title" className={styles.sectionHeading}>Got a spreadsheet routine that <span className={styles.contactEmphasis}>keeps coming back?</span></h2><p>Tell me what you export, what you do with it, and which report you need at the end. Then we&apos;ll get started.</p></div><div><a href="mailto:clearflowreporting@gmail.com" className={styles.email}>clearflowreporting@gmail.com<Mail size={22} strokeWidth={1.5} aria-hidden="true" /></a><p className={styles.contactTagline}>Less manual work. Clearer reporting.</p></div></div>
       </section>
     </main>
-    <footer className={`${styles.dark} ${styles.footer}`}><div className={`${styles.container} ${styles.footerInner}`}><p>Reporting Automation · Independent consulting</p><div className="flex flex-wrap gap-5"><Link href="/case-study">Northwood case study</Link><Link href="/raw-data">Interactive demo</Link><a href="#contact">Get in touch</a></div></div></footer>
+    <footer className={`${styles.dark} ${styles.footer}`}><div className={`${styles.container} ${styles.footerInner}`}><p>Clearflow Reporting · Independent consulting</p><div className="flex flex-wrap gap-5"><Link href="/case-study">Northwood case study</Link><Link href="/raw-data">Interactive demo</Link><a href="#contact">Get in touch</a></div></div></footer>
   </SectionReveals>;
 }
