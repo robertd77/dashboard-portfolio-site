@@ -15,8 +15,11 @@ import { rawDatasets } from "@/lib/datasets";
 import { runReportingWorkflow } from "@/lib/processing/workflow";
 
 export const metadata: Metadata = {
-  title: { absolute: "Clearflow Reporting | Less manual work. Clearer reporting." },
-  description: "Clearflow Reporting automates repetitive spreadsheet and reporting workflows for small businesses. Explore the Northwood demo, from ordinary exports to consistent reporting.",
+  title: { absolute: "Reporting Automation for Small Businesses | Clearflow Reporting" },
+  description: "Simplify spreadsheet workflows, automate recurring reports, and turn disconnected business data into clear dashboards. Explore Clearflow Reporting.",
+  alternates: { canonical: "/" },
+  openGraph: { title: "Reporting Automation for Small Businesses | Clearflow Reporting", description: "Simplify spreadsheet workflows, automate recurring reports, and turn disconnected business data into clear dashboards. Explore Clearflow Reporting.", url: "/" },
+  twitter: { title: "Reporting Automation for Small Businesses | Clearflow Reporting", description: "Simplify spreadsheet workflows, automate recurring reports, and turn disconnected business data into clear dashboards. Explore Clearflow Reporting." },
 };
 
 export default async function HomePage() {
@@ -24,7 +27,19 @@ export default async function HomePage() {
   const insights = selectCaseStudyInsights(data);
   const points = selectMonthlySales(filterDashboardData(data, DEFAULT_DASHBOARD_FILTERS), DEFAULT_DASHBOARD_FILTERS);
   const peak = Math.max(0, ...points.map((point) => point.netSales ?? 0));
-  return <SectionReveals className={styles.landing}>
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Clearflow Reporting",
+    url: "https://clearflowreporting.ca",
+    description: "Simplify spreadsheet workflows, automate recurring reports, and turn disconnected business data into clear dashboards. Explore Clearflow Reporting.",
+    email: "clearflowreporting@gmail.com",
+    areaServed: { "@type": "Country", name: "Canada" },
+    serviceType: ["Reporting automation", "Data cleanup and integration", "Dashboards and internal tools"],
+  };
+  return <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
+    <SectionReveals className={styles.landing}>
     <div className={styles.dark}>
       <header className={styles.header}>
         <div className={`${styles.container} ${styles.headerInner}`}>
@@ -89,5 +104,6 @@ export default async function HomePage() {
       </section>
     </main>
     <footer className={`${styles.dark} ${styles.footer}`}><div className={`${styles.container} ${styles.footerInner}`}><p>Clearflow Reporting · Independent consulting</p><div className="flex flex-wrap gap-5"><Link href="/case-study">Northwood case study</Link><Link href="/raw-data">Interactive demo</Link><a href="#contact">Get in touch</a></div></div></footer>
-  </SectionReveals>;
+    </SectionReveals>
+  </>;
 }

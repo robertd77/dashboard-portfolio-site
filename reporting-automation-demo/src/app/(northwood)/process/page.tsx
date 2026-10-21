@@ -5,7 +5,12 @@ import { Button } from "@/components/ui/button";
 import { PageHeading } from "@/components/page-heading";
 import { ProcessingWorkflow } from "@/components/processing-workflow";
 
-export const metadata: Metadata = { title: "Process & Validate" };
+export const metadata: Metadata = {
+  title: "Process & Validate",
+  description: "Run the Northwood demo workflow to see source data cleaning, validation, and exception handling.",
+  alternates: { canonical: "/process" },
+  robots: { index: false, follow: true },
+};
 
 export default function ProcessPage() {
   return (
