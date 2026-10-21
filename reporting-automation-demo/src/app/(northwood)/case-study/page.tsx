@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   title: "Reporting Automation Case Study",
   description: "See how four business exports become a repeatable reporting workflow with automated cleanup, validation, and an interactive dashboard.",
   alternates: { canonical: "/case-study" },
-  openGraph: { title: "Reporting Automation Case Study | Clearflow Reporting", description: "Explore how four exports become a validated, repeatable reporting workflow using a fictional Ontario retailer.", url: "/case-study" },
-  twitter: { title: "Reporting Automation Case Study | Clearflow Reporting" },
+  openGraph: { title: "Reporting Automation Case Study | Clearflow Reporting", description: "Explore how four exports become a validated, repeatable reporting workflow using a fictional Ontario retailer.", url: "/case-study", images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Clearflow Reporting" }] },
+  twitter: { card: "summary_large_image", title: "Reporting Automation Case Study | Clearflow Reporting", images: ["/opengraph-image"] },
 };
 
 const sectionClass = "border-t border-border py-12 sm:py-16";
