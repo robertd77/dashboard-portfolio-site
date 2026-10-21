@@ -5,7 +5,12 @@ import { StageNavigation } from "@/components/stage-navigation";
 import { RawDataExplorer } from "@/components/raw-data-explorer";
 import { loadRawDatasetPreviews } from "@/lib/raw-data";
 
-export const metadata: Metadata = { title: "Raw Data" };
+export const metadata: Metadata = {
+  title: "Raw Data",
+  description: "Inspect the four simulated source exports used in the Northwood reporting automation demonstration.",
+  alternates: { canonical: "/raw-data" },
+  robots: { index: false, follow: true },
+};
 
 export default async function RawDataPage() {
   const datasets = await loadRawDatasetPreviews();

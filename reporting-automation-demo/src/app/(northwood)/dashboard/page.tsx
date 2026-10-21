@@ -13,7 +13,12 @@ import { CustomerPurchaseMixChart } from "@/components/dashboard/charts/customer
 import { runReportingWorkflow } from "@/lib/processing/workflow";
 import { dashboardDataFromWorkflow } from "@/lib/dashboard/data";
 
-export const metadata: Metadata = { title: "Dashboard" };
+export const metadata: Metadata = {
+  title: "Dashboard",
+  description: "Explore sales, inventory, and customer reporting in the interactive Northwood Supply Co. demonstration.",
+  alternates: { canonical: "/dashboard" },
+  robots: { index: false, follow: true },
+};
 
 export default async function DashboardPage() {
   const data = dashboardDataFromWorkflow(await runReportingWorkflow());
