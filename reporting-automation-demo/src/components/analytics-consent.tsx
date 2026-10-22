@@ -14,7 +14,7 @@ type AnalyticsWindow = Window & {
 };
 
 function initializeAnalytics() {
-  const win = window as AnalyticsWindow;
+  const win = window as unknown as AnalyticsWindow;
   win[`ga-disable-${MEASUREMENT_ID}`] = false;
 
   if (win.clearflowAnalyticsInitialized) return;
@@ -31,7 +31,7 @@ function initializeAnalytics() {
 }
 
 function trackPageView() {
-  const win = window as AnalyticsWindow;
+  const win = window as unknown as AnalyticsWindow;
   win.gtag?.("event", "page_view", {
     page_location: window.location.href,
     page_title: document.title,
@@ -60,7 +60,7 @@ export function AnalyticsConsent() {
       if (!(event.target instanceof Element)) return;
       const link = event.target.closest<HTMLAnchorElement>('a[href^="mailto:"]');
       if (!link) return;
-      (window as AnalyticsWindow).gtag?.("event", "contact_click", {
+      (window as unknown as AnalyticsWindow).gtag?.("event", "contact_click", {
         contact_method: "email",
       });
     };
@@ -71,7 +71,7 @@ export function AnalyticsConsent() {
   const choose = (next: "accepted" | "declined") => {
     window.localStorage.setItem(CONSENT_KEY, next);
     if (next === "declined") {
-      (window as AnalyticsWindow)[`ga-disable-${MEASUREMENT_ID}`] = true;
+      (window as unknown as AnalyticsWindow)[`ga-disable-${MEASUREMENT_ID}`] = true;
     }
     setConsent(next);
     setShowPreferences(false);
