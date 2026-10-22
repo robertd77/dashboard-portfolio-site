@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { AnalyticsConsent } from "@/components/analytics-consent";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://clearflowreporting.ca"),
@@ -24,5 +25,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body><a href="#main-content" className="skip-link">Skip to content</a>{children}</body></html>;
+  return <html lang="en"><body><a href="#main-content" className="skip-link">Skip to content</a>{children}<AnalyticsConsent /></body></html>;
 }
