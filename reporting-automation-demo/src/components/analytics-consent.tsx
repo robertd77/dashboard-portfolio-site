@@ -7,7 +7,7 @@ const MEASUREMENT_ID = "G-2DMZPDM1TV";
 const CONSENT_KEY = "clearflow-analytics-consent";
 
 type AnalyticsWindow = Window & {
-  dataLayer?: unknown[][];
+  dataLayer?: unknown[];
   gtag?: (...args: unknown[]) => void;
   clearflowAnalyticsInitialized?: boolean;
   [key: `ga-disable-${string}`]: unknown;
@@ -20,7 +20,7 @@ function initializeAnalytics() {
   if (win.clearflowAnalyticsInitialized) return;
   win.clearflowAnalyticsInitialized = true;
   win.dataLayer = win.dataLayer || [];
-  win.gtag = (...args: unknown[]) => { win.dataLayer?.push(args); };
+  win.gtag = function (..._args: unknown[]) { win.dataLayer?.push(arguments); };
   win.gtag("js", new Date());
   win.gtag("config", MEASUREMENT_ID, { send_page_view: false, anonymize_ip: true });
 
