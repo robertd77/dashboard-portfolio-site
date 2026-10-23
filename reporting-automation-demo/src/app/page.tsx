@@ -103,7 +103,7 @@ export default async function HomePage() {
         <div className={`${styles.container} ${styles.contactInner}`}><div><p className={styles.kicker}>Let’s simplify the next reporting cycle</p><h2 id="contact-title" className={styles.sectionHeading}>Got a spreadsheet routine that <span className={styles.contactEmphasis}>keeps coming back?</span></h2><p>Tell me what you export, what you do with it, and which report you need at the end. Then we&apos;ll get started.</p></div><div><a href="mailto:clearflowreporting@gmail.com" className={styles.email}>clearflowreporting@gmail.com<Mail size={22} strokeWidth={1.5} aria-hidden="true" /></a><p className={styles.contactTagline}>Less manual work. Clearer reporting.</p></div></div>
       </section>
     </main>
-    <footer className={`${styles.dark} ${styles.footer}`}><div className={`${styles.container} ${styles.footerInner}`}><p>Clearflow Reporting · Independent consulting</p><div className="flex flex-wrap gap-5"><Link href="/case-study">Northwood case study</Link><Link href="/raw-data">Interactive demo</Link><a href="#contact">Get in touch</a></div></div></footer>
+    <footer className={`${styles.dark} ${styles.footer}`}><div className={`${styles.container} ${styles.footerInner}`}><p>Clearflow Reporting · Independent consulting</p><div className="flex flex-wrap gap-5"><Link href="/case-study">Northwood case study</Link><Link href="/raw-data">Interactive demo</Link><a href="#contact">Get in touch</a><Link href="/privacy">Privacy policy</Link></div></div></footer>
     </SectionReveals>
   </>;
 }

@@ -29,7 +29,7 @@ export default function NorthwoodLayout({ children }: Readonly<{ children: React
         <main id="main-content" tabIndex={-1} className="pb-14 outline-none">{children}</main>
         <footer className="site-footer">
           <p>Northwood Supply Co. · A Clearflow Reporting demo</p>
-          <p>Fictional retailer · Simulated data · Not a real client engagement</p>
+          <p>Fictional retailer · Simulated data · Not a real client engagement · <Link href="/privacy" className="underline underline-offset-2">Privacy policy</Link></p>
         </footer>
       </div>
     </>

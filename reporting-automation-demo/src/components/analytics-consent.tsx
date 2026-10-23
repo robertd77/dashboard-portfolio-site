@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const MEASUREMENT_ID = "G-2DMZPDM1TV";
@@ -85,16 +86,16 @@ export function AnalyticsConsent() {
         <section aria-label="Analytics preferences" className="fixed inset-x-4 bottom-4 z-50 mx-auto max-w-2xl rounded-xl border border-[#b8c9bd] bg-white p-5 text-[#173e32] shadow-xl sm:inset-x-6">
           <p className="text-sm font-semibold">Optional website analytics</p>
           <p className="mt-2 text-sm leading-6">
-            May we use Google Analytics to understand visits and email-contact clicks? You can decline or change this choice later. Analytics is off unless you accept.
+            We use optional Google Analytics cookies to understand how visitors use our website. You can accept or decline, and change your choice any time.{" "}<Link href="/privacy" className="underline underline-offset-2 hover:text-[#367b5e]">Privacy policy</Link>.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
-            <button type="button" className="rounded-lg bg-[#245c46] px-4 py-2 text-sm font-semibold text-white" onClick={() => choose("accepted")}>Accept analytics</button>
-            <button type="button" className="rounded-lg border border-[#245c46] px-4 py-2 text-sm font-semibold" onClick={() => choose("declined")}>Decline</button>
+            <button type="button" className="cursor-pointer rounded-lg bg-[#245c46] px-4 py-2 text-sm font-semibold text-white hover:bg-[#367b5e]" onClick={() => choose("accepted")}>Accept cookies</button>
+            <button type="button" className="cursor-pointer rounded-lg border border-[#245c46] px-4 py-2 text-sm font-semibold hover:bg-[#edf4ee]" onClick={() => choose("declined")}>Decline cookies</button>
           </div>
         </section>
       )}
       {consent !== "unknown" && !showPreferences && (
-        <button type="button" onClick={() => setShowPreferences(true)} className="fixed bottom-3 left-3 z-40 rounded-lg border border-[#b8c9bd] bg-white/95 px-3 py-1.5 text-xs font-medium text-[#173e32] shadow-sm">
+        <button type="button" onClick={() => setShowPreferences(true)} className="fixed bottom-3 left-3 z-40 cursor-pointer rounded-lg border border-[#b8c9bd] bg-white/95 px-3 py-1.5 text-xs font-medium text-[#173e32] shadow-sm">
           Analytics settings
         </button>
       )}
